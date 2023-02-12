@@ -6,6 +6,7 @@
 #include <vector>
 #include <stdlib.h> // нужен для вызова функции rand(), srand()
 #include <time.h>
+#include <algorithm>
 
 using namespace System;
 using namespace System::Windows::Forms;
@@ -43,6 +44,15 @@ double LeastSquareMethod::InteractiveForm::GetRandomNumberFloat(double min, doub
 
 	return value;
 }
+
+System::Void LeastSquareMethod::InteractiveForm::Chart1_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e)
+{
+	double coordX = int((chart1->ChartAreas[0]->AxisX->PixelPositionToValue((double)e->X)) * 1000 + 0.5) / 1000.0;
+	double coordY = int((chart1->ChartAreas[0]->AxisY->PixelPositionToValue((double)e->Y)) * 1000 + 0.5) / 1000.0;
+	label_X->Text = "X: " + coordX.ToString();
+	label_Y->Text = "Y: " + coordY.ToString();
+}
+
 
 void outputChangeMatrix(int countOfVariables, double** matrixA, double* matrixB)
 {
@@ -267,6 +277,12 @@ double* filllMatrixBLn(int const& countOfVar, std::vector<double>sumCoordinateLn
 	return matrixB;
 }
 
+void initializeVector(std::vector<double> &vec,int const& size)
+{
+	for (int i = 0; i < size; i++)
+		vec.push_back(0);
+}
+
 System::Void LeastSquareMethod::InteractiveForm::Btn_action_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	clearInteractiveElement();
@@ -279,10 +295,8 @@ System::Void LeastSquareMethod::InteractiveForm::Btn_action_Click(System::Object
 
 	std::vector<double> sumCoordinate;
 	std::vector<double> sumCoordinateLn;
-	for (int i = 0; i < 7; i++)
-		sumCoordinate.push_back(0);
-	for (int i = 0; i < 6; i++)
-		sumCoordinateLn.push_back(0);
+	initializeVector(sumCoordinate, 7);
+	initializeVector(sumCoordinateLn, 6);
 
 	int countOfVariables = 0;
 	int countNumber = Convert::ToInt32(table_values->ColumnCount.ToString());
@@ -324,6 +338,8 @@ System::Void LeastSquareMethod::InteractiveForm::Btn_action_Click(System::Object
 		sumFaultLinear += (y - coordinateXY[1]) * (y - coordinateXY[1]);
 	}
 	logFile << " sumFaultLinear = " << sumFaultLinear << std::endl;
+	this->dGV_coefficients->Rows[0]->Cells[0]->Value = varaibles[0];
+	this->dGV_coefficients->Rows[0]->Cells[1]->Value = varaibles[1];
 	//y=b*x^a---------------------------------------------------------------------
 	//Y=beta*x^a---------------------------------------------------------------------
 	logFile << "y=beta*x^a \n ";
@@ -349,6 +365,8 @@ System::Void LeastSquareMethod::InteractiveForm::Btn_action_Click(System::Object
 		sumFaultPower += (y - coordinateXY[1]) * (y - coordinateXY[1]);
 	}
 	logFile << " sumFaultPower = " << sumFaultPower << std::endl;
+	this->dGV_coefficients->Rows[1]->Cells[0]->Value = varaibles[0];
+	this->dGV_coefficients->Rows[1]->Cells[1]->Value = varaibles[1];
 	//Y=aX+b---------------------------------------------------------------------
 	//Y=beta*exp(a*x)---------------------------------------------------------------------
 	logFile << "y=beta*exp(a*x) \n ";
@@ -375,6 +393,8 @@ System::Void LeastSquareMethod::InteractiveForm::Btn_action_Click(System::Object
 		sumFaultExponent += (y - coordinateXY[1]) * (y - coordinateXY[1]);
 	}
 	logFile << " sumFaultExponent = " << sumFaultExponent << std::endl;
+	this->dGV_coefficients->Rows[2]->Cells[0]->Value = varaibles[0];
+	this->dGV_coefficients->Rows[2]->Cells[1]->Value = varaibles[1];
 	//Y=beta*exp(a*x)---------------------------------------------------------------------
 	//Y=ax^2+bx+c---------------------------------------------------------------------
 	double sumXDegree4 = 0, sumXDegree3 = 0, sumXXY=0;
@@ -398,6 +418,8 @@ System::Void LeastSquareMethod::InteractiveForm::Btn_action_Click(System::Object
 		sumFaultSquare += (coordinateXY[1]-y) * (coordinateXY[1] -y);
 	}
 	logFile << " sumFaultSquare = " << sumFaultSquare << std::endl;
+	this->dGV_coefficients->Rows[3]->Cells[0]->Value = varaibles[0];
+	this->dGV_coefficients->Rows[3]->Cells[1]->Value = varaibles[1];
 	//Y=ax^2+bx+c---------------------------------------------------------------------
 	//Clean Memory
 	for (int i = 0; i < countOfVariables; i++)
@@ -410,6 +432,24 @@ System::Void LeastSquareMethod::InteractiveForm::Btn_action_Click(System::Object
 	this->label_sumFaultPower->Text = " Cум погрешность степ функции = " + sumFaultPower.ToString();
 	this->label_sumFaultExponent->Text = " Cум погрешность экспон функции = " + sumFaultExponent.ToString();
 	this->label_sumFaultSquare->Text = " Cум погрешность квадрат функции = " + sumFaultSquare.ToString();	
+
+	std::vector<double> sumFault;
+	sumFault.push_back(sumFaultLinear);
+	sumFault.push_back(sumFaultPower);
+	sumFault.push_back(sumFaultExponent);
+	sumFault.push_back(sumFaultSquare);
+	sort(sumFault.begin(), sumFault.end());
+	if (sumFault[0] == sumFaultLinear)
+		this->label_bestFunc->Text += " Линейная";
+	else
+		if (sumFault[0] == sumFaultPower)
+			this->label_bestFunc->Text += " Степенная";
+		else
+			if (sumFault[0] == sumFaultExponent)
+				this->label_bestFunc->Text += " Экспоненциальная";
+			else
+				this->label_bestFunc->Text += " Квадратичная";
+	
 }
 
 

@@ -180,16 +180,37 @@ namespace LeastSquareMethod {
 			this->chart1->AllowDrop = true;
 			this->chart1->BackColor = System::Drawing::Color::Transparent;
 			chartArea1->AlignmentOrientation = static_cast<System::Windows::Forms::DataVisualization::Charting::AreaAlignmentOrientations>((System::Windows::Forms::DataVisualization::Charting::AreaAlignmentOrientations::Vertical | System::Windows::Forms::DataVisualization::Charting::AreaAlignmentOrientations::Horizontal));
+			chartArea1->AxisX->ArrowStyle = System::Windows::Forms::DataVisualization::Charting::AxisArrowStyle::Lines;
+			chartArea1->AxisX->IntervalAutoMode = System::Windows::Forms::DataVisualization::Charting::IntervalAutoMode::VariableCount;
 			chartArea1->AxisX->LabelStyle->Interval = 0;
+			chartArea1->AxisX->MaximumAutoSize = 100;
+			chartArea1->AxisX->Title = L"X";
+			chartArea1->AxisX->TitleAlignment = System::Drawing::StringAlignment::Far;
+			chartArea1->AxisX->TitleFont = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+			chartArea1->AxisY->ArrowStyle = System::Windows::Forms::DataVisualization::Charting::AxisArrowStyle::Lines;
+			chartArea1->AxisY->IntervalAutoMode = System::Windows::Forms::DataVisualization::Charting::IntervalAutoMode::VariableCount;
+			chartArea1->AxisY->MaximumAutoSize = 100;
+			chartArea1->AxisY->TextOrientation = System::Windows::Forms::DataVisualization::Charting::TextOrientation::Stacked;
+			chartArea1->AxisY->Title = L"Y";
+			chartArea1->AxisY->TitleAlignment = System::Drawing::StringAlignment::Far;
+			chartArea1->AxisY->TitleFont = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
 			chartArea1->CursorX->IsUserEnabled = true;
 			chartArea1->CursorX->IsUserSelectionEnabled = true;
 			chartArea1->CursorX->LineDashStyle = System::Windows::Forms::DataVisualization::Charting::ChartDashStyle::DashDot;
+			chartArea1->CursorX->LineWidth = 2;
 			chartArea1->CursorY->IsUserEnabled = true;
 			chartArea1->CursorY->IsUserSelectionEnabled = true;
 			chartArea1->CursorY->LineColor = System::Drawing::Color::Coral;
 			chartArea1->CursorY->LineDashStyle = System::Windows::Forms::DataVisualization::Charting::ChartDashStyle::Dash;
 			chartArea1->CursorY->LineWidth = 2;
 			chartArea1->CursorY->SelectionColor = System::Drawing::Color::Silver;
+			chartArea1->InnerPlotPosition->Auto = false;
+			chartArea1->InnerPlotPosition->Height = 85.9457F;
+			chartArea1->InnerPlotPosition->Width = 89.71415F;
+			chartArea1->InnerPlotPosition->X = 8.80975F;
+			chartArea1->InnerPlotPosition->Y = 3.70115F;
 			chartArea1->Name = L"ChartArea1";
 			this->chart1->ChartAreas->Add(chartArea1);
 			legend1->Name = L"Legend1";
@@ -262,7 +283,7 @@ namespace LeastSquareMethod {
 			this->chart1->Series->Add(series2);
 			this->chart1->Series->Add(series3);
 			this->chart1->Series->Add(series4);
-			this->chart1->Size = System::Drawing::Size(751, 321);
+			this->chart1->Size = System::Drawing::Size(751, 338);
 			this->chart1->TabIndex = 4;
 			title1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
@@ -384,7 +405,7 @@ namespace LeastSquareMethod {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(772, 456);
+			this->ClientSize = System::Drawing::Size(772, 473);
 			this->ControlBox = false;
 			this->Controls->Add(this->label_Y);
 			this->Controls->Add(this->label_X);

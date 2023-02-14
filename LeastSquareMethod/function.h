@@ -7,5 +7,5 @@ double* filllMatrixB(int const& countOfVar, std::vector<double>sumCoordinate);
 void initializeVector(std::vector<double>& vec, int const& size);
 double* filllMatrixBLn(int const& countOfVar, std::vector<double>sumCoordinateLn);
 double** fillMatrixALn(int const& countOfVar, std::vector<double>sumCoordinateLn, int const& countNumber);
-
+double getRandomNumberFloat(double min, double max, int precision);
 #endif

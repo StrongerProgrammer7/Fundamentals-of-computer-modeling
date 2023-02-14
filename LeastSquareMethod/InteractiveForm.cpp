@@ -1,15 +1,18 @@
 #include "InteractiveForm.h"
 #include "include.h"
 #include "function.h"
+#include "gauss.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
 
-std::ofstream logFile("log.txt");
+std::ofstream logFile;
 
 [STAThreadAttribute]
 void main(array<String^>^ args)
 {
+	std::fstream logFile("log.txt");
+	logFile.close();
 	Application::SetCompatibleTextRenderingDefault(false);
 	Application::EnableVisualStyles();
 	LeastSquareMethod::InteractiveForm form;
@@ -19,7 +22,6 @@ void main(array<String^>^ args)
 
 System::Void LeastSquareMethod::InteractiveForm::Btn_close_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	logFile.close();
 	Application::Exit();
 }
 
@@ -44,21 +46,7 @@ double* LeastSquareMethod::InteractiveForm::getCoordinate(int const& ind)
 	return coordinate;
 }
 
-double LeastSquareMethod::InteractiveForm::GetRandomNumberFloat(double min, double max, int precision)
-{
-	// Установить стартовую точку
-	//srand(time(NULL));
 
-	double value;
-
-	// получить случайное число как целое число с порядком precision
-	value = rand() % (int)pow(10, precision);
-
-	// получить вещественное число
-	value = min + (value / pow(10, precision)) * (max - min);
-
-	return value;
-}
 
 System::Void LeastSquareMethod::InteractiveForm::Chart1_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e)
 {
@@ -69,170 +57,10 @@ System::Void LeastSquareMethod::InteractiveForm::Chart1_MouseClick(System::Objec
 }
 
 
-void outputChangeMatrix(int countOfVariables, double** matrixA, double* matrixB)
-{
-	for (int i = 0; i < countOfVariables; i++)
-	{
-		for (int j = 0; j < countOfVariables; j++)
-			logFile << std::setprecision(3) << matrixA[i][j] << " ";
-		logFile << std::setprecision(3) << matrixB[i] << std::endl;
-	}
-	logFile << std::endl;
-}
-
-double* methodGaussa(double** matrixA, double* matrixB, int countOfVariables)
-{
-	int rang = 0, rangMatrixAB = 0;
-	double* varaibles = new double[countOfVariables], maxElementMartix;
-	int indexVarMatrix = 0, indexLineMaxElm;
-	const double eps = FLT_EPSILON;
-
-	outputChangeMatrix(countOfVariables, matrixA, matrixB);
-
-	while (indexVarMatrix < countOfVariables)
-	{
-		//Search line with maxElementMartix matrixA[i][j]
-		maxElementMartix = abs(matrixA[indexVarMatrix][indexVarMatrix]);
-		indexLineMaxElm = indexVarMatrix;
-		for (int i = indexVarMatrix + 1; i < countOfVariables; i++)
-		{
-			if (fabs(matrixA[i][indexVarMatrix]) > maxElementMartix)
-			{
-				maxElementMartix = fabs(matrixA[i][indexVarMatrix]);
-				indexLineMaxElm = i;
-				logFile << "\n Max(matrixA " << i + 1 << " " << indexVarMatrix + 1 << ")=" << maxElementMartix << std::endl;
-			}
-		}
-		if (maxElementMartix <= eps)
-		{
-			for (int i = indexVarMatrix; i < countOfVariables; i++)
-				matrixA[i][indexVarMatrix] = 0.0;
-			rangMatrixAB = indexVarMatrix;
-			if (matrixB[indexVarMatrix] != 0)
-				rangMatrixAB++;
-			indexVarMatrix++; // расширенная матрица ранг
-			outputChangeMatrix(countOfVariables, matrixA, matrixB);
-			continue;
-		}
-
-		//Меняем местами строки
-		if (indexLineMaxElm != indexVarMatrix) //исключаем "само на себя"
-		{
-			for (int j = 0; j < countOfVariables; j++)
-			{
-				if (matrixA[indexVarMatrix][j] == 0 && matrixA[indexLineMaxElm][j] == 0) // если нули то игнор
-					continue;
-				double temp = matrixA[indexVarMatrix][j];
-				matrixA[indexVarMatrix][j] = matrixA[indexLineMaxElm][j];
-				matrixA[indexLineMaxElm][j] = -temp;
-			}
-			double temp = matrixB[indexVarMatrix];
-			matrixB[indexVarMatrix] = matrixB[indexLineMaxElm];
-			matrixB[indexLineMaxElm] = -temp;
-
-			outputChangeMatrix(countOfVariables, matrixA, matrixB);
-		}
-
-		maxElementMartix = matrixA[indexVarMatrix][indexVarMatrix];
-		assert(fabs(maxElementMartix) > eps); // макс дб больше епс для продолжения, иначе ошибка в программе
-
-		for (int i = indexVarMatrix + 1; i < countOfVariables; i++)
-		{
-			double temp = (-matrixA[i][indexVarMatrix]) / maxElementMartix;
-
-			matrixA[i][indexVarMatrix] = 0.0;//после вычитыния слишком маленькое число получается , чтобы мусора не было явно присваиваем 0
-			for (indexLineMaxElm = indexVarMatrix + 1; indexLineMaxElm < countOfVariables; ++indexLineMaxElm)
-			{
-				matrixA[i][indexLineMaxElm] += temp * matrixA[indexVarMatrix][indexLineMaxElm];
-			}
-			matrixB[i] += temp * matrixB[indexVarMatrix];
-
-			outputChangeMatrix(countOfVariables, matrixA, matrixB);
-		}
-		outputChangeMatrix(countOfVariables, matrixA, matrixB);
-		rang++;
-		++indexVarMatrix;
-	}
-
-	if (rang == countOfVariables)
-		rangMatrixAB = rang;
-	bool  appliedFCR = 0;
-	double freeVariables = 0;
-	if (rangMatrixAB > rang)
-	{
-		logFile << " Ранг расширенной матрицы больше ранга \nобыкновенной матрицы ";
-		MessageBox::Show("Ранг расширенной матрицы больше ранга \n обыкновенной матрицы", "", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
-		for (int i = 0; i < countOfVariables; i++)
-			varaibles[i] = 1.0;
-		return varaibles;
-	}
-	else
-	{
-		if (rangMatrixAB == rang && rangMatrixAB < countOfVariables)
-		{
-			logFile << " Решений бесконечное множество. \nКоличество переменных больше ,"
-				"количества строк , введем свободную переменную " << std::endl;
-			MessageBox::Show("Решений бесконечное множество. \nКоличество переменных больше , количества строк", "", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
-			//cin >> freeVariables;
-			freeVariables = 1.0;
-			appliedFCR = 1;
-			for (int i = 0; i < countOfVariables; i++)
-				varaibles[i] = 1.0;
-			return varaibles;
-		}
-	}
-
-
-	//Outside
-	double* temp = new double[countOfVariables];
-	for (int i = 0; i < countOfVariables; i++)
-		temp[i] = matrixB[i];
-	for (indexVarMatrix = countOfVariables - 1; indexVarMatrix >= 0; indexVarMatrix--)
-	{
-		double element = 0;
-		if (appliedFCR == 1)
-		{
-			varaibles[indexVarMatrix] = freeVariables;
-			appliedFCR = 0;
-		}
-		else
-		{
-			if (indexVarMatrix == countOfVariables - 1)
-			{
-
-				for (int j = 0; j < countOfVariables; j++)
-					if (matrixA[countOfVariables - 1][j] != 0)
-						element = matrixA[countOfVariables - 1][j];
-				if (element != 0)
-					varaibles[indexVarMatrix] = matrixB[indexVarMatrix] / element;
-			}
-			else
-			{
-				varaibles[indexVarMatrix] = temp[indexVarMatrix];
-			}
-
-		}
-		element = 0;
-		if (indexVarMatrix < countOfVariables - 1)
-		{
-			if (matrixA[indexVarMatrix][indexVarMatrix] != 0)
-			{
-				element = matrixA[indexVarMatrix][indexVarMatrix];
-				varaibles[indexVarMatrix] = temp[indexVarMatrix] / element;
-			}
-		}
-
-		for (int i = 0; i < indexVarMatrix; i++)
-		{
-			temp[i] = temp[i] - matrixA[i][indexVarMatrix] * varaibles[indexVarMatrix];
-		}
-	}
-	return varaibles;
-
-}
 
 System::Void LeastSquareMethod::InteractiveForm::Btn_action_Click(System::Object^ sender, System::EventArgs^ e)
 {
+	logFile.open("log.txt", std::ios_base::out | std::ios_base::app);
 	clearInteractiveElement();
 	double** matrixA = new double* [5];
 	for (int i = 0; i < 5; i++)
@@ -398,7 +226,7 @@ System::Void LeastSquareMethod::InteractiveForm::Btn_action_Click(System::Object
 				this->label_bestFunc->Text += " Экспоненциальная";
 			else
 				this->label_bestFunc->Text += " Квадратичная";
-	
+	logFile.close();
 }
 
 
@@ -407,8 +235,8 @@ System::Void LeastSquareMethod::InteractiveForm::Btn_random_Click(System::Object
 	srand(time(NULL));
 	for (int i = 0; i < Convert::ToInt32(table_values->ColumnCount.ToString()); i++)
 	{
-		table_values->Rows[0]->Cells[i]->Value = GetRandomNumberFloat(0, 2, 2).ToString();
-		table_values->Rows[1]->Cells[i]->Value = GetRandomNumberFloat(0, 2, 2).ToString();
+		table_values->Rows[0]->Cells[i]->Value = getRandomNumberFloat(0, 2, 2).ToString();
+		table_values->Rows[1]->Cells[i]->Value = getRandomNumberFloat(0, 2, 2).ToString();
 	}
 }
 

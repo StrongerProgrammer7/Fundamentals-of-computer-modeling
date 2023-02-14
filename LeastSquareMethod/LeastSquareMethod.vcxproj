@@ -135,10 +135,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="function.cpp" />
+    <ClCompile Include="gauss.cpp" />
     <ClCompile Include="InteractiveForm.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="function.h" />
+    <ClInclude Include="gauss.h" />
     <ClInclude Include="include.h" />
     <ClInclude Include="InteractiveForm.h">
       <FileType>CppForm</FileType>
@@ -151,6 +153,9 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="accounting_calculator_calculation_calculate_office_icon_191148.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="log.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

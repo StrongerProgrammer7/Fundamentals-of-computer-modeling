@@ -69,3 +69,18 @@ void initializeVector(std::vector<double> & vec, int const& size)
 		vec.push_back(0);
 }
 
+double getRandomNumberFloat(double min, double max, int precision)
+{
+	// Установить стартовую точку
+	//srand(time(NULL));
+
+	double value;
+
+	// получить случайное число как целое число с порядком precision
+	value = rand() % (int)pow(10, precision);
+
+	// получить вещественное число
+	value = min + (value / pow(10, precision)) * (max - min);
+
+	return value;
+}

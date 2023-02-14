@@ -21,6 +21,9 @@
     <ClCompile Include="function.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="gauss.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="InteractiveForm.h">
@@ -32,10 +35,18 @@
     <ClInclude Include="function.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="gauss.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="accounting_calculator_calculation_calculate_office_icon_191148.ico">
       <Filter>Файлы ресурсов</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="log.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
   </ItemGroup>
 </Project>

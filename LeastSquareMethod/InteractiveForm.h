@@ -451,9 +451,6 @@ namespace LeastSquareMethod {
 			 void clearInteractiveElement();
 			 double* getCoordinate(int const& ind);	
 			 System::Void Btn_random_Click(System::Object^ sender, System::EventArgs^ e);
-	protected: double GetRandomNumberFloat(double min, double max, int precision);
-		
-
-private: System::Void Chart1_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e);
+			 System::Void Chart1_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e);
 };
 }

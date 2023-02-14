@@ -1,12 +1,6 @@
 #include "InteractiveForm.h"
-#include <iostream>
-#include <iomanip>
-#include <fstream>
-#include <cassert>  
-#include <vector>
-#include <stdlib.h> // нужен для вызова функции rand(), srand()
-#include <time.h>
-#include <algorithm>
+#include "include.h"
+#include "function.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
@@ -27,6 +21,27 @@ System::Void LeastSquareMethod::InteractiveForm::Btn_close_Click(System::Object^
 {
 	logFile.close();
 	Application::Exit();
+}
+
+void LeastSquareMethod::InteractiveForm::clearInteractiveElement()
+{
+	this->chart1->Series[0]->Points->Clear();
+	this->chart1->Series[1]->Points->Clear();
+	this->chart1->Series[2]->Points->Clear();
+	this->chart1->Series[3]->Points->Clear();
+	this->label_sumFaultLinear->Text = " ";
+	this->label_sumFaultPower->Text = " ";
+	this->label_sumFaultExponent->Text = " ";
+	this->label_sumFaultSquare->Text = " ";
+	this->label_bestFunc->Text = "Лучшая функция: ";
+
+}
+double* LeastSquareMethod::InteractiveForm::getCoordinate(int const& ind)
+{
+	double* coordinate = new double[2];
+	coordinate[0] = Convert::ToDouble(table_values->Rows[0]->Cells[ind]->FormattedValue->ToString());
+	coordinate[1] = Convert::ToDouble(table_values->Rows[1]->Cells[ind]->FormattedValue->ToString());
+	return coordinate;
 }
 
 double LeastSquareMethod::InteractiveForm::GetRandomNumberFloat(double min, double max, int precision)
@@ -216,73 +231,6 @@ double* methodGaussa(double** matrixA, double* matrixB, int countOfVariables)
 
 }
 
-double** fillMatrixA(int const &countOfVar,std::vector<double>sumCoordinate,int const & countNumber)
-{
-	double** matrixA = new double* [5];
-	for (int i = 0; i < 5; i++)
-		matrixA[i] = new double[5]{ 0 };
-
-	int indexSumCoordinate = 0;
-	if (countOfVar == 2)
-		indexSumCoordinate = 2;
-	else
-		indexSumCoordinate = 0;
-	for (int i = 0, k = countOfVar == 2 ? 3 : 1; i < countOfVar; i++,k++)
-	{
-		
-		for (int j = 0; j < countOfVar; j++, indexSumCoordinate++)
-		{
-			matrixA[i][j] = sumCoordinate[indexSumCoordinate];
-			if (i == countOfVar - 1 && j == countOfVar - 1)
-				matrixA[i][j] = countNumber;
-		}
-		indexSumCoordinate = k;
-	}
-	return matrixA;
-}
-double* filllMatrixB(int const& countOfVar, std::vector<double>sumCoordinate)
-{
-	double* matrixB = new double[countOfVar] { 0 };
-	int indexSumCoordinate = countOfVar == 2 ? 5 : 6;
-	for (int i = 0; i < countOfVar; i++,indexSumCoordinate--)
-		matrixB[i] = sumCoordinate[indexSumCoordinate];
-	return matrixB;
-}
-double** fillMatrixALn(int const& countOfVar, std::vector<double>sumCoordinateLn, int const& countNumber)
-{
-	double** matrixA = new double* [5];
-	for (int i = 0; i < 5; i++)
-		matrixA[i] = new double[5]{ 0 };
-
-	int indexSumCoordinate = 0;
-
-	for (int i = 0; i < countOfVar; i++)
-	{
-		for (int j = 0; j < countOfVar; j++, indexSumCoordinate++)
-		{
-			matrixA[i][j] = sumCoordinateLn[indexSumCoordinate];
-			if (i == countOfVar - 1 && j == countOfVar - 1)
-				matrixA[i][j] = countNumber;
-		}
-		indexSumCoordinate = 1;
-	}
-	return matrixA;
-}
-double* filllMatrixBLn(int const& countOfVar, std::vector<double>sumCoordinateLn)
-{
-	double* matrixB = new double[countOfVar] { 0 };
-	int indexSumCoordinate = 3;
-	for (int i = 0; i < countOfVar; i++, indexSumCoordinate--)
-		matrixB[i] = sumCoordinateLn[indexSumCoordinate];
-	return matrixB;
-}
-
-void initializeVector(std::vector<double> &vec,int const& size)
-{
-	for (int i = 0; i < size; i++)
-		vec.push_back(0);
-}
-
 System::Void LeastSquareMethod::InteractiveForm::Btn_action_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	clearInteractiveElement();
@@ -365,8 +313,8 @@ System::Void LeastSquareMethod::InteractiveForm::Btn_action_Click(System::Object
 		sumFaultPower += (y - coordinateXY[1]) * (y - coordinateXY[1]);
 	}
 	logFile << " sumFaultPower = " << sumFaultPower << std::endl;
-	this->dGV_coefficients->Rows[1]->Cells[0]->Value = varaibles[0];
-	this->dGV_coefficients->Rows[1]->Cells[1]->Value = varaibles[1];
+	this->dGV_coefficients->Rows[1]->Cells[0]->Value = beta;// varaibles[0];
+	this->dGV_coefficients->Rows[1]->Cells[1]->Value = varaibles[0];
 	//Y=aX+b---------------------------------------------------------------------
 	//Y=beta*exp(a*x)---------------------------------------------------------------------
 	logFile << "y=beta*exp(a*x) \n ";
@@ -393,8 +341,8 @@ System::Void LeastSquareMethod::InteractiveForm::Btn_action_Click(System::Object
 		sumFaultExponent += (y - coordinateXY[1]) * (y - coordinateXY[1]);
 	}
 	logFile << " sumFaultExponent = " << sumFaultExponent << std::endl;
-	this->dGV_coefficients->Rows[2]->Cells[0]->Value = varaibles[0];
-	this->dGV_coefficients->Rows[2]->Cells[1]->Value = varaibles[1];
+	this->dGV_coefficients->Rows[2]->Cells[0]->Value = beta;//varaibles[0];
+	this->dGV_coefficients->Rows[2]->Cells[1]->Value = varaibles[0];
 	//Y=beta*exp(a*x)---------------------------------------------------------------------
 	//Y=ax^2+bx+c---------------------------------------------------------------------
 	double sumXDegree4 = 0, sumXDegree3 = 0, sumXXY=0;
@@ -420,6 +368,7 @@ System::Void LeastSquareMethod::InteractiveForm::Btn_action_Click(System::Object
 	logFile << " sumFaultSquare = " << sumFaultSquare << std::endl;
 	this->dGV_coefficients->Rows[3]->Cells[0]->Value = varaibles[0];
 	this->dGV_coefficients->Rows[3]->Cells[1]->Value = varaibles[1];
+	this->dGV_coefficients->Rows[3]->Cells[2]->Value = varaibles[2];
 	//Y=ax^2+bx+c---------------------------------------------------------------------
 	//Clean Memory
 	for (int i = 0; i < countOfVariables; i++)

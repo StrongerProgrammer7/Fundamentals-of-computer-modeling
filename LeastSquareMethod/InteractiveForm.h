@@ -1,6 +1,5 @@
 #pragma once
 
-
 namespace LeastSquareMethod {
 
 	using namespace System;
@@ -44,6 +43,8 @@ namespace LeastSquareMethod {
 			this->dGV_coefficients->Rows[1]->HeaderCell->Value = "Степенная ";
 			this->dGV_coefficients->Rows[2]->HeaderCell->Value = "Экспонен-я";
 			this->dGV_coefficients->Rows[3]->HeaderCell->Value = "Квадрат-я";
+
+			
 		}
 		
 
@@ -71,10 +72,13 @@ namespace LeastSquareMethod {
 
 	private: System::Windows::Forms::Label^ label_bestFunc;
 	private: System::Windows::Forms::DataGridView^ dGV_coefficients;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ col_a;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ col_b;
+
+
 	private: System::Windows::Forms::Label^ label_X;
 	private: System::Windows::Forms::Label^ label_Y;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ col_a;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ col_b;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ c;
 
 
 
@@ -114,10 +118,11 @@ namespace LeastSquareMethod {
 			this->label_sumFaultSquare = (gcnew System::Windows::Forms::Label());
 			this->label_bestFunc = (gcnew System::Windows::Forms::Label());
 			this->dGV_coefficients = (gcnew System::Windows::Forms::DataGridView());
-			this->col_a = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->col_b = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->label_X = (gcnew System::Windows::Forms::Label());
 			this->label_Y = (gcnew System::Windows::Forms::Label());
+			this->col_a = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->col_b = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->c = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->table_values))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dGV_coefficients))->BeginInit();
@@ -349,10 +354,10 @@ namespace LeastSquareMethod {
 			this->dGV_coefficients->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::DisplayedHeaders;
 			this->dGV_coefficients->BackgroundColor = System::Drawing::SystemColors::ControlDark;
 			this->dGV_coefficients->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dGV_coefficients->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(2)
+			this->dGV_coefficients->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(3)
 			{
 				this->col_a,
-					this->col_b
+					this->col_b, this->c
 			});
 			this->dGV_coefficients->Location = System::Drawing::Point(586, 253);
 			this->dGV_coefficients->MultiSelect = false;
@@ -364,6 +369,24 @@ namespace LeastSquareMethod {
 			this->dGV_coefficients->RowTemplate->ReadOnly = true;
 			this->dGV_coefficients->Size = System::Drawing::Size(151, 191);
 			this->dGV_coefficients->TabIndex = 12;
+			// 
+			// label_X
+			// 
+			this->label_X->AutoSize = true;
+			this->label_X->Location = System::Drawing::Point(18, 124);
+			this->label_X->Name = L"label_X";
+			this->label_X->Size = System::Drawing::Size(26, 13);
+			this->label_X->TabIndex = 13;
+			this->label_X->Text = L"X = ";
+			// 
+			// label_Y
+			// 
+			this->label_Y->AutoSize = true;
+			this->label_Y->Location = System::Drawing::Point(18, 143);
+			this->label_Y->Name = L"label_Y";
+			this->label_Y->Size = System::Drawing::Size(26, 13);
+			this->label_Y->TabIndex = 14;
+			this->label_Y->Text = L"Y = ";
 			// 
 			// col_a
 			// 
@@ -383,23 +406,12 @@ namespace LeastSquareMethod {
 			this->col_b->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
 			this->col_b->Width = 19;
 			// 
-			// label_X
+			// c
 			// 
-			this->label_X->AutoSize = true;
-			this->label_X->Location = System::Drawing::Point(18, 124);
-			this->label_X->Name = L"label_X";
-			this->label_X->Size = System::Drawing::Size(26, 13);
-			this->label_X->TabIndex = 13;
-			this->label_X->Text = L"X = ";
-			// 
-			// label_Y
-			// 
-			this->label_Y->AutoSize = true;
-			this->label_Y->Location = System::Drawing::Point(18, 143);
-			this->label_Y->Name = L"label_Y";
-			this->label_Y->Size = System::Drawing::Size(26, 13);
-			this->label_Y->TabIndex = 14;
-			this->label_Y->Text = L"Y = ";
+			this->c->HeaderText = L"c";
+			this->c->Name = L"c";
+			this->c->ReadOnly = true;
+			this->c->Width = 38;
 			// 
 			// InteractiveForm
 			// 
@@ -435,30 +447,10 @@ namespace LeastSquareMethod {
 #pragma endregion
 
 	private: System::Void Btn_close_Click(System::Object^ sender, System::EventArgs^ e);
-	private: System::Void Btn_action_Click(System::Object^ sender, System::EventArgs^ e);
-	protected: 
-		void clearInteractiveElement()
-		{
-			this->chart1->Series[0]->Points->Clear();
-			this->chart1->Series[1]->Points->Clear();
-			this->chart1->Series[2]->Points->Clear();
-			this->chart1->Series[3]->Points->Clear();
-			this->label_sumFaultLinear->Text = " ";
-			this->label_sumFaultPower->Text = " ";
-			this->label_sumFaultExponent->Text = " ";
-			this->label_sumFaultSquare->Text = " ";
-			this->label_bestFunc->Text = "Лучшая функция: ";
-		}
-
-		double* getCoordinate(int const& ind)
-		{
-			double* coordinate = new double[2];
-			coordinate[0] = Convert::ToDouble(table_values->Rows[0]->Cells[ind]->FormattedValue->ToString());
-			coordinate[1] = Convert::ToDouble(table_values->Rows[1]->Cells[ind]->FormattedValue->ToString());
-			return coordinate;
-		}
-
-	private: System::Void Btn_random_Click(System::Object^ sender, System::EventArgs^ e);
+			 System::Void Btn_action_Click(System::Object^ sender, System::EventArgs^ e);
+			 void clearInteractiveElement();
+			 double* getCoordinate(int const& ind);	
+			 System::Void Btn_random_Click(System::Object^ sender, System::EventArgs^ e);
 	protected: double GetRandomNumberFloat(double min, double max, int precision);
 		
 

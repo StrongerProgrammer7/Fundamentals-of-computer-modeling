@@ -187,13 +187,14 @@ namespace MethodMonteKarlo {
 			this->chart1->Name = L"chart1";
 			series1->BorderWidth = 2;
 			series1->ChartArea = L"ChartArea1";
-			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::SplineArea;
+			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
 			series1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			series1->Legend = L"Legend1";
 			series1->MarkerColor = System::Drawing::Color::Red;
 			series1->MarkerStyle = System::Windows::Forms::DataVisualization::Charting::MarkerStyle::Square;
 			series1->Name = L"x y";
+			series1->YValuesPerPoint = 3;
 			series2->BorderWidth = 2;
 			series2->ChartArea = L"ChartArea1";
 			series2->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;

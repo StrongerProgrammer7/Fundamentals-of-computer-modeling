@@ -18,10 +18,12 @@ namespace MethodMonteKarlo {
 		InteractionForm(void)
 		{
 			InitializeComponent();
-			this->table_values->RowCount = 3;
+			this->table_values->RowCount = 5;
 			this->table_values->Rows[0]->HeaderCell->Value = "X";
-			this->table_values->Rows[1]->HeaderCell->Value = "Y";
-			this->table_values->Rows[2]->HeaderCell->Value = "F(x)";
+			this->table_values->Rows[1]->HeaderCell->Value = "F(x)";
+			this->table_values->Rows[2]->HeaderCell->Value = "rnd(X)";
+			this->table_values->Rows[3]->HeaderCell->Value = "rnd(Y)";
+			this->table_values->Rows[4]->HeaderCell->Value = "F(rnd(Y))";
 		}
 
 	protected:
@@ -45,13 +47,21 @@ namespace MethodMonteKarlo {
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::DataVisualization::Charting::Chart^ chart1;
-	private: System::Windows::Forms::Button^ btn_rndPoint;
-	private: System::Windows::Forms::Button^ btn_createGraph;
+	private: System::Windows::Forms::Button^ btn_squareTringle;
+
+
+
 	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::NumericUpDown^ numeric_a;
+
 
 	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::NumericUpDown^ numeric_b;
+	private: System::Windows::Forms::TextBox^ tb_a;
+	private: System::Windows::Forms::TextBox^ tb_b;
+	private: System::Windows::Forms::Label^ label_X;
+	private: System::Windows::Forms::Label^ label_Y;
+	private: System::Windows::Forms::CheckBox^ cb_randUniform;
+
+
 
 
 	private:
@@ -72,6 +82,9 @@ namespace MethodMonteKarlo {
 			System::Windows::Forms::DataVisualization::Charting::Legend^ legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
 			System::Windows::Forms::DataVisualization::Charting::Series^ series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			System::Windows::Forms::DataVisualization::Charting::Series^ series2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^ series3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^ series4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Title^ title1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Title());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(InteractionForm::typeid));
 			this->numeric_numVar = (gcnew System::Windows::Forms::NumericUpDown());
 			this->table_values = (gcnew System::Windows::Forms::DataGridView());
@@ -79,18 +92,18 @@ namespace MethodMonteKarlo {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->chart1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
-			this->btn_rndPoint = (gcnew System::Windows::Forms::Button());
-			this->btn_createGraph = (gcnew System::Windows::Forms::Button());
+			this->btn_squareTringle = (gcnew System::Windows::Forms::Button());
 			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->numeric_a = (gcnew System::Windows::Forms::NumericUpDown());
 			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->numeric_b = (gcnew System::Windows::Forms::NumericUpDown());
+			this->tb_a = (gcnew System::Windows::Forms::TextBox());
+			this->tb_b = (gcnew System::Windows::Forms::TextBox());
+			this->label_X = (gcnew System::Windows::Forms::Label());
+			this->label_Y = (gcnew System::Windows::Forms::Label());
+			this->cb_randUniform = (gcnew System::Windows::Forms::CheckBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numeric_numVar))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->table_values))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numeric_countRNDPointN))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numeric_a))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numeric_b))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// numeric_numVar
@@ -109,14 +122,14 @@ namespace MethodMonteKarlo {
 			this->table_values->AllowUserToDeleteRows = false;
 			this->table_values->AllowUserToResizeColumns = false;
 			this->table_values->AllowUserToResizeRows = false;
-			this->table_values->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::AllCells;
+			this->table_values->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::AllCellsExceptHeader;
 			this->table_values->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::AllHeaders;
 			this->table_values->BackgroundColor = System::Drawing::SystemColors::ControlLightLight;
 			this->table_values->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->table_values->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->table_values->Location = System::Drawing::Point(12, 12);
 			this->table_values->Name = L"table_values";
-			this->table_values->RowHeadersWidth = 54;
+			this->table_values->RowHeadersWidth = 100;
 			this->table_values->Size = System::Drawing::Size(313, 86);
 			this->table_values->TabIndex = 1;
 			// 
@@ -153,12 +166,22 @@ namespace MethodMonteKarlo {
 			this->chart1->BackColor = System::Drawing::Color::AntiqueWhite;
 			chartArea1->AlignmentOrientation = static_cast<System::Windows::Forms::DataVisualization::Charting::AreaAlignmentOrientations>((System::Windows::Forms::DataVisualization::Charting::AreaAlignmentOrientations::Vertical | System::Windows::Forms::DataVisualization::Charting::AreaAlignmentOrientations::Horizontal));
 			chartArea1->AxisX->ArrowStyle = System::Windows::Forms::DataVisualization::Charting::AxisArrowStyle::Lines;
+			chartArea1->AxisX->IntervalAutoMode = System::Windows::Forms::DataVisualization::Charting::IntervalAutoMode::VariableCount;
+			chartArea1->AxisX->MajorGrid->Interval = 0;
 			chartArea1->AxisX->StripLines->Add(stripLine1);
 			chartArea1->AxisX->Title = L"X";
 			chartArea1->AxisX->TitleAlignment = System::Drawing::StringAlignment::Far;
+			chartArea1->AxisX->TitleFont = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+			chartArea1->AxisY->ArrowStyle = System::Windows::Forms::DataVisualization::Charting::AxisArrowStyle::Lines;
+			chartArea1->AxisY->IntervalAutoMode = System::Windows::Forms::DataVisualization::Charting::IntervalAutoMode::VariableCount;
+			chartArea1->AxisY->MajorGrid->Interval = 0;
+			chartArea1->AxisY->MinorTickMark->Enabled = true;
 			chartArea1->AxisY->TextOrientation = System::Windows::Forms::DataVisualization::Charting::TextOrientation::Stacked;
 			chartArea1->AxisY->Title = L"Y";
 			chartArea1->AxisY->TitleAlignment = System::Drawing::StringAlignment::Far;
+			chartArea1->AxisY->TitleFont = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
 			chartArea1->CursorX->AutoScroll = false;
 			chartArea1->CursorX->Interval = 0.5;
 			chartArea1->CursorX->IsUserEnabled = true;
@@ -173,9 +196,8 @@ namespace MethodMonteKarlo {
 			chartArea1->CursorY->LineWidth = 2;
 			chartArea1->Name = L"ChartArea1";
 			this->chart1->ChartAreas->Add(chartArea1);
-			legend1->DockedToChartArea = L"ChartArea1";
-			legend1->Docking = System::Windows::Forms::DataVisualization::Charting::Docking::Top;
 			legend1->HeaderSeparator = System::Windows::Forms::DataVisualization::Charting::LegendSeparatorStyle::DashLine;
+			legend1->LegendStyle = System::Windows::Forms::DataVisualization::Charting::LegendStyle::Column;
 			legend1->MaximumAutoSize = 25;
 			legend1->Name = L"Legend1";
 			legend1->Title = L"Функция";
@@ -188,80 +210,131 @@ namespace MethodMonteKarlo {
 			series1->BorderWidth = 2;
 			series1->ChartArea = L"ChartArea1";
 			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
+			series1->Color = System::Drawing::Color::DodgerBlue;
 			series1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			series1->Legend = L"Legend1";
 			series1->MarkerColor = System::Drawing::Color::Red;
 			series1->MarkerStyle = System::Windows::Forms::DataVisualization::Charting::MarkerStyle::Square;
-			series1->Name = L"x y";
-			series1->YValuesPerPoint = 3;
+			series1->Name = L"Фигура";
 			series2->BorderWidth = 2;
 			series2->ChartArea = L"ChartArea1";
 			series2->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
+			series2->Color = System::Drawing::Color::DodgerBlue;
+			series2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
 			series2->Legend = L"Legend1";
-			series2->MarkerColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+			series2->MarkerColor = System::Drawing::Color::Red;
+			series2->MarkerStyle = System::Windows::Forms::DataVisualization::Charting::MarkerStyle::Square;
+			series2->Name = L"~";
+			series3->BorderWidth = 2;
+			series3->ChartArea = L"ChartArea1";
+			series3->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::FastPoint;
+			series3->Legend = L"Legend1";
+			series3->MarkerColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			series2->MarkerStyle = System::Windows::Forms::DataVisualization::Charting::MarkerStyle::Circle;
-			series2->Name = L"f(x)";
+			series3->MarkerSize = 7;
+			series3->MarkerStyle = System::Windows::Forms::DataVisualization::Charting::MarkerStyle::Circle;
+			series3->Name = L"Точки внутри";
+			series3->YValuesPerPoint = 2;
+			series4->ChartArea = L"ChartArea1";
+			series4->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::FastPoint;
+			series4->Color = System::Drawing::Color::Red;
+			series4->Legend = L"Legend1";
+			series4->MarkerColor = System::Drawing::Color::Violet;
+			series4->MarkerStyle = System::Windows::Forms::DataVisualization::Charting::MarkerStyle::Square;
+			series4->Name = L"Точки снаружи";
 			this->chart1->Series->Add(series1);
 			this->chart1->Series->Add(series2);
+			this->chart1->Series->Add(series3);
+			this->chart1->Series->Add(series4);
 			this->chart1->Size = System::Drawing::Size(695, 364);
 			this->chart1->TabIndex = 5;
 			this->chart1->Text = L"chart1";
+			title1->Alignment = System::Drawing::ContentAlignment::TopLeft;
+			title1->BackImageAlignment = System::Windows::Forms::DataVisualization::Charting::ChartImageAlignmentStyle::Top;
+			title1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+			title1->ForeColor = System::Drawing::Color::ForestGreen;
+			title1->Name = L"Title1";
+			title1->Text = L"Метод Монте-Карло";
+			title1->TextOrientation = System::Windows::Forms::DataVisualization::Charting::TextOrientation::Horizontal;
+			this->chart1->Titles->Add(title1);
+			this->chart1->MouseClick += gcnew System::Windows::Forms::MouseEventHandler(this, &InteractionForm::Chart1_MouseClick);
 			// 
-			// btn_rndPoint
+			// btn_squareTringle
 			// 
-			this->btn_rndPoint->Location = System::Drawing::Point(331, 10);
-			this->btn_rndPoint->Name = L"btn_rndPoint";
-			this->btn_rndPoint->Size = System::Drawing::Size(186, 23);
-			this->btn_rndPoint->TabIndex = 6;
-			this->btn_rndPoint->Text = L"Заполнить таблицу";
-			this->btn_rndPoint->UseVisualStyleBackColor = true;
-			this->btn_rndPoint->Click += gcnew System::EventHandler(this, &InteractionForm::Btn_rndPoint_Click);
-			// 
-			// btn_createGraph
-			// 
-			this->btn_createGraph->Location = System::Drawing::Point(331, 40);
-			this->btn_createGraph->Name = L"btn_createGraph";
-			this->btn_createGraph->Size = System::Drawing::Size(186, 23);
-			this->btn_createGraph->TabIndex = 7;
-			this->btn_createGraph->Text = L"Построить график";
-			this->btn_createGraph->UseVisualStyleBackColor = true;
-			this->btn_createGraph->Click += gcnew System::EventHandler(this, &InteractionForm::Btn_createGraph_Click);
+			this->btn_squareTringle->Location = System::Drawing::Point(331, 10);
+			this->btn_squareTringle->Name = L"btn_squareTringle";
+			this->btn_squareTringle->Size = System::Drawing::Size(186, 53);
+			this->btn_squareTringle->TabIndex = 6;
+			this->btn_squareTringle->Text = L"Заполнить таблицу и построить график";
+			this->btn_squareTringle->UseVisualStyleBackColor = true;
+			this->btn_squareTringle->Click += gcnew System::EventHandler(this, &InteractionForm::Btn_squareTringle);
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(110, 101);
+			this->label3->Location = System::Drawing::Point(105, 101);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(19, 16);
 			this->label3->TabIndex = 9;
 			this->label3->Text = L"a:";
 			// 
-			// numeric_a
-			// 
-			this->numeric_a->Location = System::Drawing::Point(100, 120);
-			this->numeric_a->Name = L"numeric_a";
-			this->numeric_a->Size = System::Drawing::Size(42, 22);
-			this->numeric_a->TabIndex = 8;
-			this->numeric_a->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 5, 0, 0, 0 });
-			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(166, 101);
+			this->label4->Location = System::Drawing::Point(161, 101);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(19, 16);
 			this->label4->TabIndex = 11;
 			this->label4->Text = L"b:";
 			// 
-			// numeric_b
+			// tb_a
 			// 
-			this->numeric_b->Location = System::Drawing::Point(157, 120);
-			this->numeric_b->Name = L"numeric_b";
-			this->numeric_b->Size = System::Drawing::Size(42, 22);
-			this->numeric_b->TabIndex = 10;
-			this->numeric_b->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 8, 0, 0, 0 });
+			this->tb_a->Cursor = System::Windows::Forms::Cursors::No;
+			this->tb_a->Location = System::Drawing::Point(97, 120);
+			this->tb_a->Name = L"tb_a";
+			this->tb_a->Size = System::Drawing::Size(32, 22);
+			this->tb_a->TabIndex = 12;
+			this->tb_a->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+			// 
+			// tb_b
+			// 
+			this->tb_b->Cursor = System::Windows::Forms::Cursors::No;
+			this->tb_b->Location = System::Drawing::Point(151, 120);
+			this->tb_b->Name = L"tb_b";
+			this->tb_b->Size = System::Drawing::Size(32, 22);
+			this->tb_b->TabIndex = 13;
+			this->tb_b->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+			// 
+			// label_X
+			// 
+			this->label_X->AutoSize = true;
+			this->label_X->Location = System::Drawing::Point(555, 287);
+			this->label_X->Name = L"label_X";
+			this->label_X->Size = System::Drawing::Size(16, 16);
+			this->label_X->TabIndex = 14;
+			this->label_X->Text = L"X";
+			// 
+			// label_Y
+			// 
+			this->label_Y->AutoSize = true;
+			this->label_Y->Location = System::Drawing::Point(555, 315);
+			this->label_Y->Name = L"label_Y";
+			this->label_Y->Size = System::Drawing::Size(17, 16);
+			this->label_Y->TabIndex = 15;
+			this->label_Y->Text = L"Y";
+			// 
+			// cb_randUniform
+			// 
+			this->cb_randUniform->AutoSize = true;
+			this->cb_randUniform->Location = System::Drawing::Point(331, 69);
+			this->cb_randUniform->Name = L"cb_randUniform";
+			this->cb_randUniform->Size = System::Drawing::Size(223, 20);
+			this->cb_randUniform->TabIndex = 16;
+			this->cb_randUniform->Text = L"Равномерное распределение";
+			this->cb_randUniform->UseVisualStyleBackColor = true;
 			// 
 			// InteractionForm
 			// 
@@ -271,12 +344,14 @@ namespace MethodMonteKarlo {
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->ClientSize = System::Drawing::Size(1106, 524);
+			this->Controls->Add(this->cb_randUniform);
+			this->Controls->Add(this->label_Y);
+			this->Controls->Add(this->label_X);
+			this->Controls->Add(this->tb_b);
+			this->Controls->Add(this->tb_a);
 			this->Controls->Add(this->label4);
-			this->Controls->Add(this->numeric_b);
 			this->Controls->Add(this->label3);
-			this->Controls->Add(this->numeric_a);
-			this->Controls->Add(this->btn_createGraph);
-			this->Controls->Add(this->btn_rndPoint);
+			this->Controls->Add(this->btn_squareTringle);
 			this->Controls->Add(this->chart1);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
@@ -295,20 +370,15 @@ namespace MethodMonteKarlo {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->table_values))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numeric_countRNDPointN))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numeric_a))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numeric_b))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
-	private: System::Void Btn_rndPoint_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void Btn_squareTringle(System::Object^ sender, System::EventArgs^ e);
 			 bool isEmptyValuesTable(int const& cell, int const& row);
 			 void clearInteractiveElement();
-	private: System::Void Btn_createGraph_Click(System::Object^ sender, System::EventArgs^ e);
-
-	private:
-		 int N;
-		 int numVar;
+			 System::Void Chart1_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e);
+	 
 };
 }

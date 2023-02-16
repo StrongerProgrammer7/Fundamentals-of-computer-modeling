@@ -1,10 +1,6 @@
 #include "InteractionForm.h"
-#include <random>
-#include <vector>
-#include <algorithm>
-#include <cmath>
-#include <string>
-#include <map>
+#include "function.h"
+
 
 using namespace System;
 using namespace System::Windows::Forms;
@@ -21,64 +17,54 @@ void main(array<String^>^ args)
 
 }
 
-//Частотный тест
-bool differLittle_MX_DX(double const& coord, int const& a)
-{
-	double M_X = a / 2.0;
-	double D_X = (a * a) / 12.0;
-	double standardDeviation = sqrt(D_X);
-	return (coord > M_X - standardDeviation && coord < M_X + standardDeviation);
-}
 
-bool MethodMonteKarlo::InteractionForm::isEmptyValuesTable(int const &cell, int const& row)
+bool MethodMonteKarlo::InteractionForm::isEmptyValuesTable(int const& cell, int const& row)
 {
 	return Convert::ToDouble(table_values->Rows[row]->Cells[cell]->Value) == NULL || Convert::ToDouble(table_values->Rows[row]->Cells[cell]->Value) == 0.0 ? true : false;
 }
 
-void MethodMonteKarlo::InteractionForm::clearInteractiveElement()
+void MethodMonteKarlo::InteractionForm::clearInteractiveElementChartArea1()
 {
 	this->chart1->Series[0]->Points->Clear();
 	this->chart1->Series[1]->Points->Clear();
 	this->chart1->Series[2]->Points->Clear();
 	this->chart1->Series[3]->Points->Clear();
-
 }
 
-std::vector<double> getRandomPoint(bool const uniform, double const& end_rectangle, int const& countPoint)
+void MethodMonteKarlo::InteractionForm::clearInteractiveElementChartArea2()
 {
-	std::vector<double> vector;
-	std::random_device rd;
-	std::mt19937 gen(rd());
-	std::uniform_real_distribution<> dist(0, end_rectangle);
-	for (int i = 0; i < countPoint; i++)
+	this->chart1->Series[4]->Points->Clear();
+	this->chart1->Series[5]->Points->Clear();
+	this->chart1->Series[6]->Points->Clear();
+}
+
+void MethodMonteKarlo::InteractionForm::fillTable_values(const int& N, std::vector<double> rnd_x, std::vector<double> rnd_y)
+{
+	if (N < 100)
 	{
-		double coord = int((double)dist(gen) * 100 + 0.5) / 100.0;
-		if (uniform == true && differLittle_MX_DX(coord, end_rectangle) == true)
-			vector.push_back(coord);
-		else
-			if (uniform == false)
-				vector.push_back(coord);
-			else
-				i--;
-
+		for (int i = 0; i < N; i++)
+		{
+			this->table_values_integral->Rows[2]->Cells[i]->Value = rnd_x[i];
+			this->table_values_integral->Rows[3]->Cells[i]->Value = rnd_y[i];
+		}
 	}
-	return vector;
+}
+System::Void MethodMonteKarlo::InteractionForm::Chart1_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e)
+{
+	double coordX = int((chart1->ChartAreas[0]->AxisX->PixelPositionToValue((double)e->X)) * 1000 + 0.5) / 1000.0;
+	double coordY = int((chart1->ChartAreas[0]->AxisY->PixelPositionToValue((double)e->Y)) * 1000 + 0.5) / 1000.0;
+	label_X->Text = "X: " + coordX.ToString();
+	label_Y->Text = "Y: " + coordY.ToString();
+	coordX = int((chart1->ChartAreas[1]->AxisX->PixelPositionToValue((double)e->X)) * 1000 + 0.5) / 1000.0;
+	coordY = int((chart1->ChartAreas[1]->AxisY->PixelPositionToValue((double)e->Y)) * 1000 + 0.5) / 1000.0;
+	label_X2->Text = "X: " + coordX.ToString();
+	label_Y2->Text = "Y: " + coordY.ToString();
 }
 
-bool insideTringle(std::map<std::string, double> triangleVertexCoord, double x, double y)
-{
-	double tempa = (triangleVertexCoord["xa"] - x) * (triangleVertexCoord["yb"] - triangleVertexCoord["ya"]) - 
-		(triangleVertexCoord["xb"] - triangleVertexCoord["xa"]) * (triangleVertexCoord["ya"] - y);
-	double tempb = (triangleVertexCoord["xb"] - x) * (triangleVertexCoord["yc"] - triangleVertexCoord["yb"])
-		- (triangleVertexCoord["xc"] - triangleVertexCoord["xb"]) * (triangleVertexCoord["yb"] - y);
-	double tempc = (triangleVertexCoord["xc"] - x) * (triangleVertexCoord["ya"] - triangleVertexCoord["yc"]) 
-		- (triangleVertexCoord["xa"] - triangleVertexCoord["xc"]) * (triangleVertexCoord["yc"] - y);
-	return (tempa < 0 && tempb < 0 && tempc < 0 || tempa > 0 && tempb > 0 && tempc > 0 || tempa == 0 && tempb == 0 && tempc == 0);
-}
 
 System::Void MethodMonteKarlo::InteractionForm::Btn_squareTringle(System::Object^ sender, System::EventArgs^ e)
 {
-	clearInteractiveElement();
+	clearInteractiveElementChartArea1();
 
 	int const numVar = Convert::ToInt32(this->numeric_numVar->Value);
 	int const N = Convert::ToInt32(this->numeric_countRNDPointN->Value);
@@ -91,10 +77,8 @@ System::Void MethodMonteKarlo::InteractionForm::Btn_squareTringle(System::Object
 	for (int i = 0; i < 20; i++)
 	{
 		this->table_values->Rows[0]->Cells[i]->Value = i;
-		if (i >= 0 && i < numVar)
-			this->table_values->Rows[1]->Cells[i]->Value = int((double)(10.0 * i / numVar) * 100 + 0.5) / 100.0;
-		else
-			this->table_values->Rows[1]->Cells[i]->Value = int((double)(10.0 * ((i - 20.0) / (numVar - 20.0))) * 100 + 0.5) / 100.0;
+		this->table_values->Rows[1]->Cells[i]->Value = functionTringle(i, numVar);
+
 		f_x.push_back(Convert::ToDouble(this->table_values->Rows[1]->Cells[i]->Value));
 		this->chart1->Series[0]->Points->AddXY(i, f_x[i]);
 	}
@@ -109,14 +93,8 @@ System::Void MethodMonteKarlo::InteractionForm::Btn_squareTringle(System::Object
 	 bool uniformRND = cb_randUniform->Checked;
 	 std::vector<double> rnd_x = getRandomPoint(uniformRND, a, N);
 	 std::vector<double> rnd_y = getRandomPoint(uniformRND, b, N);
-	 if (N < 100)
-	 {
-		 for (int i = 0; i < N; i++)
-		 {
-			 this->table_values->Rows[2]->Cells[i]->Value = rnd_x[i];
-			 this->table_values->Rows[3]->Cells[i]->Value = rnd_y[i];
-		 }
-	 }
+	 fillTable_values(N,rnd_x, rnd_y);
+
 	 std::map<std::string, double> triangleVertexCoord;
 	 triangleVertexCoord["xa"] = Convert::ToDouble(this->table_values->Rows[0]->Cells[0]->Value);
 	 triangleVertexCoord["ya"] = Convert::ToDouble(this->table_values->Rows[1]->Cells[0]->Value);
@@ -130,6 +108,7 @@ System::Void MethodMonteKarlo::InteractionForm::Btn_squareTringle(System::Object
 	 triangleVertexCoord["xc"] = Convert::ToDouble(this->table_values->Rows[0]->Cells[19]->Value);
 	 triangleVertexCoord["yc"] = Convert::ToDouble(this->table_values->Rows[1]->Cells[19]->Value);
 	
+	 int M = 0;
 	 for (int i = 0; i < N; i++)
 	 {
 		 double f_xi = 0;
@@ -141,20 +120,78 @@ System::Void MethodMonteKarlo::InteractionForm::Btn_squareTringle(System::Object
 			this->table_values->Rows[4]->Cells[i]->Value = f_xi;
 
 		
-		 if (insideTringle(triangleVertexCoord,rnd_x[i],rnd_y[i]) == true && rnd_y[i] < f_xi)
+		 if (insideTringle(triangleVertexCoord, rnd_x[i], rnd_y[i]) == true && rnd_y[i] < f_xi)
+		 {
 			 this->chart1->Series[2]->Points->AddXY(rnd_x[i], rnd_y[i]);
+			 M++;
+		 }		 
 		 else
 			 this->chart1->Series[3]->Points->AddXY(rnd_x[i], rnd_y[i]);
 	 }
+	 double squareFigure = (M * a * b) / N;
+	 this->label_squareTringle->Text = "Площадь: " +  squareFigure.ToString();
 }
 
-System::Void MethodMonteKarlo::InteractionForm::Chart1_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e)
+
+System::Void MethodMonteKarlo::InteractionForm::Btn_squareIntegral_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	double coordX = int((chart1->ChartAreas[0]->AxisX->PixelPositionToValue((double)e->X)) * 1000 + 0.5) / 1000.0;
-	double coordY = int((chart1->ChartAreas[0]->AxisY->PixelPositionToValue((double)e->Y)) * 1000 + 0.5) / 1000.0;
-	double c = chart1->ChartAreas[0]->CursorX->Position;
-	label_X->Text = "X: " + c.ToString();
-	label_Y->Text = "Y: " + coordY.ToString();
+	clearInteractiveElementChartArea2();
+	int const numVar = Convert::ToInt32(this->numeric_numVar->Value);
+	int const N = Convert::ToInt32(this->numeric_countRNDPointN->Value);
+	if (N < 100)
+		this->table_values_integral->ColumnCount = N+1;
+	else
+		this->table_values_integral->ColumnCount = 20;
+
+	std::vector<double> x_integral;
+	std::vector<double> y_integral;
+	getCoordinateMonteCarloIntegral(x_integral, y_integral,numVar,N);
+	double minFunc = 0, maxFunc = 0;
+	findMax_MinFuncMonteCarlo(y_integral, maxFunc, minFunc);
+
+	for (int i = 0; i < N; i++)
+	{
+		if (N < 100)
+		{
+			this->table_values_integral->Rows[0]->Cells[i]->Value = x_integral[i];
+			this->table_values_integral->Rows[1]->Cells[i]->Value = y_integral[i];
+		}
+
+		this->chart1->Series[4]->Points->AddXY(x_integral[i],y_integral[i]);
+	}
+	this->chart1->Series[4]->Points->AddXY(x_integral[x_integral.size()-1], y_integral[y_integral.size()-1]);
+
+	const double a = 5;
+	const double b = maxFunc;
+	tb_a_int->Text = a.ToString();
+	tb_b_int->Text = b.ToString();
+
+	bool uniformRND = cb_randUniform->Checked;
+	std::vector<double> rnd_x = getRandomPoint(uniformRND, a, N);
+	std::vector<double> rnd_y = getRandomPoint(uniformRND, b, N);
+	fillTable_values(N,rnd_x, rnd_y);
+	
+	int M = 0;
+
+	for (int i = 0; i < N; i++)
+	{
+		double f_xi = functionIntegral(rnd_x[i],numVar);
+		if(N<100)
+			this->table_values_integral->Rows[4]->Cells[i]->Value = f_xi;
+		if (rnd_y[i] < f_xi && rnd_x[i] <= x_integral[x_integral.size()-1])
+		{
+			this->chart1->Series[5]->Points->AddXY(rnd_x[i], rnd_y[i]);
+			M++;
+		}
+		else
+			this->chart1->Series[6]->Points->AddXY(rnd_x[i], rnd_y[i]);
+	}
+	double integral = (M * a * b) / N;//M*(b-a)*(maxFunc-minFunc)/N;
+	double sum = 0;
+	for (int i = 0; i < y_integral.size(); i++)
+		sum += y_integral[i];
+	this->label_integral->Text = "Интеграл: " + integral.ToString() + " Проверка: " + sum.ToString();
+	
 }
 
 

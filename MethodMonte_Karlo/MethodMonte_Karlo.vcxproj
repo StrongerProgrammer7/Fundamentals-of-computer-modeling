@@ -134,9 +134,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="function.cpp" />
     <ClCompile Include="InteractionForm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="function.h" />
+    <ClInclude Include="include.h" />
     <ClInclude Include="InteractionForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>

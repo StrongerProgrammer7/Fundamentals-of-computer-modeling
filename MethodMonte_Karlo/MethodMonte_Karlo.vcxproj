@@ -136,6 +136,7 @@
   <ItemGroup>
     <ClCompile Include="function.cpp" />
     <ClCompile Include="InteractionForm.cpp" />
+    <ClCompile Include="InteractiveForm2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="function.h" />
@@ -143,10 +144,16 @@
     <ClInclude Include="InteractionForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="InteractiveForm2.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="InteractionForm.resx">
       <DependentUpon>InteractionForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InteractiveForm2.resx">
+      <DependentUpon>InteractiveForm2.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -1,4 +1,5 @@
 #include "include.h"
+
 //Частотный тест
 bool differLittle_MX_DX(double const& coord, double const& a)
 {
@@ -8,12 +9,12 @@ bool differLittle_MX_DX(double const& coord, double const& a)
 	return (coord > M_X - standardDeviation && coord < M_X + standardDeviation);
 }
 
-std::vector<double> getRandomPoint(bool const uniform, double const& end_rectangle, int const& countPoint)
+std::vector<double> getRandomPoint(bool const uniform, double const& start_rect,double const& end_rectangle, int const& countPoint)
 {
 	std::vector<double> vector;
 	std::random_device rd;
 	std::mt19937 gen(rd());
-	std::uniform_real_distribution<> dist(0, end_rectangle);
+	std::uniform_real_distribution<> dist(start_rect, end_rectangle);
 	for (int i = 0; i < countPoint; i++)
 	{
 		double coord = int((double)dist(gen) * 100 + 0.5) / 100.0;
@@ -49,7 +50,7 @@ double functionTringle(int const& x, int const& numVar)
 
 double functionIntegral(double const& x, int const& numVar)
 {
-	return sqrt(11 - numVar * 2 * sin(x) * cos(x));
+	return sqrt(11.0 - numVar * 2.0 * sin(x) * cos(x));
 }
 
 double step_h(const double a, const double b, unsigned int count_segment)
@@ -90,4 +91,20 @@ void findMax_MinFuncMonteCarlo(std::vector<double>& y, double& max, double& min)
 		if (y[i] > max) max = y[i];
 		if (y[i] < min) min = y[i];
 	}
+}
+
+double method_Sympsona(const double a, const double b, unsigned int count_segment,int const& numVar)
+{
+	double h = (b - a) / count_segment;
+	double summa = functionIntegral(a,numVar) + functionIntegral(b,numVar);
+	for (int i = 1; i <= count_segment; i++)
+	{
+		if (i % 2 == 0)
+			summa += 2 * functionIntegral(a + i * h,numVar);
+		else
+			summa += 4 * functionIntegral(a + i * h,numVar);
+	}
+
+	summa *= h / 3;
+	return summa;
 }

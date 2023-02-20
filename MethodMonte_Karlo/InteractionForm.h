@@ -1,4 +1,5 @@
 #pragma once
+#include "InteractiveForm2.h"
 #include <vector>
 namespace MethodMonteKarlo {
 
@@ -78,6 +79,10 @@ namespace MethodMonteKarlo {
 	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::Label^ label_integral;
+	private: System::Windows::Forms::Label^ label_checkSquare;
+	private: System::Windows::Forms::Label^ label_checkIntegral;
+	private: System::Windows::Forms::MenuStrip^ menuStrip1;
+	private: System::Windows::Forms::ToolStripMenuItem^ ToolStripMenuItem_openForm2;
 
 
 
@@ -133,16 +138,21 @@ namespace MethodMonteKarlo {
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->label_integral = (gcnew System::Windows::Forms::Label());
+			this->label_checkSquare = (gcnew System::Windows::Forms::Label());
+			this->label_checkIntegral = (gcnew System::Windows::Forms::Label());
+			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
+			this->ToolStripMenuItem_openForm2 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numeric_numVar))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->table_values))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numeric_countRNDPointN))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->table_values_integral))->BeginInit();
+			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// numeric_numVar
 			// 
-			this->numeric_numVar->Location = System::Drawing::Point(709, 436);
+			this->numeric_numVar->Location = System::Drawing::Point(995, 498);
 			this->numeric_numVar->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 10, 0, 0, 0 });
 			this->numeric_numVar->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->numeric_numVar->Name = L"numeric_numVar";
@@ -161,7 +171,7 @@ namespace MethodMonteKarlo {
 			this->table_values->BackgroundColor = System::Drawing::SystemColors::ControlLightLight;
 			this->table_values->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->table_values->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->table_values->Location = System::Drawing::Point(790, 6);
+			this->table_values->Location = System::Drawing::Point(790, 30);
 			this->table_values->Name = L"table_values";
 			this->table_values->RowHeadersWidth = 100;
 			this->table_values->Size = System::Drawing::Size(313, 122);
@@ -169,7 +179,7 @@ namespace MethodMonteKarlo {
 			// 
 			// numeric_countRNDPointN
 			// 
-			this->numeric_countRNDPointN->Location = System::Drawing::Point(686, 481);
+			this->numeric_countRNDPointN->Location = System::Drawing::Point(818, 498);
 			this->numeric_countRNDPointN->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 10000, 0, 0, 0 });
 			this->numeric_countRNDPointN->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->numeric_countRNDPointN->Name = L"numeric_countRNDPointN";
@@ -180,8 +190,8 @@ namespace MethodMonteKarlo {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->BackColor = System::Drawing::Color::AntiqueWhite;
-			this->label1->Location = System::Drawing::Point(655, 462);
+			this->label1->BackColor = System::Drawing::Color::Transparent;
+			this->label1->Location = System::Drawing::Point(787, 475);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(123, 16);
 			this->label1->TabIndex = 3;
@@ -190,8 +200,8 @@ namespace MethodMonteKarlo {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->BackColor = System::Drawing::Color::AntiqueWhite;
-			this->label2->Location = System::Drawing::Point(692, 417);
+			this->label2->BackColor = System::Drawing::Color::Transparent;
+			this->label2->Location = System::Drawing::Point(970, 477);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(84, 16);
 			this->label2->TabIndex = 4;
@@ -290,7 +300,7 @@ namespace MethodMonteKarlo {
 			legend2->TitleSeparator = System::Windows::Forms::DataVisualization::Charting::LegendSeparatorStyle::DashLine;
 			this->chart1->Legends->Add(legend1);
 			this->chart1->Legends->Add(legend2);
-			this->chart1->Location = System::Drawing::Point(12, 6);
+			this->chart1->Location = System::Drawing::Point(12, 34);
 			this->chart1->Name = L"chart1";
 			series1->BorderWidth = 2;
 			series1->ChartArea = L"ChartArea1";
@@ -375,7 +385,7 @@ namespace MethodMonteKarlo {
 			// 
 			// btn_squareTringle
 			// 
-			this->btn_squareTringle->Location = System::Drawing::Point(851, 140);
+			this->btn_squareTringle->Location = System::Drawing::Point(851, 154);
 			this->btn_squareTringle->Name = L"btn_squareTringle";
 			this->btn_squareTringle->Size = System::Drawing::Size(186, 53);
 			this->btn_squareTringle->TabIndex = 6;
@@ -386,7 +396,7 @@ namespace MethodMonteKarlo {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(811, 196);
+			this->label3->Location = System::Drawing::Point(811, 207);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(19, 16);
 			this->label3->TabIndex = 9;
@@ -395,7 +405,7 @@ namespace MethodMonteKarlo {
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(869, 196);
+			this->label4->Location = System::Drawing::Point(869, 207);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(19, 16);
 			this->label4->TabIndex = 11;
@@ -404,7 +414,7 @@ namespace MethodMonteKarlo {
 			// tb_a
 			// 
 			this->tb_a->Cursor = System::Windows::Forms::Cursors::No;
-			this->tb_a->Location = System::Drawing::Point(805, 216);
+			this->tb_a->Location = System::Drawing::Point(805, 227);
 			this->tb_a->Name = L"tb_a";
 			this->tb_a->Size = System::Drawing::Size(32, 22);
 			this->tb_a->TabIndex = 12;
@@ -413,7 +423,7 @@ namespace MethodMonteKarlo {
 			// tb_b
 			// 
 			this->tb_b->Cursor = System::Windows::Forms::Cursors::No;
-			this->tb_b->Location = System::Drawing::Point(861, 216);
+			this->tb_b->Location = System::Drawing::Point(861, 227);
 			this->tb_b->Name = L"tb_b";
 			this->tb_b->Size = System::Drawing::Size(32, 22);
 			this->tb_b->TabIndex = 13;
@@ -423,7 +433,7 @@ namespace MethodMonteKarlo {
 			// 
 			this->label_X->AutoSize = true;
 			this->label_X->BackColor = System::Drawing::Color::Transparent;
-			this->label_X->Location = System::Drawing::Point(635, 146);
+			this->label_X->Location = System::Drawing::Point(634, 177);
 			this->label_X->Name = L"label_X";
 			this->label_X->Size = System::Drawing::Size(16, 16);
 			this->label_X->TabIndex = 14;
@@ -433,7 +443,7 @@ namespace MethodMonteKarlo {
 			// 
 			this->label_Y->AutoSize = true;
 			this->label_Y->BackColor = System::Drawing::Color::Transparent;
-			this->label_Y->Location = System::Drawing::Point(635, 164);
+			this->label_Y->Location = System::Drawing::Point(634, 205);
 			this->label_Y->Name = L"label_Y";
 			this->label_Y->Size = System::Drawing::Size(17, 16);
 			this->label_Y->TabIndex = 15;
@@ -442,7 +452,7 @@ namespace MethodMonteKarlo {
 			// cb_randUniform
 			// 
 			this->cb_randUniform->AutoSize = true;
-			this->cb_randUniform->Location = System::Drawing::Point(840, 492);
+			this->cb_randUniform->Location = System::Drawing::Point(837, 523);
 			this->cb_randUniform->Name = L"cb_randUniform";
 			this->cb_randUniform->Size = System::Drawing::Size(223, 20);
 			this->cb_randUniform->TabIndex = 16;
@@ -460,7 +470,7 @@ namespace MethodMonteKarlo {
 			// 
 			// btn_squareIntegral
 			// 
-			this->btn_squareIntegral->Location = System::Drawing::Point(860, 392);
+			this->btn_squareIntegral->Location = System::Drawing::Point(860, 395);
 			this->btn_squareIntegral->Name = L"btn_squareIntegral";
 			this->btn_squareIntegral->Size = System::Drawing::Size(186, 23);
 			this->btn_squareIntegral->TabIndex = 18;
@@ -479,7 +489,7 @@ namespace MethodMonteKarlo {
 			this->table_values_integral->BackgroundColor = System::Drawing::SystemColors::ControlLightLight;
 			this->table_values_integral->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->table_values_integral->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->table_values_integral->Location = System::Drawing::Point(790, 259);
+			this->table_values_integral->Location = System::Drawing::Point(790, 263);
 			this->table_values_integral->Name = L"table_values_integral";
 			this->table_values_integral->RowHeadersWidth = 100;
 			this->table_values_integral->Size = System::Drawing::Size(313, 127);
@@ -489,7 +499,7 @@ namespace MethodMonteKarlo {
 			// 
 			this->label_Y2->AutoSize = true;
 			this->label_Y2->BackColor = System::Drawing::Color::Transparent;
-			this->label_Y2->Location = System::Drawing::Point(634, 374);
+			this->label_Y2->Location = System::Drawing::Point(633, 416);
 			this->label_Y2->Name = L"label_Y2";
 			this->label_Y2->Size = System::Drawing::Size(17, 16);
 			this->label_Y2->TabIndex = 21;
@@ -499,7 +509,7 @@ namespace MethodMonteKarlo {
 			// 
 			this->label_X2->AutoSize = true;
 			this->label_X2->BackColor = System::Drawing::Color::Transparent;
-			this->label_X2->Location = System::Drawing::Point(634, 356);
+			this->label_X2->Location = System::Drawing::Point(633, 392);
 			this->label_X2->Name = L"label_X2";
 			this->label_X2->Size = System::Drawing::Size(16, 16);
 			this->label_X2->TabIndex = 20;
@@ -508,7 +518,7 @@ namespace MethodMonteKarlo {
 			// tb_b_int
 			// 
 			this->tb_b_int->Cursor = System::Windows::Forms::Cursors::No;
-			this->tb_b_int->Location = System::Drawing::Point(860, 436);
+			this->tb_b_int->Location = System::Drawing::Point(860, 437);
 			this->tb_b_int->Name = L"tb_b_int";
 			this->tb_b_int->Size = System::Drawing::Size(32, 22);
 			this->tb_b_int->TabIndex = 25;
@@ -517,7 +527,7 @@ namespace MethodMonteKarlo {
 			// tb_a_int
 			// 
 			this->tb_a_int->Cursor = System::Windows::Forms::Cursors::No;
-			this->tb_a_int->Location = System::Drawing::Point(804, 436);
+			this->tb_a_int->Location = System::Drawing::Point(804, 437);
 			this->tb_a_int->Name = L"tb_a_int";
 			this->tb_a_int->Size = System::Drawing::Size(32, 22);
 			this->tb_a_int->TabIndex = 24;
@@ -526,7 +536,7 @@ namespace MethodMonteKarlo {
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(868, 416);
+			this->label5->Location = System::Drawing::Point(868, 417);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(19, 16);
 			this->label5->TabIndex = 23;
@@ -535,7 +545,7 @@ namespace MethodMonteKarlo {
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(810, 416);
+			this->label6->Location = System::Drawing::Point(810, 417);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(19, 16);
 			this->label6->TabIndex = 22;
@@ -544,11 +554,45 @@ namespace MethodMonteKarlo {
 			// label_integral
 			// 
 			this->label_integral->AutoSize = true;
-			this->label_integral->Location = System::Drawing::Point(899, 436);
+			this->label_integral->Location = System::Drawing::Point(899, 427);
 			this->label_integral->Name = L"label_integral";
 			this->label_integral->Size = System::Drawing::Size(52, 16);
 			this->label_integral->TabIndex = 26;
 			this->label_integral->Text = L"Integral";
+			// 
+			// label_checkSquare
+			// 
+			this->label_checkSquare->AutoSize = true;
+			this->label_checkSquare->Location = System::Drawing::Point(899, 241);
+			this->label_checkSquare->Name = L"label_checkSquare";
+			this->label_checkSquare->Size = System::Drawing::Size(46, 16);
+			this->label_checkSquare->TabIndex = 27;
+			this->label_checkSquare->Text = L"Check";
+			// 
+			// label_checkIntegral
+			// 
+			this->label_checkIntegral->AutoSize = true;
+			this->label_checkIntegral->Location = System::Drawing::Point(899, 458);
+			this->label_checkIntegral->Name = L"label_checkIntegral";
+			this->label_checkIntegral->Size = System::Drawing::Size(46, 16);
+			this->label_checkIntegral->TabIndex = 28;
+			this->label_checkIntegral->Text = L"Check";
+			// 
+			// menuStrip1
+			// 
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->ToolStripMenuItem_openForm2 });
+			this->menuStrip1->Location = System::Drawing::Point(0, 0);
+			this->menuStrip1->Name = L"menuStrip1";
+			this->menuStrip1->Size = System::Drawing::Size(1106, 24);
+			this->menuStrip1->TabIndex = 29;
+			this->menuStrip1->Text = L"menuStrip1";
+			// 
+			// ToolStripMenuItem_openForm2
+			// 
+			this->ToolStripMenuItem_openForm2->Name = L"ToolStripMenuItem_openForm2";
+			this->ToolStripMenuItem_openForm2->Size = System::Drawing::Size(345, 20);
+			this->ToolStripMenuItem_openForm2->Text = L"‘орма вычислени€ площади круга и пол€рных координат";
+			this->ToolStripMenuItem_openForm2->Click += gcnew System::EventHandler(this, &InteractionForm::ToolStripMenuItem_openForm2_Click);
 			// 
 			// InteractionForm
 			// 
@@ -557,7 +601,9 @@ namespace MethodMonteKarlo {
 			this->AutoScroll = true;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
-			this->ClientSize = System::Drawing::Size(1106, 524);
+			this->ClientSize = System::Drawing::Size(1106, 550);
+			this->Controls->Add(this->label_checkIntegral);
+			this->Controls->Add(this->label_checkSquare);
 			this->Controls->Add(this->label_integral);
 			this->Controls->Add(this->tb_b_int);
 			this->Controls->Add(this->tb_a_int);
@@ -581,11 +627,13 @@ namespace MethodMonteKarlo {
 			this->Controls->Add(this->numeric_countRNDPointN);
 			this->Controls->Add(this->table_values);
 			this->Controls->Add(this->numeric_numVar);
+			this->Controls->Add(this->menuStrip1);
 			this->Controls->Add(this->chart1);
 			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::SizableToolWindow;
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+			this->MainMenuStrip = this->menuStrip1;
 			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"InteractionForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
@@ -595,6 +643,8 @@ namespace MethodMonteKarlo {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numeric_countRNDPointN))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->table_values_integral))->EndInit();
+			this->menuStrip1->ResumeLayout(false);
+			this->menuStrip1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -606,6 +656,7 @@ namespace MethodMonteKarlo {
 			 void clearInteractiveElementChartArea2();
 			 System::Void Chart1_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e);
 			 System::Void Btn_squareIntegral_Click(System::Object^ sender, System::EventArgs^ e);
-			 void fillTable_values(const int& N, std::vector<double> rnd_x, std::vector<double> rnd_y);
+			 void fillTable_values(const int& N, std::vector<double> rnd_x, std::vector<double> rnd_y, DataGridView^ table);
+			 System::Void ToolStripMenuItem_openForm2_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }

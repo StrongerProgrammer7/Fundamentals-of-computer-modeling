@@ -38,17 +38,18 @@ void MethodMonteKarlo::InteractionForm::clearInteractiveElementChartArea2()
 	this->chart1->Series[6]->Points->Clear();
 }
 
-void MethodMonteKarlo::InteractionForm::fillTable_values(const int& N, std::vector<double> rnd_x, std::vector<double> rnd_y)
+void MethodMonteKarlo::InteractionForm::fillTable_values(const int& N, std::vector<double> rnd_x, std::vector<double> rnd_y, System::Windows::Forms::DataGridView^ table)
 {
 	if (N < 100)
 	{
 		for (int i = 0; i < N; i++)
 		{
-			this->table_values_integral->Rows[2]->Cells[i]->Value = rnd_x[i];
-			this->table_values_integral->Rows[3]->Cells[i]->Value = rnd_y[i];
+			table->Rows[2]->Cells[i]->Value = rnd_x[i];
+			table->Rows[3]->Cells[i]->Value = rnd_y[i];
 		}
 	}
 }
+
 System::Void MethodMonteKarlo::InteractionForm::Chart1_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e)
 {
 	double coordX = int((chart1->ChartAreas[0]->AxisX->PixelPositionToValue((double)e->X)) * 1000 + 0.5) / 1000.0;
@@ -85,15 +86,15 @@ System::Void MethodMonteKarlo::InteractionForm::Btn_squareTringle(System::Object
 	this->chart1->Series[1]->Points->AddXY(Convert::ToDouble(this->table_values->Rows[0]->Cells[0]->Value), f_x[0]);
 	this->chart1->Series[1]->Points->AddXY(this->table_values->Rows[0]->Cells[19]->Value, this->table_values->Rows[1]->Cells[19]->Value);
 
-	 const double a = 19;
+	 const double a = 19.0;
 	 const double b = *std::max_element(f_x.begin(), f_x.end());
 	 tb_a->Text = a.ToString();
 	 tb_b->Text = b.ToString();
 
 	 bool uniformRND = cb_randUniform->Checked;
-	 std::vector<double> rnd_x = getRandomPoint(uniformRND, a, N);
-	 std::vector<double> rnd_y = getRandomPoint(uniformRND, b, N);
-	 fillTable_values(N,rnd_x, rnd_y);
+	 std::vector<double> rnd_x = getRandomPoint(uniformRND, 0.0,a, N);
+	 std::vector<double> rnd_y = getRandomPoint(uniformRND, 0.0,b, N);
+	 fillTable_values(N,rnd_x, rnd_y,this->table_values);
 
 	 std::map<std::string, double> triangleVertexCoord;
 	 triangleVertexCoord["xa"] = Convert::ToDouble(this->table_values->Rows[0]->Cells[0]->Value);
@@ -130,6 +131,9 @@ System::Void MethodMonteKarlo::InteractionForm::Btn_squareTringle(System::Object
 	 }
 	 double squareFigure = (M * a * b) / N;
 	 this->label_squareTringle->Text = "Площадь: " +  squareFigure.ToString();
+	 this->label_checkSquare->Text = " Проверка: " + (0.5 * abs((triangleVertexCoord ["xc"]- triangleVertexCoord["xa"])*
+		 (triangleVertexCoord["yb"]- triangleVertexCoord["ya"])-(triangleVertexCoord["xb"]- triangleVertexCoord["xa"])
+		 *(triangleVertexCoord["yc"]- triangleVertexCoord["ya"]))).ToString();
 }
 
 
@@ -167,10 +171,9 @@ System::Void MethodMonteKarlo::InteractionForm::Btn_squareIntegral_Click(System:
 	tb_b_int->Text = b.ToString();
 
 	bool uniformRND = cb_randUniform->Checked;
-	std::vector<double> rnd_x = getRandomPoint(uniformRND, a, N);
-	std::vector<double> rnd_y = getRandomPoint(uniformRND, b, N);
-	fillTable_values(N,rnd_x, rnd_y);
-	
+	std::vector<double> rnd_x = getRandomPoint(uniformRND, 0.0,a, N);
+	std::vector<double> rnd_y = getRandomPoint(uniformRND, 0.0,b, N);
+	fillTable_values(N,rnd_x, rnd_y,this->table_values_integral);
 	int M = 0;
 
 	for (int i = 0; i < N; i++)
@@ -190,10 +193,17 @@ System::Void MethodMonteKarlo::InteractionForm::Btn_squareIntegral_Click(System:
 	double sum = 0;
 	for (int i = 0; i < y_integral.size(); i++)
 		sum += y_integral[i];
-	this->label_integral->Text = "Интеграл: " + integral.ToString() + " Проверка: " + sum.ToString();
+	this->label_integral->Text = "Интеграл: " + integral.ToString();
+	this->label_checkIntegral->Text = " Проверка: " + method_Sympsona(0,5,N,numVar).ToString();
 	
 }
 
+System::Void MethodMonteKarlo::InteractionForm::ToolStripMenuItem_openForm2_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	InteractiveForm2^ form2 = gcnew InteractiveForm2();
+	form2->Show();
+
+}
 
 /*Для отображения более 1000 столбцов и в свойствах грида в строке AutoSizeColoumns задайте вариант AllCellsExceptHeader,
 for (int i = 0; i < 1000+; i++)

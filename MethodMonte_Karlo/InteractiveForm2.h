@@ -49,8 +49,15 @@ namespace MethodMonteKarlo {
 	private: System::Windows::Forms::Label^ label_squareCicle;
 	private: System::Windows::Forms::Label^ label_pi;
 	private: System::Windows::Forms::Button^ btn_polar;
-	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::Label^ label_check1;
+
 	private: System::Windows::Forms::Label^ label_squareFigure;
+	private: System::Windows::Forms::Label^ label_X;
+	private: System::Windows::Forms::Label^ label_Y;
+	private: System::Windows::Forms::Label^ label_Y2;
+	private: System::Windows::Forms::Label^ label_X2;
+
+	private: System::Windows::Forms::Label^ label_checkIntegral;
 
 
 
@@ -72,6 +79,7 @@ namespace MethodMonteKarlo {
 			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
 			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea2 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
 			System::Windows::Forms::DataVisualization::Charting::Legend^ legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Legend^ legend2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
 			System::Windows::Forms::DataVisualization::Charting::Series^ series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			System::Windows::Forms::DataVisualization::Charting::Series^ series2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			System::Windows::Forms::DataVisualization::Charting::Series^ series3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
@@ -79,6 +87,7 @@ namespace MethodMonteKarlo {
 			System::Windows::Forms::DataVisualization::Charting::Series^ series5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			System::Windows::Forms::DataVisualization::Charting::Series^ series6 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			System::Windows::Forms::DataVisualization::Charting::Series^ series7 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^ series8 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(InteractiveForm2::typeid));
 			this->chart1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
 			this->numericUpDown_numVar = (gcnew System::Windows::Forms::NumericUpDown());
@@ -91,8 +100,13 @@ namespace MethodMonteKarlo {
 			this->label_squareCicle = (gcnew System::Windows::Forms::Label());
 			this->label_pi = (gcnew System::Windows::Forms::Label());
 			this->btn_polar = (gcnew System::Windows::Forms::Button());
-			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label_check1 = (gcnew System::Windows::Forms::Label());
 			this->label_squareFigure = (gcnew System::Windows::Forms::Label());
+			this->label_X = (gcnew System::Windows::Forms::Label());
+			this->label_Y = (gcnew System::Windows::Forms::Label());
+			this->label_Y2 = (gcnew System::Windows::Forms::Label());
+			this->label_X2 = (gcnew System::Windows::Forms::Label());
+			this->label_checkIntegral = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown_numVar))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown_CountPoint))->BeginInit();
@@ -100,6 +114,7 @@ namespace MethodMonteKarlo {
 			// 
 			// chart1
 			// 
+			chartArea1->AlignmentOrientation = System::Windows::Forms::DataVisualization::Charting::AreaAlignmentOrientations::None;
 			chartArea1->AxisX->ArrowStyle = System::Windows::Forms::DataVisualization::Charting::AxisArrowStyle::Lines;
 			chartArea1->AxisX->InterlacedColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)),
 				static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(192)));
@@ -128,17 +143,37 @@ namespace MethodMonteKarlo {
 			chartArea1->CursorY->IsUserSelectionEnabled = true;
 			chartArea1->CursorY->LineColor = System::Drawing::Color::Cyan;
 			chartArea1->Name = L"ChartArea1";
+			chartArea2->AlignmentOrientation = static_cast<System::Windows::Forms::DataVisualization::Charting::AreaAlignmentOrientations>((System::Windows::Forms::DataVisualization::Charting::AreaAlignmentOrientations::Vertical | System::Windows::Forms::DataVisualization::Charting::AreaAlignmentOrientations::Horizontal));
 			chartArea2->AxisX->ArrowStyle = System::Windows::Forms::DataVisualization::Charting::AxisArrowStyle::Lines;
 			chartArea2->AxisX->IntervalAutoMode = System::Windows::Forms::DataVisualization::Charting::IntervalAutoMode::VariableCount;
+			chartArea2->AxisX->IsStartedFromZero = false;
+			chartArea2->AxisX->LabelStyle->Angle = 30;
+			chartArea2->AxisX->LabelStyle->Format = L"{0:0.0000}";
+			chartArea2->AxisX->LabelStyle->Interval = 0;
+			chartArea2->AxisX->MajorGrid->Enabled = false;
+			chartArea2->AxisX->MajorGrid->Interval = 0;
+			chartArea2->AxisX->MaximumAutoSize = 100;
 			chartArea2->AxisX->MinorTickMark->Enabled = true;
+			chartArea2->AxisX->ScaleView->SmallScrollMinSize = 0.1;
+			chartArea2->AxisX->ScrollBar->BackColor = System::Drawing::Color::Transparent;
+			chartArea2->AxisX->ScrollBar->ButtonColor = System::Drawing::Color::Gray;
+			chartArea2->AxisX->ScrollBar->LineColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)),
+				static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)));
 			chartArea2->AxisX->Title = L"Х";
 			chartArea2->AxisX->TitleAlignment = System::Drawing::StringAlignment::Far;
 			chartArea2->AxisY->ArrowStyle = System::Windows::Forms::DataVisualization::Charting::AxisArrowStyle::Lines;
-			chartArea2->AxisY->IntervalAutoMode = System::Windows::Forms::DataVisualization::Charting::IntervalAutoMode::VariableCount;
+			chartArea2->AxisY->LabelStyle->Format = L"{0:0.00,}";
+			chartArea2->AxisY->MajorGrid->Enabled = false;
 			chartArea2->AxisY->MinorTickMark->Enabled = true;
+			chartArea2->AxisY->ScaleView->SmallScrollMinSize = 0.1;
+			chartArea2->AxisY->ScrollBar->BackColor = System::Drawing::Color::Transparent;
+			chartArea2->AxisY->ScrollBar->ButtonColor = System::Drawing::Color::Gray;
+			chartArea2->AxisY->ScrollBar->LineColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)),
+				static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)));
 			chartArea2->AxisY->TextOrientation = System::Windows::Forms::DataVisualization::Charting::TextOrientation::Stacked;
-			chartArea2->AxisY->Title = L"У";
+			chartArea2->AxisY->Title = L"Y";
 			chartArea2->AxisY->TitleAlignment = System::Drawing::StringAlignment::Far;
+			chartArea2->BackColor = System::Drawing::Color::Transparent;
 			chartArea2->CursorX->Interval = 0.2;
 			chartArea2->CursorX->IsUserEnabled = true;
 			chartArea2->CursorX->IsUserSelectionEnabled = true;
@@ -150,9 +185,25 @@ namespace MethodMonteKarlo {
 			this->chart1->ChartAreas->Add(chartArea2);
 			legend1->HeaderSeparator = System::Windows::Forms::DataVisualization::Charting::LegendSeparatorStyle::Line;
 			legend1->Name = L"Legend1";
-			legend1->Title = L"Cicle";
+			legend1->Title = L"Площадь круга";
 			legend1->TitleSeparator = System::Windows::Forms::DataVisualization::Charting::LegendSeparatorStyle::DoubleLine;
+			legend2->AutoFitMinFontSize = 5;
+			legend2->DockedToChartArea = L"ChartArea2";
+			legend2->IsDockedInsideChartArea = false;
+			legend2->IsEquallySpacedItems = true;
+			legend2->IsTextAutoFit = false;
+			legend2->LegendStyle = System::Windows::Forms::DataVisualization::Charting::LegendStyle::Column;
+			legend2->Name = L"Legend2";
+			legend2->Position->Auto = false;
+			legend2->Position->Height = 19.26605F;
+			legend2->Position->Width = 22.16829F;
+			legend2->Position->X = 75.11974F;
+			legend2->Position->Y = 52.865F;
+			legend2->TextWrapThreshold = 30;
+			legend2->Title = L"Полярные координаты";
+			legend2->TitleSeparator = System::Windows::Forms::DataVisualization::Charting::LegendSeparatorStyle::Line;
 			this->chart1->Legends->Add(legend1);
+			this->chart1->Legends->Add(legend2);
 			this->chart1->Location = System::Drawing::Point(12, 11);
 			this->chart1->Name = L"chart1";
 			series1->BorderWidth = 2;
@@ -183,22 +234,29 @@ namespace MethodMonteKarlo {
 			series5->ChartArea = L"ChartArea2";
 			series5->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
 			series5->Color = System::Drawing::Color::Navy;
-			series5->Legend = L"Legend1";
+			series5->Legend = L"Legend2";
 			series5->Name = L"Полярные";
+			series6->BorderWidth = 2;
 			series6->ChartArea = L"ChartArea2";
-			series6->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Point;
-			series6->Legend = L"Legend1";
-			series6->MarkerColor = System::Drawing::Color::Green;
-			series6->MarkerSize = 7;
-			series6->MarkerStyle = System::Windows::Forms::DataVisualization::Charting::MarkerStyle::Circle;
-			series6->Name = L"Точки внутри-2";
+			series6->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
+			series6->Color = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			series6->Legend = L"Legend2";
+			series6->Name = L"Прямоугольник";
 			series7->ChartArea = L"ChartArea2";
 			series7->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Point;
-			series7->Legend = L"Legend1";
-			series7->MarkerColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+			series7->Legend = L"Legend2";
+			series7->MarkerColor = System::Drawing::Color::Green;
+			series7->MarkerSize = 7;
+			series7->MarkerStyle = System::Windows::Forms::DataVisualization::Charting::MarkerStyle::Circle;
+			series7->Name = L"Точки внутри-2";
+			series8->ChartArea = L"ChartArea2";
+			series8->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Point;
+			series8->Legend = L"Legend2";
+			series8->MarkerColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			series7->MarkerStyle = System::Windows::Forms::DataVisualization::Charting::MarkerStyle::Square;
-			series7->Name = L"Точки снаружи-2";
+			series8->MarkerStyle = System::Windows::Forms::DataVisualization::Charting::MarkerStyle::Square;
+			series8->Name = L"Точки снаружи-2";
 			this->chart1->Series->Add(series1);
 			this->chart1->Series->Add(series2);
 			this->chart1->Series->Add(series3);
@@ -206,13 +264,15 @@ namespace MethodMonteKarlo {
 			this->chart1->Series->Add(series5);
 			this->chart1->Series->Add(series6);
 			this->chart1->Series->Add(series7);
-			this->chart1->Size = System::Drawing::Size(865, 437);
+			this->chart1->Series->Add(series8);
+			this->chart1->Size = System::Drawing::Size(619, 437);
 			this->chart1->TabIndex = 0;
 			this->chart1->Text = L"chart1";
+			this->chart1->MouseClick += gcnew System::Windows::Forms::MouseEventHandler(this, &InteractiveForm2::Chart1_MouseClick);
 			// 
 			// numericUpDown_numVar
 			// 
-			this->numericUpDown_numVar->Location = System::Drawing::Point(980, 404);
+			this->numericUpDown_numVar->Location = System::Drawing::Point(662, 400);
 			this->numericUpDown_numVar->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 20, 0, 0, 0 });
 			this->numericUpDown_numVar->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->numericUpDown_numVar->Name = L"numericUpDown_numVar";
@@ -222,7 +282,7 @@ namespace MethodMonteKarlo {
 			// 
 			// numericUpDown_CountPoint
 			// 
-			this->numericUpDown_CountPoint->Location = System::Drawing::Point(1055, 404);
+			this->numericUpDown_CountPoint->Location = System::Drawing::Point(737, 400);
 			this->numericUpDown_CountPoint->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 5000, 0, 0, 0 });
 			this->numericUpDown_CountPoint->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->numericUpDown_CountPoint->Name = L"numericUpDown_CountPoint";
@@ -233,7 +293,7 @@ namespace MethodMonteKarlo {
 			// chb_randUniform
 			// 
 			this->chb_randUniform->AutoSize = true;
-			this->chb_randUniform->Location = System::Drawing::Point(980, 436);
+			this->chb_randUniform->Location = System::Drawing::Point(662, 432);
 			this->chb_randUniform->Name = L"chb_randUniform";
 			this->chb_randUniform->Size = System::Drawing::Size(176, 17);
 			this->chb_randUniform->TabIndex = 3;
@@ -243,7 +303,7 @@ namespace MethodMonteKarlo {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(977, 384);
+			this->label1->Location = System::Drawing::Point(659, 380);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(52, 13);
 			this->label1->TabIndex = 4;
@@ -252,7 +312,7 @@ namespace MethodMonteKarlo {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(1091, 384);
+			this->label2->Location = System::Drawing::Point(773, 380);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(15, 13);
 			this->label2->TabIndex = 5;
@@ -260,7 +320,7 @@ namespace MethodMonteKarlo {
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(920, 78);
+			this->button1->Location = System::Drawing::Point(643, 93);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(206, 56);
 			this->button1->TabIndex = 6;
@@ -271,7 +331,7 @@ namespace MethodMonteKarlo {
 			// label_squareSquare
 			// 
 			this->label_squareSquare->AutoSize = true;
-			this->label_squareSquare->Location = System::Drawing::Point(884, 13);
+			this->label_squareSquare->Location = System::Drawing::Point(641, 13);
 			this->label_squareSquare->Name = L"label_squareSquare";
 			this->label_squareSquare->Size = System::Drawing::Size(104, 13);
 			this->label_squareSquare->TabIndex = 7;
@@ -280,7 +340,7 @@ namespace MethodMonteKarlo {
 			// label_squareCicle
 			// 
 			this->label_squareCicle->AutoSize = true;
-			this->label_squareCicle->Location = System::Drawing::Point(883, 35);
+			this->label_squareCicle->Location = System::Drawing::Point(640, 35);
 			this->label_squareCicle->Name = L"label_squareCicle";
 			this->label_squareCicle->Size = System::Drawing::Size(85, 13);
 			this->label_squareCicle->TabIndex = 8;
@@ -290,7 +350,7 @@ namespace MethodMonteKarlo {
 			// label_pi
 			// 
 			this->label_pi->AutoSize = true;
-			this->label_pi->Location = System::Drawing::Point(884, 59);
+			this->label_pi->Location = System::Drawing::Point(641, 59);
 			this->label_pi->Name = L"label_pi";
 			this->label_pi->Size = System::Drawing::Size(23, 13);
 			this->label_pi->TabIndex = 9;
@@ -299,39 +359,94 @@ namespace MethodMonteKarlo {
 			// 
 			// btn_polar
 			// 
-			this->btn_polar->Location = System::Drawing::Point(930, 236);
+			this->btn_polar->Location = System::Drawing::Point(643, 238);
 			this->btn_polar->Name = L"btn_polar";
-			this->btn_polar->Size = System::Drawing::Size(196, 49);
+			this->btn_polar->Size = System::Drawing::Size(206, 49);
 			this->btn_polar->TabIndex = 10;
 			this->btn_polar->Text = L"Вычислить полярные координаты";
 			this->btn_polar->UseVisualStyleBackColor = true;
 			this->btn_polar->Click += gcnew System::EventHandler(this, &InteractiveForm2::Btn_polar_Click);
 			// 
-			// label3
+			// label_check1
 			// 
-			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(894, 210);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(23, 13);
-			this->label3->TabIndex = 13;
-			this->label3->Text = L"ПИ";
-			this->label3->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			this->label_check1->AutoSize = true;
+			this->label_check1->Location = System::Drawing::Point(650, 191);
+			this->label_check1->Name = L"label_check1";
+			this->label_check1->Size = System::Drawing::Size(112, 13);
+			this->label_check1->TabIndex = 13;
+			this->label_check1->Text = L"Проверка pi/2 *(A+B)";
+			this->label_check1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// label_squareFigure
 			// 
 			this->label_squareFigure->AutoSize = true;
-			this->label_squareFigure->Location = System::Drawing::Point(894, 164);
+			this->label_squareFigure->Location = System::Drawing::Point(650, 164);
 			this->label_squareFigure->Name = L"label_squareFigure";
-			this->label_squareFigure->Size = System::Drawing::Size(104, 13);
+			this->label_squareFigure->Size = System::Drawing::Size(95, 13);
 			this->label_squareFigure->TabIndex = 11;
-			this->label_squareFigure->Text = L"Площадь квадрата";
+			this->label_squareFigure->Text = L"Площадь фигуры";
+			// 
+			// label_X
+			// 
+			this->label_X->AutoSize = true;
+			this->label_X->BackColor = System::Drawing::Color::White;
+			this->label_X->Location = System::Drawing::Point(501, 115);
+			this->label_X->Name = L"label_X";
+			this->label_X->Size = System::Drawing::Size(14, 13);
+			this->label_X->TabIndex = 14;
+			this->label_X->Text = L"X";
+			// 
+			// label_Y
+			// 
+			this->label_Y->AutoSize = true;
+			this->label_Y->BackColor = System::Drawing::Color::White;
+			this->label_Y->Location = System::Drawing::Point(501, 144);
+			this->label_Y->Name = L"label_Y";
+			this->label_Y->Size = System::Drawing::Size(14, 13);
+			this->label_Y->TabIndex = 15;
+			this->label_Y->Text = L"Y";
+			// 
+			// label_Y2
+			// 
+			this->label_Y2->AutoSize = true;
+			this->label_Y2->BackColor = System::Drawing::Color::White;
+			this->label_Y2->Location = System::Drawing::Point(501, 368);
+			this->label_Y2->Name = L"label_Y2";
+			this->label_Y2->Size = System::Drawing::Size(14, 13);
+			this->label_Y2->TabIndex = 17;
+			this->label_Y2->Text = L"Y";
+			// 
+			// label_X2
+			// 
+			this->label_X2->AutoSize = true;
+			this->label_X2->BackColor = System::Drawing::Color::White;
+			this->label_X2->Location = System::Drawing::Point(501, 339);
+			this->label_X2->Name = L"label_X2";
+			this->label_X2->Size = System::Drawing::Size(14, 13);
+			this->label_X2->TabIndex = 16;
+			this->label_X2->Text = L"X";
+			// 
+			// label_checkIntegral
+			// 
+			this->label_checkIntegral->AutoSize = true;
+			this->label_checkIntegral->Location = System::Drawing::Point(650, 222);
+			this->label_checkIntegral->Name = L"label_checkIntegral";
+			this->label_checkIntegral->Size = System::Drawing::Size(55, 13);
+			this->label_checkIntegral->TabIndex = 18;
+			this->label_checkIntegral->Text = L"Интеграл";
+			this->label_checkIntegral->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// InteractiveForm2
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1165, 460);
-			this->Controls->Add(this->label3);
+			this->ClientSize = System::Drawing::Size(853, 460);
+			this->Controls->Add(this->label_checkIntegral);
+			this->Controls->Add(this->label_Y2);
+			this->Controls->Add(this->label_X2);
+			this->Controls->Add(this->label_Y);
+			this->Controls->Add(this->label_X);
+			this->Controls->Add(this->label_check1);
 			this->Controls->Add(this->label_squareFigure);
 			this->Controls->Add(this->btn_polar);
 			this->Controls->Add(this->label_pi);
@@ -346,7 +461,7 @@ namespace MethodMonteKarlo {
 			this->Controls->Add(this->chart1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"InteractiveForm2";
-			this->Text = L"Площадь круга и полярные координаты";
+			this->Text = L"X";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown_numVar))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown_CountPoint))->EndInit();
@@ -357,6 +472,8 @@ namespace MethodMonteKarlo {
 #pragma endregion
 	private: System::Void Button1_Click(System::Object^ sender, System::EventArgs^ e);
 			 void clearInteractiveElementChartArea1();
-private: System::Void Btn_polar_Click(System::Object^ sender, System::EventArgs^ e);
+			 void clearInteractiveElementChartArea2();
+			 System::Void Btn_polar_Click(System::Object^ sender, System::EventArgs^ e);
+			 System::Void Chart1_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e);
 };
 }

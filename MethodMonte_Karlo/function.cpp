@@ -48,9 +48,15 @@ double functionTringle(int const& x, int const& numVar)
 		return int((double)(10.0 * ((x - 20.0) / (numVar - 20.0))) * 100 + 0.5) / 100.0;
 }
 
-double functionIntegral(double const& x, int const& numVar)
+double functionIntegral(double const& x, double const& numVar)
 {
-	return sqrt(11.0 - numVar * 2.0 * sin(x) * cos(x));
+	return sqrt(11.0 - numVar * ((1.0 - cos(2.0 * x)) / 2.0));
+}
+
+double functionPolar(double const& A,double const& B,double const& phi,bool isIntegral)
+{
+	double ro = A * ((cos(2.0 * phi) + 1.0) / 2.0) + B * ((1.0 - cos(2.0 * phi)) / 2.0);
+	return isIntegral==true? ro : sqrt(ro);
 }
 
 double step_h(const double a, const double b, unsigned int count_segment)
@@ -93,18 +99,42 @@ void findMax_MinFuncMonteCarlo(std::vector<double>& y, double& max, double& min)
 	}
 }
 
-double method_Sympsona(const double a, const double b, unsigned int count_segment,int const& numVar)
+double method_Sympsona(const double a, const double b, unsigned int count_segment,int const& numVar,bool isPolar)
 {
-	double h = (b - a) / count_segment;
-	double summa = functionIntegral(a,numVar) + functionIntegral(b,numVar);
+	double h = step_h(a,b,count_segment);
+	double summa = isPolar == true ? functionPolar(12.0, 10.0, a,true) : functionIntegral(a,numVar) + 
+		isPolar == true ? functionPolar(12.0, 10.0,b,true) : functionIntegral(b,numVar);
 	for (int i = 1; i <= count_segment; i++)
 	{
 		if (i % 2 == 0)
-			summa += 2 * functionIntegral(a + i * h,numVar);
+		{
+			if (isPolar == true)
+				summa += 2.0 * functionPolar(12.0, 10.0, a + i * h, true);
+			else
+				summa += 2.0 * functionIntegral(a + i * h, (double)numVar);
+		}
 		else
-			summa += 4 * functionIntegral(a + i * h,numVar);
+		{
+			if (isPolar == true)
+				summa += 4.0 * functionPolar(12.0, 10.0, a + i * h, true);
+			else
+				summa += 4.0 * functionIntegral(a + i * h, (double)numVar);
+		}
 	}
 
-	summa *= h / 3;
+	summa *= h / 3.0;
+	return summa;
+}
+
+double method_LeftRectangle(const double a, const double b, unsigned int count_segment)
+{
+	double h = (b - a) / (count_segment - 1);
+	double summa = 0, x = a;
+	for (int i = 0; i <= count_segment - 1; i++)
+	{
+		if (i != 0)
+			x = a + i * h;
+		summa += h * functionIntegral(x, 1.0);
+	}
 	return summa;
 }

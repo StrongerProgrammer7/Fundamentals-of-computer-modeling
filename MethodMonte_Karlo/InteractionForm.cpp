@@ -149,8 +149,6 @@ System::Void MethodMonteKarlo::InteractionForm::Btn_squareTringle(System::Object
 		 *(triangleVertexCoord["yc"]- triangleVertexCoord["ya"]))).ToString();
 }
 
-
-
 System::Void MethodMonteKarlo::InteractionForm::Btn_squareIntegral_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	clearInteractiveElementChartArea2();

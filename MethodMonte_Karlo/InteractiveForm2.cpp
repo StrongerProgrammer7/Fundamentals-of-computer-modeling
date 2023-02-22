@@ -10,8 +10,6 @@ System::Void MethodMonteKarlo::InteractiveForm2::Button1_Click(System::Object^ s
 	double R = Convert::ToDouble(this->numericUpDown_numVar->Value);
 	int N = Convert::ToInt32(this->numericUpDown_CountPoint->Value);
 	bool uniformRND = this->chb_randUniform->Checked;
-
-	//TODO a = смещние координат b = смещение коориданм
 	
 	this->chart1->Series[0]->Points->AddXY(0, 0);
 	this->chart1->Series[0]->Points->AddXY(0, 2*R);
@@ -20,7 +18,7 @@ System::Void MethodMonteKarlo::InteractiveForm2::Button1_Click(System::Object^ s
 	this->chart1->Series[0]->Points->AddXY(0, 0);
 
 	for (double h = 0; h < 2 * std::_Pi*2.0; h += 0.01)
-		this->chart1->Series[1]->Points->AddXY(R+R*cos(h), R + R * sin(h));
+		this->chart1->Series[1]->Points->AddXY(R+R*cos(h), R + R * sin(h));// смещение по х, смещение по у
 
 	std::vector<double> rnd_x = getRandomPoint(uniformRND, 0,2.0*R, N);
 	std::vector<double> rnd_y = getRandomPoint(uniformRND, 0,2.0*R, N);
@@ -99,6 +97,7 @@ System::Void MethodMonteKarlo::InteractiveForm2::Btn_polar_Click(System::Object^
 			max_b = y;
 		this->chart1->Series[4]->Points->AddXY( x, y);
 	}
+	//For rectangle
 	this->chart1->Series[5]->Points->AddXY(min_a, min_b);
 	this->chart1->Series[5]->Points->AddXY(min_a, max_b);
 	this->chart1->Series[5]->Points->AddXY(max_a, max_b);

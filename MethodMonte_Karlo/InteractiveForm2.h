@@ -461,7 +461,7 @@ namespace MethodMonteKarlo {
 			this->Controls->Add(this->chart1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"InteractiveForm2";
-			this->Text = L"X";
+			this->Text = L"Вычисление площади круга и фигуры в полярных координатах";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown_numVar))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown_CountPoint))->EndInit();

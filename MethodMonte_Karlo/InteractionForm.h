@@ -279,14 +279,16 @@ namespace MethodMonteKarlo {
 			chartArea2->Position->Y = 49.61771F;
 			this->chart1->ChartAreas->Add(chartArea1);
 			this->chart1->ChartAreas->Add(chartArea2);
+			legend1->BackColor = System::Drawing::Color::Transparent;
 			legend1->HeaderSeparator = System::Windows::Forms::DataVisualization::Charting::LegendSeparatorStyle::DashLine;
 			legend1->LegendStyle = System::Windows::Forms::DataVisualization::Charting::LegendStyle::Column;
 			legend1->MaximumAutoSize = 25;
 			legend1->Name = L"Legend1";
-			legend1->Title = L"Легенда площадь";
+			legend1->Title = L"Площаль фигуры";
 			legend1->TitleFont = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			legend1->TitleSeparator = System::Windows::Forms::DataVisualization::Charting::LegendSeparatorStyle::GradientLine;
+			legend2->BackColor = System::Drawing::Color::Transparent;
 			legend2->DockedToChartArea = L"ChartArea2";
 			legend2->HeaderSeparator = System::Windows::Forms::DataVisualization::Charting::LegendSeparatorStyle::DashLine;
 			legend2->IsDockedInsideChartArea = false;
@@ -294,7 +296,7 @@ namespace MethodMonteKarlo {
 			legend2->MaximumAutoSize = 100;
 			legend2->Name = L"Legend2";
 			legend2->TableStyle = System::Windows::Forms::DataVisualization::Charting::LegendTableStyle::Tall;
-			legend2->Title = L"Легенда интеграл";
+			legend2->Title = L"Интеграл";
 			legend2->TitleFont = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			legend2->TitleSeparator = System::Windows::Forms::DataVisualization::Charting::LegendSeparatorStyle::DashLine;

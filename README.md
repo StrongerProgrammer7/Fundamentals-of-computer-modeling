@@ -10,9 +10,6 @@
 <h3>Monte Carlo</h3>
 </div>
 <div>
-<h3>Runge-Kutta ODE </h3>
-</div>
-<div>
 <h3>Development tools and Programming Language</h3>
 <p align="justify"> Microsoft Visual Studio Profession 2019</p>
 <p align="justify"> Language C++, C++/CLI (Windows forms) </p>

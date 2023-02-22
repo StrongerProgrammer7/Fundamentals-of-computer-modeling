@@ -8,9 +8,18 @@
 </div>
 <div>
 <h3>Monte Carlo</h3>
+<p>File Monte-Carlo (russian language: V.G. Galkina, Monte-Carlo METHOD PDF):</p>
+[Metod_Monte-Karlo.pdf](https://github.com/StrongerProgrammer7/Fundamentals-of-computer-modeling/files/10807876/Metod_Monte-Karlo.pdf)
+<p align="center"><img src="https://user-images.githubusercontent.com/71569051/220745792-e434f368-433b-4844-907c-7f545ab79cc9.png" alt="WinForms"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/71569051/220746151-9e35158b-c888-4da3-ae72-31f307a96ff1.png" alt="WinForms"></p>
 </div>
 <div>
 <h3>Development tools and Programming Language</h3>
 <p align="justify"> Microsoft Visual Studio Profession 2019</p>
 <p align="justify"> Language C++, C++/CLI (Windows forms) </p>
+</div>
+<div>
+<h4>Extra material</h4>
+Generation random numbers - evenly
+[Generatsia_sluchaynykh_chisel.pdf](https://github.com/StrongerProgrammer7/Fundamentals-of-computer-modeling/files/10807894/Generatsia_sluchaynykh_chisel.pdf)
 </div>

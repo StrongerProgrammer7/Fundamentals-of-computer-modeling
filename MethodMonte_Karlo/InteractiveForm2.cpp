@@ -42,7 +42,7 @@ System::Void MethodMonteKarlo::InteractiveForm2::Button1_Click(System::Object^ s
 	double squareCicle = 4 * M / N;
 	this->label_pi->Text = "ПИ : " + (std::_Pi).ToString();
 	this->label_squareSquare->Text = "Площадь квадрата : " + (squareSquare).ToString();
-	this->label_squareCicle->Text = "Площадь круга : " + (squareCicle).ToString();
+	this->label_squareCicle->Text = "Площадь круга : " + (int((squareCicle) * 1000 + 0.5) / 1000.0).ToString();
 }
 
 void MethodMonteKarlo::InteractiveForm2::clearInteractiveElementChartArea1()
@@ -134,10 +134,11 @@ System::Void MethodMonteKarlo::InteractiveForm2::Btn_polar_Click(System::Object^
 		else
 			this->chart1->Series[7]->Points->AddXY(rnd_x[i], rnd_y[i]);
 	}
-
-	this->label_squareFigure->Text = "Площадь фигуры " + (M * (max_a * max_b * 4.0) / N).ToString();
-	this->label_check1->Text = "PI/2 *(" +A.ToString() + " + " + B.ToString() +") " + ((std::_Pi/2.0) * (A + B)).ToString();
-	this->label_checkIntegral->Text = "Интеграл: " +(0.5*(method_Sympsona(0,std::_Pi*2.0,N,numVar,true))).ToString();
+	double squireFigure = int(((M * (max_a * max_b * 4.0) / N)) * 1000 + 0.5) / 1000.0;
+	double accu = int((0.5 * (method_Sympsona(0, std::_Pi * 2.0, N, numVar, true))) * 1000 + 0.5) / 1000.0;
+	this->label_squareFigure->Text = "Площадь фигуры " + squireFigure.ToString();//(M * (max_a * max_b * 4.0) / N).ToString();
+	this->label_check1->Text = "PI/2 *(" +A.ToString() + " + " + B.ToString() +") " + (int(((std::_Pi / 2.0) * (A + B)) * 1000 + 0.5) / 1000.0).ToString();
+	this->label_checkIntegral->Text = "Точное значение: " + accu.ToString();//(0.5*(method_Sympsona(0,std::_Pi*2.0,N,numVar,true))).ToString();
 	//this->label_checkIntegral->Text += "   LEFT " + (0.5*(method_LeftRectangle(0,std::_Pi*2.0,N))).ToString();
 }
 

@@ -143,10 +143,11 @@ System::Void MethodMonteKarlo::InteractionForm::Btn_squareTringle(System::Object
 			 this->chart1->Series[3]->Points->AddXY(rnd_x[i], rnd_y[i]);
 	 }
 	 double squareFigure = (M * a * b) / N;
-	 this->label_squareTringle->Text = "Площадь: " +  squareFigure.ToString();
-	 this->label_checkSquare->Text = " Проверка: " + (0.5 * abs((triangleVertexCoord ["xc"]- triangleVertexCoord["xa"])*
-		 (triangleVertexCoord["yb"]- triangleVertexCoord["ya"])-(triangleVertexCoord["xb"]- triangleVertexCoord["xa"])
-		 *(triangleVertexCoord["yc"]- triangleVertexCoord["ya"]))).ToString();
+	 double squareTringle = (0.5 * abs((triangleVertexCoord["xc"] - triangleVertexCoord["xa"]) *
+		 (triangleVertexCoord["yb"] - triangleVertexCoord["ya"]) - (triangleVertexCoord["xb"] - triangleVertexCoord["xa"])
+		 * (triangleVertexCoord["yc"] - triangleVertexCoord["ya"])));
+	 this->label_squareTringle->Text = "Площадь: " +  (int((squareFigure) * 1000 + 0.5) / 1000.0).ToString();
+	 this->label_checkSquare->Text = " Точное значение: " + (int((squareTringle) * 1000 + 0.5) / 1000.0).ToString();
 }
 
 System::Void MethodMonteKarlo::InteractionForm::Btn_squareIntegral_Click(System::Object^ sender, System::EventArgs^ e)
@@ -205,8 +206,8 @@ System::Void MethodMonteKarlo::InteractionForm::Btn_squareIntegral_Click(System:
 			this->chart1->Series[6]->Points->AddXY(rnd_x[i], rnd_y[i]);
 	}
 	double integral = (M * a * b) / N;
-	this->label_integral->Text = "Интеграл: " + integral.ToString();
-	this->label_checkIntegral->Text = " Симпсон: " + method_Sympsona(0.0, a, N, numVar, false);//method_LeftRectangle(0.0, a, N).ToString();
+	this->label_integral->Text = "Интеграл: " + (int((integral) * 1000 + 0.5) / 1000.0).ToString();
+	this->label_checkIntegral->Text = " Симпсон: " + (int((method_Sympsona(0.0, a, N, numVar, false)) * 1000 + 0.5) / 1000.0);//method_LeftRectangle(0.0, a, N).ToString();
 }
 
 System::Void MethodMonteKarlo::InteractionForm::ToolStripMenuItem_openForm2_Click(System::Object^ sender, System::EventArgs^ e)

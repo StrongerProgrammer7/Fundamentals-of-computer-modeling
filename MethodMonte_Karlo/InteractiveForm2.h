@@ -370,7 +370,7 @@ namespace MethodMonteKarlo {
 			// label_check1
 			// 
 			this->label_check1->AutoSize = true;
-			this->label_check1->Location = System::Drawing::Point(650, 191);
+			this->label_check1->Location = System::Drawing::Point(650, 290);
 			this->label_check1->Name = L"label_check1";
 			this->label_check1->Size = System::Drawing::Size(112, 13);
 			this->label_check1->TabIndex = 13;
@@ -429,7 +429,7 @@ namespace MethodMonteKarlo {
 			// label_checkIntegral
 			// 
 			this->label_checkIntegral->AutoSize = true;
-			this->label_checkIntegral->Location = System::Drawing::Point(650, 222);
+			this->label_checkIntegral->Location = System::Drawing::Point(650, 197);
 			this->label_checkIntegral->Name = L"label_checkIntegral";
 			this->label_checkIntegral->Size = System::Drawing::Size(55, 13);
 			this->label_checkIntegral->TabIndex = 18;

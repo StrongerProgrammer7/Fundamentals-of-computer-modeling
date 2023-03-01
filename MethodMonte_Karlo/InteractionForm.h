@@ -312,7 +312,6 @@ namespace MethodMonteKarlo {
 				static_cast<System::Byte>(204)));
 			series1->Legend = L"Legend1";
 			series1->MarkerColor = System::Drawing::Color::Red;
-			series1->MarkerStyle = System::Windows::Forms::DataVisualization::Charting::MarkerStyle::Square;
 			series1->Name = L"Фигура";
 			series2->BorderWidth = 2;
 			series2->ChartArea = L"ChartArea1";
@@ -343,12 +342,11 @@ namespace MethodMonteKarlo {
 			series4->Name = L"Точки снаружи";
 			series5->BorderWidth = 2;
 			series5->ChartArea = L"ChartArea2";
-			series5->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::SplineArea;
+			series5->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
 			series5->Color = System::Drawing::Color::Transparent;
 			series5->Legend = L"Legend2";
 			series5->MarkerColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			series5->MarkerStyle = System::Windows::Forms::DataVisualization::Charting::MarkerStyle::Circle;
 			series5->Name = L"Фигура-2";
 			series5->Palette = System::Windows::Forms::DataVisualization::Charting::ChartColorPalette::Grayscale;
 			series5->YValuesPerPoint = 2;

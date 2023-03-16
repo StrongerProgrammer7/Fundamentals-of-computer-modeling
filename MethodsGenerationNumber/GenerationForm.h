@@ -1,5 +1,6 @@
 #pragma once
-
+#include <iostream>
+#include <vector>
 namespace MethodsGenerationNumber {
 
 	using namespace System;
@@ -21,7 +22,12 @@ namespace MethodsGenerationNumber {
 			//
 			//TODO: добавьте код конструктора
 			//
-
+			this->dg_equability->Rows->Add();
+			this->dg_equability->Rows[0]->HeaderCell->Value = "Мет 1";
+			this->dg_equability->Rows->Add();
+			this->dg_equability->Rows[1]->HeaderCell->Value = "Мет 2";
+			this->dg_equability->Rows->Add();
+			this->dg_equability->Rows[2]->HeaderCell->Value = "Мет 3";
 		}
 
 	protected:
@@ -52,15 +58,33 @@ namespace MethodsGenerationNumber {
 	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::Button^ btn_clear;
-	private: System::Windows::Forms::Label^ label7;
-	private: System::Windows::Forms::Label^ label8;
-	private: System::Windows::Forms::Label^ label9;
-	private: System::Windows::Forms::Label^ label10;
-	private: System::Windows::Forms::Label^ label11;
-	private: System::Windows::Forms::Label^ label12;
-	private: System::Windows::Forms::Label^ label13;
-	private: System::Windows::Forms::Label^ label14;
-	private: System::Windows::Forms::DataGridView^ dataGridView1;
+	private: System::Windows::Forms::Label^ lbl_intervalTest1;
+
+
+
+
+
+
+
+
+
+	private: System::Windows::Forms::DataGridView^ dg_data;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ current;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ reultMult;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ recieved;
+	private: System::Windows::Forms::DataGridView^ dg_equability;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ met1;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ met2;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ met3;
+	private: System::Windows::Forms::Label^ lbl_intervalTest2;
+	private: System::Windows::Forms::Label^ lbl_intervalTest3;
+
+
+
+
+
+
+
 
 	private:
 		/// <summary>
@@ -95,18 +119,21 @@ namespace MethodsGenerationNumber {
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->btn_clear = (gcnew System::Windows::Forms::Button());
-			this->label7 = (gcnew System::Windows::Forms::Label());
-			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->label9 = (gcnew System::Windows::Forms::Label());
-			this->label10 = (gcnew System::Windows::Forms::Label());
-			this->label11 = (gcnew System::Windows::Forms::Label());
-			this->label12 = (gcnew System::Windows::Forms::Label());
-			this->label13 = (gcnew System::Windows::Forms::Label());
-			this->label14 = (gcnew System::Windows::Forms::Label());
-			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->lbl_intervalTest1 = (gcnew System::Windows::Forms::Label());
+			this->dg_data = (gcnew System::Windows::Forms::DataGridView());
+			this->current = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->reultMult = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->recieved = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->dg_equability = (gcnew System::Windows::Forms::DataGridView());
+			this->met1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->met2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->met3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->lbl_intervalTest2 = (gcnew System::Windows::Forms::Label());
+			this->lbl_intervalTest3 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numeric_countPoint))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dg_data))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dg_equability))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// chart1
@@ -299,101 +326,128 @@ namespace MethodsGenerationNumber {
 			this->btn_clear->UseVisualStyleBackColor = true;
 			this->btn_clear->Click += gcnew System::EventHandler(this, &GenerationForm::Btn_clear_Click);
 			// 
-			// label7
+			// lbl_intervalTest1
 			// 
-			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(752, 41);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(83, 13);
-			this->label7->TabIndex = 15;
-			this->label7->Text = L"Мат ожидание:";
+			this->lbl_intervalTest1->AutoSize = true;
+			this->lbl_intervalTest1->Location = System::Drawing::Point(752, 334);
+			this->lbl_intervalTest1->Name = L"lbl_intervalTest1";
+			this->lbl_intervalTest1->Size = System::Drawing::Size(158, 13);
+			this->lbl_intervalTest1->TabIndex = 22;
+			this->lbl_intervalTest1->Text = L"Интервал частотного теста 1:";
 			// 
-			// label8
+			// dg_data
 			// 
-			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(752, 12);
-			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(47, 13);
-			this->label8->TabIndex = 16;
-			this->label8->Text = L"Методы";
+			this->dg_data->AllowUserToAddRows = false;
+			this->dg_data->AllowUserToDeleteRows = false;
+			this->dg_data->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::AllCellsExceptHeader;
+			this->dg_data->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::AllCellsExceptHeaders;
+			this->dg_data->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->dg_data->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dg_data->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(3) {
+				this->current, this->reultMult,
+					this->recieved
+			});
+			this->dg_data->Location = System::Drawing::Point(752, 12);
+			this->dg_data->Name = L"dg_data";
+			this->dg_data->ReadOnly = true;
+			this->dg_data->Size = System::Drawing::Size(240, 150);
+			this->dg_data->TabIndex = 23;
 			// 
-			// label9
+			// current
 			// 
-			this->label9->AutoSize = true;
-			this->label9->Location = System::Drawing::Point(837, 9);
-			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(53, 13);
-			this->label9->TabIndex = 17;
-			this->label9->Text = L"Методы1";
+			this->current->HeaderText = L"Текущее";
+			this->current->Name = L"current";
+			this->current->ReadOnly = true;
+			this->current->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			this->current->Width = 5;
 			// 
-			// label10
+			// reultMult
 			// 
-			this->label10->AutoSize = true;
-			this->label10->Location = System::Drawing::Point(952, 9);
-			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(53, 13);
-			this->label10->TabIndex = 18;
-			this->label10->Text = L"Методы2";
+			this->reultMult->HeaderText = L"Результат умножения";
+			this->reultMult->Name = L"reultMult";
+			this->reultMult->ReadOnly = true;
+			this->reultMult->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			this->reultMult->Width = 5;
 			// 
-			// label11
+			// recieved
 			// 
-			this->label11->AutoSize = true;
-			this->label11->Location = System::Drawing::Point(1035, 9);
-			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(53, 13);
-			this->label11->TabIndex = 19;
-			this->label11->Text = L"Методы3";
+			this->recieved->HeaderText = L"Полученное";
+			this->recieved->Name = L"recieved";
+			this->recieved->ReadOnly = true;
+			this->recieved->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			this->recieved->Width = 5;
 			// 
-			// label12
+			// dg_equability
 			// 
-			this->label12->AutoSize = true;
-			this->label12->Location = System::Drawing::Point(752, 66);
-			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(67, 13);
-			this->label12->TabIndex = 20;
-			this->label12->Text = L"Дисперсия:";
+			this->dg_equability->AllowUserToAddRows = false;
+			this->dg_equability->AllowUserToDeleteRows = false;
+			this->dg_equability->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::AllCellsExceptHeader;
+			this->dg_equability->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::AllCellsExceptHeaders;
+			this->dg_equability->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->dg_equability->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dg_equability->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(3) {
+				this->met1, this->met2,
+					this->met3
+			});
+			this->dg_equability->Location = System::Drawing::Point(752, 168);
+			this->dg_equability->Name = L"dg_equability";
+			this->dg_equability->ReadOnly = true;
+			this->dg_equability->Size = System::Drawing::Size(240, 150);
+			this->dg_equability->TabIndex = 24;
 			// 
-			// label13
+			// met1
 			// 
-			this->label13->AutoSize = true;
-			this->label13->Location = System::Drawing::Point(752, 97);
-			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(176, 13);
-			this->label13->TabIndex = 21;
-			this->label13->Text = L"Среднеквадратичное отклонение";
+			this->met1->HeaderText = L"Мат ожидания";
+			this->met1->Name = L"met1";
+			this->met1->ReadOnly = true;
+			this->met1->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			this->met1->Width = 5;
 			// 
-			// label14
+			// met2
 			// 
-			this->label14->AutoSize = true;
-			this->label14->Location = System::Drawing::Point(752, 132);
-			this->label14->Name = L"label14";
-			this->label14->Size = System::Drawing::Size(149, 13);
-			this->label14->TabIndex = 22;
-			this->label14->Text = L"Интервал частотного теста:";
+			this->met2->HeaderText = L"Дисперсия";
+			this->met2->Name = L"met2";
+			this->met2->ReadOnly = true;
+			this->met2->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			this->met2->Width = 5;
 			// 
-			// dataGridView1
+			// met3
 			// 
-			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(797, 163);
-			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->Size = System::Drawing::Size(240, 150);
-			this->dataGridView1->TabIndex = 23;
+			this->met3->HeaderText = L"Среднеквадратичное отклонение";
+			this->met3->Name = L"met3";
+			this->met3->ReadOnly = true;
+			this->met3->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			this->met3->Width = 5;
+			// 
+			// lbl_intervalTest2
+			// 
+			this->lbl_intervalTest2->AutoSize = true;
+			this->lbl_intervalTest2->Location = System::Drawing::Point(752, 363);
+			this->lbl_intervalTest2->Name = L"lbl_intervalTest2";
+			this->lbl_intervalTest2->Size = System::Drawing::Size(158, 13);
+			this->lbl_intervalTest2->TabIndex = 25;
+			this->lbl_intervalTest2->Text = L"Интервал частотного теста 2:";
+			// 
+			// lbl_intervalTest3
+			// 
+			this->lbl_intervalTest3->AutoSize = true;
+			this->lbl_intervalTest3->Location = System::Drawing::Point(752, 391);
+			this->lbl_intervalTest3->Name = L"lbl_intervalTest3";
+			this->lbl_intervalTest3->Size = System::Drawing::Size(161, 13);
+			this->lbl_intervalTest3->TabIndex = 26;
+			this->lbl_intervalTest3->Text = L"Интервал частотного теста 3: ";
 			// 
 			// GenerationForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::LightGray;
-			this->ClientSize = System::Drawing::Size(1100, 436);
-			this->Controls->Add(this->dataGridView1);
-			this->Controls->Add(this->label14);
-			this->Controls->Add(this->label13);
-			this->Controls->Add(this->label12);
-			this->Controls->Add(this->label11);
-			this->Controls->Add(this->label10);
-			this->Controls->Add(this->label9);
-			this->Controls->Add(this->label8);
-			this->Controls->Add(this->label7);
+			this->ClientSize = System::Drawing::Size(1045, 436);
+			this->Controls->Add(this->lbl_intervalTest3);
+			this->Controls->Add(this->lbl_intervalTest2);
+			this->Controls->Add(this->dg_equability);
+			this->Controls->Add(this->dg_data);
+			this->Controls->Add(this->lbl_intervalTest1);
 			this->Controls->Add(this->btn_clear);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label3);
@@ -413,7 +467,8 @@ namespace MethodsGenerationNumber {
 			this->Text = L"GenerationForm";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numeric_countPoint))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dg_data))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dg_equability))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -421,11 +476,18 @@ namespace MethodsGenerationNumber {
 #pragma endregion
 	private: System::Void Btn_squre_Click(System::Object^ sender, System::EventArgs^ e);
 			 System::Void fillChart(int series,int* countPointsInDiapason);
+			 System::Void fillChart(int series, int count);
 			 System::Void clearChart(int series);
+			 System::Void clearDataGrid_data();
+			 System::Void fillDataGrid(__int64 curNumb, __int64 squareCurNumb, __int64 receivedNumb);
+			 System::Void fillDataGridEquability(int const& method, double expectedValue, double dispersion, double standardDeviation);
+			 void fillDiagram(int series, int* countPointsInDiapason);
+			 //methods
+			 std::vector<double> methodOfMeanSquares(int countPoints, __int64 R0);
+			 std::vector<double> methodOfMult(int const& countPoints, __int64 R0, __int64& R1);
+			 std::vector<double> methodLinearCongruent(int const& countPoints, __int64 multiplier, __int64 divisor);
 			 System::Void Btn_mult_Click(System::Object^ sender, System::EventArgs^ e);
 			 System::Void Btn_linearCongruentMethod_Click(System::Object^ sender, System::EventArgs^ e);
 			 System::Void Btn_clear_Click(System::Object^ sender, System::EventArgs^ e);
-			 System::Void fillChart(int series, int count);
-			 void fillDiagram(int series, int* countPointsInDiapason);
-};
+	};
 }

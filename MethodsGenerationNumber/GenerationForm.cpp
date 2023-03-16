@@ -1,6 +1,5 @@
 #include "GenerationForm.h"
-#include <vector>
-#include <iostream>
+
 using namespace System;
 using namespace System::Windows::Forms;
 
@@ -13,6 +12,75 @@ void main(array<String^>^ args)
 	Application::Run(% form);
 
 }
+System::Void MethodsGenerationNumber::GenerationForm::clearChart(int series)
+{
+	this->chart1->Series[series]->Points->Clear();
+}
+
+System::Void MethodsGenerationNumber::GenerationForm::clearDataGrid_data()
+{
+	while (this->dg_data->Rows->Count != 0)
+		this->dg_data->Rows->RemoveAt(0);
+}
+
+void MethodsGenerationNumber::GenerationForm::fillDiagram(int series, int* countPointsInDiapason)
+{
+	for (int i = 0; i < 10; i++)
+	{
+		if (countPointsInDiapason[i] != 0)
+			fillChart(series, countPointsInDiapason[i]);
+	}
+}
+
+System::Void MethodsGenerationNumber::GenerationForm::fillChart(int series, int count)
+{
+	this->chart1->Series[series]->Points->AddY(count);
+
+}
+System::Void MethodsGenerationNumber::GenerationForm::fillChart(int series, int* countPointsInDiapason)
+{
+	this->chart1->Series[series]->Points->AddXY("0.0-0.1", countPointsInDiapason[0]);
+	this->chart1->Series[series]->Points->AddXY("0.1-0.2", countPointsInDiapason[1]);
+	this->chart1->Series[series]->Points->AddXY("0.2-0.3", countPointsInDiapason[2]);
+	this->chart1->Series[series]->Points->AddXY("0.3-0.4", countPointsInDiapason[3]);
+	this->chart1->Series[series]->Points->AddXY("0.4-0.5", countPointsInDiapason[4]);
+	this->chart1->Series[series]->Points->AddXY("0.5-0.6", countPointsInDiapason[5]);
+	this->chart1->Series[series]->Points->AddXY("0.6-0.7", countPointsInDiapason[6]);
+	this->chart1->Series[series]->Points->AddXY("0.7-0.8", countPointsInDiapason[7]);
+	this->chart1->Series[series]->Points->AddXY("0.8-0.9", countPointsInDiapason[8]);
+	this->chart1->Series[series]->Points->AddXY("0.9-1.0", countPointsInDiapason[9]);
+}
+
+double expectedValue(std::vector<double> vector_random)
+{
+	double sum = 0;
+	for (int i = 0; i < vector_random.size(); i++)
+		sum += vector_random[i];
+	return sum / (double)vector_random.size();
+}
+
+double dispersion(std::vector<double> vector_random, double expectedValue)
+{
+	double sum = 0;
+	for (int i = 0; i < vector_random.size(); i++)
+		sum += (vector_random[i] - expectedValue) * (vector_random[i] - expectedValue);
+
+	return sum / vector_random.size();
+}
+
+double standardDeviation(double dispersion)
+{
+	return std::sqrt(dispersion);
+}
+
+System::Void MethodsGenerationNumber::GenerationForm::fillDataGridEquability(int const& method, double expectedValue, double dispersion, double standardDeviation)
+{
+	this->dg_equability->Rows[method]->Cells[0]->Value = int(expectedValue * 1000 + 0.5) / 1000.0;
+	this->dg_equability->Rows[method]->Cells[1]->Value = int(dispersion * 1000 + 0.5) / 1000.0;
+	this->dg_equability->Rows[method]->Cells[2]->Value = int(standardDeviation * 1000 + 0.5) / 1000.0;
+}
+
+
 
 double cutNumber(int posNumbers,__int64 numbers,int const& start,int const& end)
 {
@@ -33,41 +101,67 @@ double cutNumber(int posNumbers,__int64 numbers,int const& start,int const& end)
 	return R3;
 }
 
-std::vector<double> methodOfMeanSquares(int countPoints,__int64 R0)
+std::vector<double> MethodsGenerationNumber::GenerationForm::methodOfMeanSquares(int countPoints,__int64 R0)
 {
 	std::vector<double> randNumb;
 
 	for (int i = 0; i < countPoints; i++)
 	{
 		__int64 R1 = R0 * R0;
-		
-		double R3 = cutNumber(8, R1,2,6);
+
+		double R3 = 0;// cutNumber(8, R1, 2, 6);
+		if (R1 > 1000000)
+			R3 = cutNumber(8, R1, 2, 6);
+		else
+			if (R1 > 100000)
+				R3 = cutNumber(7, R1, 1, 6);
+			else
+				if (R1 > 10000)
+					R3 = cutNumber(6, R1, 0, 5);
+				else
+					R3 = R1;
+		if(i<10)
+			fillDataGrid(R0, R1, R3);
 		R0 = R3;
 		randNumb.push_back(R3/10000.0);
 	}
 	return randNumb;
 }
 
-std::vector<double> methodOfMult(int const& countPoints, __int64 R0,__int64& R1)
+std::vector<double> MethodsGenerationNumber::GenerationForm::methodOfMult(int const& countPoints, __int64 R0,__int64& R1)
 {
 	std::vector<double> randNumb;
 	for (int i = 0; i < countPoints; i++)
 	{
 		__int64 R3 = R0 * R1;
-		double temp = cutNumber(8, R3,2,6);
+		double temp = 0;
+		if (R3 > 1000000)
+			temp = cutNumber(8, R3, 2, 6);
+		else
+			if (R3 > 100000)
+				temp = cutNumber(7, R3, 1, 6);
+			else
+				if (R3 > 10000)
+					temp = cutNumber(6, R3, 0, 5);
+				else
+					temp = R3;
+		if(i<10)
+			fillDataGrid(R1, R3, temp);
 		randNumb.push_back(temp / 10000.0);
 		R1 = cutNumber(8, R3, 4, 8);
 	}
 	return randNumb;
 }
 
-std::vector<double> methodLinearCongruen(int const& countPoints, __int64 multiplier, __int64& divisor)
+std::vector<double> MethodsGenerationNumber::GenerationForm::methodLinearCongruent(int const& countPoints, __int64 multiplier, __int64 divisor)
 {
 	std::vector<double> randNumb;
 	__int64 temp = multiplier;
 	for (int i = 0; i < countPoints; i++)
 	{
 		__int64 R3 = multiplier * temp;
+		if(i<10)
+			fillDataGrid(temp, R3, R3%divisor);
 		randNumb.push_back((R3%divisor) / 10000.0);
 		temp = R3 % divisor;
 	}
@@ -104,66 +198,26 @@ int* countPointBySegment(std::vector<double> vector_randomPoints)
 	return countPointByDiapason;
 }
 
-System::Void MethodsGenerationNumber::GenerationForm::clearChart(int series)
-{
-	this->chart1->Series[series]->Points->Clear();
-}
 
-void MethodsGenerationNumber::GenerationForm::fillDiagram(int series, int* countPointsInDiapason)
-{
-	for (int i = 0; i < 10; i++)
-	{
-		if (countPointsInDiapason[i] != 0)
-			fillChart(series, countPointsInDiapason[i]);
-	}
-}
 
-System::Void MethodsGenerationNumber::GenerationForm::fillChart(int series, int count)
+System::Void MethodsGenerationNumber::GenerationForm::fillDataGrid(__int64 curNumb, __int64 squareCurNumb, __int64 receivedNumb)
 {
-	this->chart1->Series[series]->Points->AddY(count);
-	
-}
-System::Void MethodsGenerationNumber::GenerationForm::fillChart(int series, int* countPointsInDiapason)
-{
-	this->chart1->Series[series]->Points->AddXY("0.0-0.1", countPointsInDiapason[0]);
-	this->chart1->Series[series]->Points->AddXY("0.1-0.2", countPointsInDiapason[1]);
-	this->chart1->Series[series]->Points->AddXY("0.2-0.3", countPointsInDiapason[2]);
-	this->chart1->Series[series]->Points->AddXY("0.3-0.4", countPointsInDiapason[3]);
-	this->chart1->Series[series]->Points->AddXY("0.4-0.5", countPointsInDiapason[4]);
-	this->chart1->Series[series]->Points->AddXY("0.5-0.6", countPointsInDiapason[5]);
-	this->chart1->Series[series]->Points->AddXY("0.6-0.7", countPointsInDiapason[6]);
-	this->chart1->Series[series]->Points->AddXY("0.7-0.8", countPointsInDiapason[7]);
-	this->chart1->Series[series]->Points->AddXY("0.8-0.9", countPointsInDiapason[8]);
-	this->chart1->Series[series]->Points->AddXY("0.9-1.0", countPointsInDiapason[9]);
-}
-
-double expectedValue(std::vector<double> vector_random)
-{
-	double sum = 0;
-	for (int i = 0; i < vector_random.size(); i++)
-	{
-		sum += vector_random[i];
-	}
-	return sum / vector_random.size();
-}
-
-double dispersion(std::vector<double> vector_random, double expectedValue)
-{
-	double sum = 0;
-	for (int i = 0; i < vector_random.size(); i++)
-		sum += (vector_random[i] - expectedValue) * (vector_random[i] - expectedValue);
-
-	return sum / vector_random.size();
-}
-
-double standardDeviation(double dispersion)
-{
-	return std::sqrt(dispersion);
+	this->dg_data->Rows->Add();
+	this->dg_data->Rows[this->dg_data->Rows->Count-1]->Cells[0]->Value = curNumb.ToString();
+	this->dg_data->Rows[this->dg_data->Rows->Count-1]->Cells[1]->Value = squareCurNumb.ToString();
+	if(receivedNumb <100)
+		this->dg_data->Rows[this->dg_data->Rows->Count-1]->Cells[2]->Value = "0,00" + receivedNumb.ToString();
+	else
+		if(receivedNumb <1000)
+			this->dg_data->Rows[this->dg_data->Rows->Count - 1]->Cells[2]->Value = "0,0" + receivedNumb.ToString();
+		else
+			this->dg_data->Rows[this->dg_data->Rows->Count - 1]->Cells[2]->Value = receivedNumb.ToString();
 }
 
 System::Void MethodsGenerationNumber::GenerationForm::Btn_squre_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	clearChart(0);
+	clearDataGrid_data();
 	int countStep = Convert::ToInt32(numeric_countPoint->Text);
 	if (countStep != 0)
 	{
@@ -171,7 +225,16 @@ System::Void MethodsGenerationNumber::GenerationForm::Btn_squre_Click(System::Ob
 		std::vector<double> randomNumbers = methodOfMeanSquares(countStep, R0);
 		int* countPointByDiapason = countPointBySegment(randomNumbers);
 		/*fillDiagram(0, countPointByDiapason);*/
-		fillChart(0, countPointByDiapason);
+
+		double expectedVal = expectedValue(randomNumbers);
+		double dispers = dispersion(randomNumbers, expectedVal);
+		double standartDev = standardDeviation(dispers);
+		fillDataGridEquability(0, expectedVal, dispers, standartDev);
+
+		fillChart(0, countPointByDiapason); 
+		double start = int((expectedVal - standartDev) * 10000 + 0.5) / 10000.0;
+		double end = int((expectedVal + standartDev) * 10000 + 0.5) / 10000.0;
+		lbl_intervalTest1->Text = "Интервал частотного теста 1: (" + start + " ; " + end + ")" + (int((end-start) * 1000 + 0.5) / 1000.0) * 100 + "%";
 	}
 	else
 	{
@@ -182,6 +245,7 @@ System::Void MethodsGenerationNumber::GenerationForm::Btn_squre_Click(System::Ob
 System::Void MethodsGenerationNumber::GenerationForm::Btn_mult_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	clearChart(1);
+	clearDataGrid_data();
 	int countPoints = Convert::ToInt32(numeric_countPoint->Text);
 	if (countPoints != 0)
 	{
@@ -190,7 +254,16 @@ System::Void MethodsGenerationNumber::GenerationForm::Btn_mult_Click(System::Obj
 		std::vector<double> randomNumbers = methodOfMult(countPoints, R0,R1);
 		int* countPointByDiapason = countPointBySegment(randomNumbers);
 		/*fillDiagram(1, countPointByDiapason);*/
+
+		double expectedVal = expectedValue(randomNumbers);
+		double dispers = dispersion(randomNumbers, expectedVal);
+		double standartDev = standardDeviation(dispers);
+		fillDataGridEquability(1, expectedVal, dispers, standartDev);
+
 		fillChart(1, countPointByDiapason);
+		double start = int((expectedVal - standartDev) * 10000 + 0.5) / 10000.0;
+		double end = int((expectedVal + standartDev) * 10000 + 0.5) / 10000.0;
+		lbl_intervalTest2->Text = "Интервал частотного теста 2: (" + start + " ; " + end + ")" + (int((end - start) * 1000 + 0.5) / 1000.0) * 100 + "%";
 	}
 	else
 	{
@@ -201,15 +274,25 @@ System::Void MethodsGenerationNumber::GenerationForm::Btn_mult_Click(System::Obj
 System::Void MethodsGenerationNumber::GenerationForm::Btn_linearCongruentMethod_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	clearChart(2);
+	clearDataGrid_data();
 	int countPoints = Convert::ToInt32(numeric_countPoint->Text);
 	if (countPoints != 0)
 	{
 		__int64 R0 = Convert::ToInt64(tb_numb->Text->ToString());
 		__int64 R1 = Convert::ToInt64(tb_numb2->Text->ToString());
-		std::vector<double> randomNumbers = methodLinearCongruen(countPoints, R0, R1);
+		std::vector<double> randomNumbers = methodLinearCongruent(countPoints, R0, R1);
 		int* countPointByDiapason = countPointBySegment(randomNumbers);
 		/*fillDiagram(2, countPointByDiapason);*/
+
+		double expectedVal = expectedValue(randomNumbers);
+		double dispers = dispersion(randomNumbers, expectedVal);
+		double standartDev = standardDeviation(dispers);
+		fillDataGridEquability(2, expectedVal, dispers, standartDev);
+
 		fillChart(2, countPointByDiapason);
+		double start = int((expectedVal - standartDev) * 10000 + 0.5) / 10000.0;
+		double end = int((expectedVal + standartDev) * 10000 + 0.5) / 10000.0;
+		lbl_intervalTest3->Text = "Интервал частотного теста 3: (" + start + " ; " + end + ")" + (int((end - start) * 1000 + 0.5) / 1000.0) * 100 + "%";
 	}
 	else
 	{

@@ -1,5 +1,5 @@
 #include "GenerationForm.h"
-
+#include <fstream>
 using namespace System;
 using namespace System::Windows::Forms;
 
@@ -126,8 +126,9 @@ double cutNumber(int posNumbers,__int64 numbers,int const& start,int const& end)
 
 std::vector<double> MethodsGenerationNumber::GenerationForm::methodOfMeanSquares(int countPoints,__int64 R0)
 {
-	std::vector<double> randNumb;
 
+	std::vector<double> randNumb;
+	std::ofstream file("log.txt");
 	for (int i = 0; i < countPoints; i++)
 	{
 		__int64 R1 = R0 * R0;
@@ -137,17 +138,23 @@ std::vector<double> MethodsGenerationNumber::GenerationForm::methodOfMeanSquares
 			R3 = cutNumber(8, R1, 2, 6);
 		else
 			if (R1 > 100000)
-				R3 = cutNumber(7, R1, 1, 6);
+				R3 = cutNumber(7, R1, 2, 6);
 			else
 				if (R1 > 10000)
 					R3 = cutNumber(6, R1, 0, 5);
 				else
 					R3 = R1;
+		
+		file << i << ": R0 = " << R0 << "; R1" << R1 << "; R3" << R3 << std::endl;
+		
 		if(i<10)
 			fillDataGrid(R0, R1, R3);
 		R0 = R3;
+
 		randNumb.push_back(R3/10000.0);
+
 	}
+	file.close();
 	return randNumb;
 }
 
@@ -162,7 +169,7 @@ std::vector<double> MethodsGenerationNumber::GenerationForm::methodOfMult(int co
 			temp = cutNumber(8, R3, 2, 6);
 		else
 			if (R3 > 100000)
-				temp = cutNumber(7, R3, 1, 6);
+				temp = cutNumber(7, R3, 2, 6);
 			else
 				if (R3 > 10000)
 					temp = cutNumber(6, R3, 0, 5);

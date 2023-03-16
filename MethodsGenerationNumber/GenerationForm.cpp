@@ -80,6 +80,29 @@ System::Void MethodsGenerationNumber::GenerationForm::fillDataGridEquability(int
 	this->dg_equability->Rows[method]->Cells[2]->Value = int(standardDeviation * 1000 + 0.5) / 1000.0;
 }
 
+System::Void MethodsGenerationNumber::GenerationForm::fillIntervalTest(int method,double expectedValue, double dispersion, double standart)
+{
+	double start = int(std::abs(expectedValue - standart) * 10000 + 0.5) / 10000.0;
+	double end = int(std::abs(expectedValue + standart) * 10000 + 0.5) / 10000.0;
+	double percent = (int((end - start) * 1000 + 0.5) / 1000.0);
+	if (percent > 1)
+		percent = percent - 1;
+	switch (method)
+	{
+	case 0:
+		lbl_intervalTest1->Text = "Интервал частотного теста 1: (" + start + " ; " + end + ")" + percent * 100 + "%";
+		break;
+	case 1:
+		lbl_intervalTest2->Text = "Интервал частотного теста 2: (" + start + " ; " + end + ")" + percent * 100 + "%";
+		break;
+	case 2:
+		lbl_intervalTest3->Text = "Интервал частотного теста 3: (" + start + " ; " + end + ")" + percent * 100 + "%";
+		break;
+	default:
+		break;
+	}
+}
+
 
 
 double cutNumber(int posNumbers,__int64 numbers,int const& start,int const& end)
@@ -231,10 +254,8 @@ System::Void MethodsGenerationNumber::GenerationForm::Btn_squre_Click(System::Ob
 		double standartDev = standardDeviation(dispers);
 		fillDataGridEquability(0, expectedVal, dispers, standartDev);
 
-		fillChart(0, countPointByDiapason); 
-		double start = int((expectedVal - standartDev) * 10000 + 0.5) / 10000.0;
-		double end = int((expectedVal + standartDev) * 10000 + 0.5) / 10000.0;
-		lbl_intervalTest1->Text = "Интервал частотного теста 1: (" + start + " ; " + end + ")" + (int((end-start) * 1000 + 0.5) / 1000.0) * 100 + "%";
+		fillChart(0, countPointByDiapason);
+		fillIntervalTest(0, expectedVal, dispers, standartDev);
 	}
 	else
 	{
@@ -261,9 +282,7 @@ System::Void MethodsGenerationNumber::GenerationForm::Btn_mult_Click(System::Obj
 		fillDataGridEquability(1, expectedVal, dispers, standartDev);
 
 		fillChart(1, countPointByDiapason);
-		double start = int((expectedVal - standartDev) * 10000 + 0.5) / 10000.0;
-		double end = int((expectedVal + standartDev) * 10000 + 0.5) / 10000.0;
-		lbl_intervalTest2->Text = "Интервал частотного теста 2: (" + start + " ; " + end + ")" + (int((end - start) * 1000 + 0.5) / 1000.0) * 100 + "%";
+		fillIntervalTest(1, expectedVal, dispers, standartDev);
 	}
 	else
 	{
@@ -290,9 +309,7 @@ System::Void MethodsGenerationNumber::GenerationForm::Btn_linearCongruentMethod_
 		fillDataGridEquability(2, expectedVal, dispers, standartDev);
 
 		fillChart(2, countPointByDiapason);
-		double start = int((expectedVal - standartDev) * 10000 + 0.5) / 10000.0;
-		double end = int((expectedVal + standartDev) * 10000 + 0.5) / 10000.0;
-		lbl_intervalTest3->Text = "Интервал частотного теста 3: (" + start + " ; " + end + ")" + (int((end - start) * 1000 + 0.5) / 1000.0) * 100 + "%";
+		fillIntervalTest(2, expectedVal, dispers, standartDev);
 	}
 	else
 	{
@@ -303,7 +320,10 @@ System::Void MethodsGenerationNumber::GenerationForm::Btn_linearCongruentMethod_
 System::Void MethodsGenerationNumber::GenerationForm::Btn_clear_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	for (int i = 0; i < this->chart1->Series->Count; i++)
-	{
 		this->chart1->Series[i]->Points->Clear();
-	}
+	clearDataGrid_data();
+	for (int i = 0; i < dg_equability->RowCount; i++)
+		for (int j = 0; j < dg_equability->Rows[i]->Cells->Count; j++)
+			dg_equability->Rows[i]->Cells[j]->Value = "";
+
 }

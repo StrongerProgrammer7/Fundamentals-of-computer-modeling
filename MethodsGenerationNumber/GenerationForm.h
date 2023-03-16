@@ -28,6 +28,7 @@ namespace MethodsGenerationNumber {
 			this->dg_equability->Rows[1]->HeaderCell->Value = "Мет 2";
 			this->dg_equability->Rows->Add();
 			this->dg_equability->Rows[2]->HeaderCell->Value = "Мет 3";
+
 		}
 
 	protected:
@@ -99,11 +100,11 @@ namespace MethodsGenerationNumber {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea2 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^ legend2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^ series4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^ series5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^ series6 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^ legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^ series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^ series2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^ series3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(GenerationForm::typeid));
 			this->chart1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
 			this->btn_squre = (gcnew System::Windows::Forms::Button());
@@ -139,64 +140,66 @@ namespace MethodsGenerationNumber {
 			// chart1
 			// 
 			this->chart1->BackColor = System::Drawing::Color::SkyBlue;
-			chartArea2->AlignmentOrientation = static_cast<System::Windows::Forms::DataVisualization::Charting::AreaAlignmentOrientations>((System::Windows::Forms::DataVisualization::Charting::AreaAlignmentOrientations::Vertical | System::Windows::Forms::DataVisualization::Charting::AreaAlignmentOrientations::Horizontal));
-			chartArea2->AxisX->IntervalAutoMode = System::Windows::Forms::DataVisualization::Charting::IntervalAutoMode::VariableCount;
-			chartArea2->AxisX->IsMarginVisible = false;
-			chartArea2->AxisX->MajorGrid->Enabled = false;
-			chartArea2->AxisX->MajorTickMark->Enabled = false;
-			chartArea2->AxisY->IntervalAutoMode = System::Windows::Forms::DataVisualization::Charting::IntervalAutoMode::VariableCount;
-			chartArea2->AxisY->LabelStyle->Format = L"0";
-			chartArea2->AxisY->MajorGrid->Interval = 0;
-			chartArea2->AxisY->MajorGrid->IntervalOffset = 0;
-			chartArea2->AxisY->MaximumAutoSize = 100;
-			chartArea2->AxisY->Minimum = 0;
-			chartArea2->AxisY->Title = L"Количество";
-			chartArea2->AxisY->TitleFont = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
+			chartArea1->AlignmentOrientation = static_cast<System::Windows::Forms::DataVisualization::Charting::AreaAlignmentOrientations>((System::Windows::Forms::DataVisualization::Charting::AreaAlignmentOrientations::Vertical | System::Windows::Forms::DataVisualization::Charting::AreaAlignmentOrientations::Horizontal));
+			chartArea1->AxisX->IntervalAutoMode = System::Windows::Forms::DataVisualization::Charting::IntervalAutoMode::VariableCount;
+			chartArea1->AxisX->IsMarginVisible = false;
+			chartArea1->AxisX->MajorGrid->Enabled = false;
+			chartArea1->AxisX->MajorTickMark->Enabled = false;
+			chartArea1->AxisY->IntervalAutoMode = System::Windows::Forms::DataVisualization::Charting::IntervalAutoMode::VariableCount;
+			chartArea1->AxisY->LabelStyle->Format = L"0";
+			chartArea1->AxisY->MajorGrid->Interval = 0;
+			chartArea1->AxisY->MajorGrid->IntervalOffset = 0;
+			chartArea1->AxisY->MaximumAutoSize = 100;
+			chartArea1->AxisY->Minimum = 0;
+			chartArea1->AxisY->Title = L"Количество";
+			chartArea1->AxisY->TitleFont = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
-			chartArea2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
+			chartArea1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			chartArea2->Name = L"ChartArea1";
-			this->chart1->ChartAreas->Add(chartArea2);
-			legend2->BackColor = System::Drawing::Color::Transparent;
-			legend2->DockedToChartArea = L"ChartArea1";
-			legend2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			chartArea1->Name = L"ChartArea1";
+			this->chart1->ChartAreas->Add(chartArea1);
+			legend1->BackColor = System::Drawing::Color::Transparent;
+			legend1->DockedToChartArea = L"ChartArea1";
+			legend1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			legend2->IsTextAutoFit = false;
-			legend2->Name = L"Legend1";
-			this->chart1->Legends->Add(legend2);
+			legend1->IsTextAutoFit = false;
+			legend1->Name = L"Legend1";
+			this->chart1->Legends->Add(legend1);
 			this->chart1->Location = System::Drawing::Point(12, 12);
 			this->chart1->Name = L"chart1";
-			series4->ChartArea = L"ChartArea1";
-			series4->Color = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+			series1->ChartArea = L"ChartArea1";
+			series1->Color = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			series4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			series1->EmptyPointStyle->CustomProperties = L"DrawingStyle=Cylinder";
+			series1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			series4->IsValueShownAsLabel = true;
-			series4->Legend = L"Legend1";
-			series4->Name = L"Метод серидинных отрезков";
-			series4->XValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::String;
-			series4->YValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::UInt64;
-			series5->ChartArea = L"ChartArea1";
-			series5->Color = System::Drawing::Color::Red;
-			series5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			series1->IsValueShownAsLabel = true;
+			series1->Legend = L"Legend1";
+			series1->Name = L"Метод серидинных отрезков";
+			series1->XValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::String;
+			series1->YValuesPerPoint = 2;
+			series1->YValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::UInt64;
+			series2->ChartArea = L"ChartArea1";
+			series2->Color = System::Drawing::Color::Red;
+			series2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			series5->IsValueShownAsLabel = true;
-			series5->Legend = L"Legend1";
-			series5->Name = L"Метод произведений";
-			series5->XValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::String;
-			series5->YValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::UInt64;
-			series6->ChartArea = L"ChartArea1";
-			series6->Color = System::Drawing::Color::Indigo;
-			series6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			series2->IsValueShownAsLabel = true;
+			series2->Legend = L"Legend1";
+			series2->Name = L"Метод произведений";
+			series2->XValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::String;
+			series2->YValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::UInt64;
+			series3->ChartArea = L"ChartArea1";
+			series3->Color = System::Drawing::Color::Indigo;
+			series3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			series6->IsValueShownAsLabel = true;
-			series6->Legend = L"Legend1";
-			series6->Name = L"Конгруэтный метод";
-			series6->XValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::String;
-			series6->YValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::UInt64;
-			this->chart1->Series->Add(series4);
-			this->chart1->Series->Add(series5);
-			this->chart1->Series->Add(series6);
+			series3->IsValueShownAsLabel = true;
+			series3->Legend = L"Legend1";
+			series3->Name = L"Конгруэтный метод";
+			series3->XValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::String;
+			series3->YValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::UInt64;
+			this->chart1->Series->Add(series1);
+			this->chart1->Series->Add(series2);
+			this->chart1->Series->Add(series3);
 			this->chart1->Size = System::Drawing::Size(734, 345);
 			this->chart1->TabIndex = 0;
 			this->chart1->Text = L"chart1";
@@ -339,7 +342,7 @@ namespace MethodsGenerationNumber {
 			// 
 			this->dg_data->AllowUserToAddRows = false;
 			this->dg_data->AllowUserToDeleteRows = false;
-			this->dg_data->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::AllCellsExceptHeader;
+			this->dg_data->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
 			this->dg_data->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::AllCellsExceptHeaders;
 			this->dg_data->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->dg_data->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
@@ -350,7 +353,7 @@ namespace MethodsGenerationNumber {
 			this->dg_data->Location = System::Drawing::Point(752, 12);
 			this->dg_data->Name = L"dg_data";
 			this->dg_data->ReadOnly = true;
-			this->dg_data->Size = System::Drawing::Size(240, 150);
+			this->dg_data->Size = System::Drawing::Size(281, 150);
 			this->dg_data->TabIndex = 23;
 			// 
 			// current
@@ -359,7 +362,6 @@ namespace MethodsGenerationNumber {
 			this->current->Name = L"current";
 			this->current->ReadOnly = true;
 			this->current->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			this->current->Width = 5;
 			// 
 			// reultMult
 			// 
@@ -367,7 +369,6 @@ namespace MethodsGenerationNumber {
 			this->reultMult->Name = L"reultMult";
 			this->reultMult->ReadOnly = true;
 			this->reultMult->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			this->reultMult->Width = 5;
 			// 
 			// recieved
 			// 
@@ -375,13 +376,12 @@ namespace MethodsGenerationNumber {
 			this->recieved->Name = L"recieved";
 			this->recieved->ReadOnly = true;
 			this->recieved->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			this->recieved->Width = 5;
 			// 
 			// dg_equability
 			// 
 			this->dg_equability->AllowUserToAddRows = false;
 			this->dg_equability->AllowUserToDeleteRows = false;
-			this->dg_equability->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::AllCellsExceptHeader;
+			this->dg_equability->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
 			this->dg_equability->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::AllCellsExceptHeaders;
 			this->dg_equability->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->dg_equability->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
@@ -392,7 +392,7 @@ namespace MethodsGenerationNumber {
 			this->dg_equability->Location = System::Drawing::Point(752, 168);
 			this->dg_equability->Name = L"dg_equability";
 			this->dg_equability->ReadOnly = true;
-			this->dg_equability->Size = System::Drawing::Size(240, 150);
+			this->dg_equability->Size = System::Drawing::Size(281, 150);
 			this->dg_equability->TabIndex = 24;
 			// 
 			// met1
@@ -401,7 +401,6 @@ namespace MethodsGenerationNumber {
 			this->met1->Name = L"met1";
 			this->met1->ReadOnly = true;
 			this->met1->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			this->met1->Width = 5;
 			// 
 			// met2
 			// 
@@ -409,7 +408,6 @@ namespace MethodsGenerationNumber {
 			this->met2->Name = L"met2";
 			this->met2->ReadOnly = true;
 			this->met2->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			this->met2->Width = 5;
 			// 
 			// met3
 			// 
@@ -417,7 +415,6 @@ namespace MethodsGenerationNumber {
 			this->met3->Name = L"met3";
 			this->met3->ReadOnly = true;
 			this->met3->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			this->met3->Width = 5;
 			// 
 			// lbl_intervalTest2
 			// 
@@ -481,6 +478,7 @@ namespace MethodsGenerationNumber {
 			 System::Void clearDataGrid_data();
 			 System::Void fillDataGrid(__int64 curNumb, __int64 squareCurNumb, __int64 receivedNumb);
 			 System::Void fillDataGridEquability(int const& method, double expectedValue, double dispersion, double standardDeviation);
+			 System::Void fillIntervalTest(int method,double expectedValue, double dispersion, double standart);
 			 void fillDiagram(int series, int* countPointsInDiapason);
 			 //methods
 			 std::vector<double> methodOfMeanSquares(int countPoints, __int64 R0);

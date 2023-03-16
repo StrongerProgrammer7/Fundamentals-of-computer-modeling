@@ -143,6 +143,7 @@ namespace MethodsGenerationNumber {
 			chartArea1->AlignmentOrientation = static_cast<System::Windows::Forms::DataVisualization::Charting::AreaAlignmentOrientations>((System::Windows::Forms::DataVisualization::Charting::AreaAlignmentOrientations::Vertical | System::Windows::Forms::DataVisualization::Charting::AreaAlignmentOrientations::Horizontal));
 			chartArea1->AxisX->IntervalAutoMode = System::Windows::Forms::DataVisualization::Charting::IntervalAutoMode::VariableCount;
 			chartArea1->AxisX->IsMarginVisible = false;
+			chartArea1->AxisX->LabelStyle->Format = L"{0:0.0}";
 			chartArea1->AxisX->MajorGrid->Enabled = false;
 			chartArea1->AxisX->MajorTickMark->Enabled = false;
 			chartArea1->AxisY->IntervalAutoMode = System::Windows::Forms::DataVisualization::Charting::IntervalAutoMode::VariableCount;
@@ -167,6 +168,7 @@ namespace MethodsGenerationNumber {
 			this->chart1->Legends->Add(legend1);
 			this->chart1->Location = System::Drawing::Point(12, 12);
 			this->chart1->Name = L"chart1";
+			this->chart1->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			series1->ChartArea = L"ChartArea1";
 			series1->Color = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
@@ -177,7 +179,6 @@ namespace MethodsGenerationNumber {
 			series1->Legend = L"Legend1";
 			series1->Name = L"Метод серидинных отрезков";
 			series1->XValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::String;
-			series1->YValuesPerPoint = 2;
 			series1->YValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::UInt64;
 			series2->ChartArea = L"ChartArea1";
 			series2->Color = System::Drawing::Color::Red;

@@ -73,16 +73,16 @@ System::Void ModelingWorkMachineWithBreakdowns::ModelingWorkForm::Btn_execution_
 	double const timeTroubleshootinTo = Convert::ToDouble(tb_troubleshootingTo->Text->Replace(".", ","));
 
 	double timeBeforeNextTask = getTimeBefoeNextTask(1.0); //врем€ до следующего задани€
-	double timeToBreakdownMachine = getTimeBeforeBreakdownMachine(timeBreakDown_M_X, timeBreakdown_StandartDeviation); // врем€ до поломки
+	double timeBeforeBreakdownMachine = getTimeBeforeBreakdownMachine(timeBreakDown_M_X, timeBreakdown_StandartDeviation); // врем€ до поломки
 	
 	double totalTimeWorkMachine = 0;
-	int brokenDetails = 0;
+	int countBrokenDetails = 0;
 	double totalTimeRepair = 0;
 	while (countDetails > 0)
 	{
 		if (timeBeforeNextTask > 0)
 		{
-			totalTimeWorkMachine += timeBeforeNextTask;
+			totalTimeWorkMachine += timeBeforeNextTask; //добавл€ем врем€ ожидани€ задани€
 			timeBeforeNextTask = 0;
 		}
 
@@ -90,23 +90,24 @@ System::Void ModelingWorkMachineWithBreakdowns::ModelingWorkForm::Btn_execution_
 		double timeExectuionTask = getTimeExecutionTask(timeExectuionM_X, timeExectuionStandartDeviation);
 		double timeDebugExection_oneTask = setMachine + timeExectuionTask;
 
-		if (timeDebugExection_oneTask < timeToBreakdownMachine)
+		if (timeDebugExection_oneTask < timeBeforeBreakdownMachine) 
 		{
 			timeBeforeNextTask += getTimeBefoeNextTask(1.0);
-			totalTimeWorkMachine += timeDebugExection_oneTask;
-			timeToBreakdownMachine -= timeDebugExection_oneTask;
+			totalTimeWorkMachine += timeDebugExection_oneTask; //к общему времени работы станка добавл€ем врем€ выполнени€ одного задани€
+			timeBeforeBreakdownMachine -= timeDebugExection_oneTask; //от времени до поломки отнимаем выполнение одного задани€
+			timeBeforeNextTask -= timeDebugExection_oneTask; //от времени до след. задани€ отнимаем врем€ вып. одного задани€
 			countDetails--;
 		}
 		else
 		{
-			brokenDetails++;
-			totalTimeWorkMachine += timeToBreakdownMachine;
-			timeBeforeNextTask -= timeToBreakdownMachine;
+			countBrokenDetails++;
+			totalTimeWorkMachine += timeBeforeBreakdownMachine; //общее врем€ работы станка + врем€ просто€
+			timeBeforeNextTask -= timeBeforeBreakdownMachine;
 			double repairTime = getTimeRepair(timeTroubleshootinFrom, timeTroubleshootinTo);
 			//cout repairTime
 			totalTimeWorkMachine += repairTime;
 			timeBeforeNextTask -= repairTime;
-			timeToBreakdownMachine = getTimeBeforeBreakdownMachine(timeBreakDown_M_X, timeBreakdown_StandartDeviation); 
+			timeBeforeBreakdownMachine = getTimeBeforeBreakdownMachine(timeBreakDown_M_X, timeBreakdown_StandartDeviation); 
 			totalTimeRepair += repairTime;
 
 		}
@@ -119,7 +120,7 @@ System::Void ModelingWorkMachineWithBreakdowns::ModelingWorkForm::Btn_execution_
 	}
 
 	lbl_countTask->Text = " оличество деталей: " + allDetails.ToString();
-	lbl_CountBreakdown->Text = " оличество поломок: " + brokenDetails.ToString();
+	lbl_CountBreakdown->Text = " оличество поломок: " + countBrokenDetails.ToString();
 	lbl_TimeWork->Text = "¬рем€ работы: " + (static_cast<int>(totalTimeWorkMachine)).ToString() +" ч. " + (static_cast<int>((int)totalTimeWorkMachine % 1 * 60)).ToString() +" мин.";
 	lbl_DetailInQueue->Text = "ƒеталей в очереди: " + countDetailInQueue.ToString();
 	lbl_TotalTimeRepair->Text = "ќбщее врем€ ремонта: " + (static_cast<int>(totalTimeRepair)).ToString() + " ч. " + (static_cast<int>((int)totalTimeRepair % 1 * 60)).ToString() + " мин.";

@@ -55,6 +55,7 @@ namespace ModelingWorkMachineWithBreakdowns {
 	private: System::Windows::Forms::Label^ lbl_TimeWork;
 	private: System::Windows::Forms::Label^ lbl_DetailInQueue;
 	private: System::Windows::Forms::Label^ lbl_TotalTimeRepair;
+	private: System::Windows::Forms::Label^ lbl_totaltimeWait;
 
 
 
@@ -94,6 +95,7 @@ namespace ModelingWorkMachineWithBreakdowns {
 			this->lbl_TimeWork = (gcnew System::Windows::Forms::Label());
 			this->lbl_DetailInQueue = (gcnew System::Windows::Forms::Label());
 			this->lbl_TotalTimeRepair = (gcnew System::Windows::Forms::Label());
+			this->lbl_totaltimeWait = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -308,11 +310,21 @@ namespace ModelingWorkMachineWithBreakdowns {
 			this->lbl_TotalTimeRepair->TabIndex = 19;
 			this->lbl_TotalTimeRepair->Text = L"label_answer";
 			// 
+			// lbl_totaltimeWait
+			// 
+			this->lbl_totaltimeWait->AutoSize = true;
+			this->lbl_totaltimeWait->Location = System::Drawing::Point(12, 387);
+			this->lbl_totaltimeWait->Name = L"lbl_totaltimeWait";
+			this->lbl_totaltimeWait->Size = System::Drawing::Size(69, 13);
+			this->lbl_totaltimeWait->TabIndex = 20;
+			this->lbl_totaltimeWait->Text = L"label_answer";
+			// 
 			// ModelingWorkForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(628, 409);
+			this->Controls->Add(this->lbl_totaltimeWait);
 			this->Controls->Add(this->lbl_TotalTimeRepair);
 			this->Controls->Add(this->lbl_DetailInQueue);
 			this->Controls->Add(this->lbl_TimeWork);

@@ -78,11 +78,12 @@ System::Void ModelingWorkMachineWithBreakdowns::ModelingWorkForm::Btn_execution_
 	double totalTimeWorkMachine = 0;
 	int countBrokenDetails = 0;
 	double totalTimeRepair = 0;
+	double totalTimeWait = 0;
 	while (countDetails > 0)
 	{
 		if (timeBeforeNextTask > 0)
 		{
-			totalTimeWorkMachine += timeBeforeNextTask; //добавл€ем врем€ ожидани€ задани€
+			//totalTimeWorkMachine += timeBeforeNextTask; //добавл€ем врем€ ожидани€ задани€
 			timeBeforeNextTask = 0;
 		}
 
@@ -101,11 +102,12 @@ System::Void ModelingWorkMachineWithBreakdowns::ModelingWorkForm::Btn_execution_
 		else
 		{
 			countBrokenDetails++;
-			totalTimeWorkMachine += timeBeforeBreakdownMachine; //общее врем€ работы станка + врем€ просто€
+			totalTimeWait += timeBeforeBreakdownMachine;
+			//totalTimeWorkMachine += timeBeforeBreakdownMachine; //общее врем€ работы станка + врем€ просто€
 			timeBeforeNextTask -= timeBeforeBreakdownMachine;
 			double repairTime = getTimeRepair(timeTroubleshootinFrom, timeTroubleshootinTo);
 			//cout repairTime
-			totalTimeWorkMachine += repairTime;
+			//totalTimeWorkMachine += repairTime;
 			timeBeforeNextTask -= repairTime;
 			timeBeforeBreakdownMachine = getTimeBeforeBreakdownMachine(timeBreakDown_M_X, timeBreakdown_StandartDeviation); 
 			totalTimeRepair += repairTime;
@@ -121,9 +123,10 @@ System::Void ModelingWorkMachineWithBreakdowns::ModelingWorkForm::Btn_execution_
 
 	lbl_countTask->Text = " оличество деталей: " + allDetails.ToString();
 	lbl_CountBreakdown->Text = " оличество поломок: " + countBrokenDetails.ToString();
-	lbl_TimeWork->Text = "¬рем€ работы: " + (static_cast<int>(totalTimeWorkMachine)).ToString() +" ч. " + (static_cast<int>((int)totalTimeWorkMachine % 1 * 60)).ToString() +" мин.";
+	lbl_TimeWork->Text = "¬рем€ работы станка: " + (static_cast<int>(totalTimeWorkMachine)).ToString() +" ч. " + (static_cast<int>((int)totalTimeWorkMachine % 1 * 60)).ToString() +" мин.";
 	lbl_DetailInQueue->Text = "ƒеталей в очереди: " + countDetailInQueue.ToString();
 	lbl_TotalTimeRepair->Text = "ќбщее врем€ ремонта: " + (static_cast<int>(totalTimeRepair)).ToString() + " ч. " + (static_cast<int>((int)totalTimeRepair % 1 * 60)).ToString() + " мин.";
+	lbl_totaltimeWait->Text = "ќбщее врем€ просто€: " + (static_cast<int>(totalTimeWait)).ToString() + " ч. " + (static_cast<int>((int)totalTimeWait % 1 * 60)).ToString() + " мин.";
 	//return brokenDetails,totalTimeWorkMachine, totalTimeWorkMachine/allDetails,countDetailInQueue,
 }
 

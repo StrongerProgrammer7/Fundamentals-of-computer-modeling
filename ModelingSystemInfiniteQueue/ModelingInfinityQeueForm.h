@@ -59,6 +59,8 @@ namespace ModelingSystemInfiniteQueue {
 	private: System::Windows::Forms::Label^ lbl_answer3;
 	private: System::Windows::Forms::Label^ lbl_answer4;
 	private: System::Windows::Forms::Label^ lbl_answer5;
+	private: System::Windows::Forms::Label^ lbl_answer6;
+	private: System::Windows::Forms::Label^ label4;
 
 	private:
 		/// <summary>
@@ -97,6 +99,8 @@ namespace ModelingSystemInfiniteQueue {
 			this->lbl_answer3 = (gcnew System::Windows::Forms::Label());
 			this->lbl_answer4 = (gcnew System::Windows::Forms::Label());
 			this->lbl_answer5 = (gcnew System::Windows::Forms::Label());
+			this->lbl_answer6 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -357,12 +361,32 @@ namespace ModelingSystemInfiniteQueue {
 			this->lbl_answer5->TabIndex = 23;
 			this->lbl_answer5->Text = L"label7";
 			// 
+			// lbl_answer6
+			// 
+			this->lbl_answer6->AutoSize = true;
+			this->lbl_answer6->Location = System::Drawing::Point(12, 421);
+			this->lbl_answer6->Name = L"lbl_answer6";
+			this->lbl_answer6->Size = System::Drawing::Size(35, 13);
+			this->lbl_answer6->TabIndex = 24;
+			this->lbl_answer6->Text = L"label7";
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Location = System::Drawing::Point(645, 420);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(35, 13);
+			this->label4->TabIndex = 25;
+			this->label4->Text = L"label4";
+			// 
 			// ModelingInfinityQeueForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::LightSteelBlue;
-			this->ClientSize = System::Drawing::Size(849, 431);
+			this->ClientSize = System::Drawing::Size(849, 445);
+			this->Controls->Add(this->label4);
+			this->Controls->Add(this->lbl_answer6);
 			this->Controls->Add(this->lbl_answer5);
 			this->Controls->Add(this->lbl_answer4);
 			this->Controls->Add(this->lbl_answer3);

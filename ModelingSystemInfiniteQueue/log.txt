@@ -17,7 +17,7 @@ totalTimeWork = 1
 totalTimeWork = 2
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 0 totalTimeWaitFirstPC =  3 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 0 totalTimeWaitFirstPC =  2 currentTimeExecutionFirstPC =1
  Second PC : 
  totalTimeExectuionTasksSecondPC = 0 totalTimeWaitSecondPC =  3 currentTimeExecutionSecondPC =0
  Third PC : 
@@ -26,7 +26,7 @@ totalTimeWork = 2
 totalTimeWork = 3
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 0 totalTimeWaitFirstPC =  4 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 0 totalTimeWaitFirstPC =  2 currentTimeExecutionFirstPC =2
  Second PC : 
  totalTimeExectuionTasksSecondPC = 0 totalTimeWaitSecondPC =  4 currentTimeExecutionSecondPC =0
  Third PC : 
@@ -35,1118 +35,2909 @@ totalTimeWork = 3
 totalTimeWork = 4
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 0 totalTimeWaitFirstPC =  5 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 0 totalTimeWaitFirstPC =  2 currentTimeExecutionFirstPC =3
  Second PC : 
  totalTimeExectuionTasksSecondPC = 0 totalTimeWaitSecondPC =  5 currentTimeExecutionSecondPC =0
  Third PC : 
- totalTimeExectuionTasksThirdPC = 0 totalTimeWaitThirdPC =  4 currentTimeExecutionThirdPC =1
+ totalTimeExectuionTasksThirdPC = 0 totalTimeWaitThirdPC =  5 currentTimeExecutionThirdPC =0
 ---------------------------------------
 totalTimeWork = 5
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 0 totalTimeWaitFirstPC =  6 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 3 totalTimeWaitFirstPC =  2 currentTimeExecutionFirstPC =1
  Second PC : 
  totalTimeExectuionTasksSecondPC = 0 totalTimeWaitSecondPC =  6 currentTimeExecutionSecondPC =0
  Third PC : 
- totalTimeExectuionTasksThirdPC = 0 totalTimeWaitThirdPC =  4 currentTimeExecutionThirdPC =2
+ totalTimeExectuionTasksThirdPC = 0 totalTimeWaitThirdPC =  5 currentTimeExecutionThirdPC =1
 ---------------------------------------
 totalTimeWork = 6
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 0 totalTimeWaitFirstPC =  7 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 3 totalTimeWaitFirstPC =  2 currentTimeExecutionFirstPC =2
  Second PC : 
  totalTimeExectuionTasksSecondPC = 0 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =0
  Third PC : 
- totalTimeExectuionTasksThirdPC = 0 totalTimeWaitThirdPC =  4 currentTimeExecutionThirdPC =3
+ totalTimeExectuionTasksThirdPC = 0 totalTimeWaitThirdPC =  5 currentTimeExecutionThirdPC =2
 ---------------------------------------
 totalTimeWork = 7
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 0 totalTimeWaitFirstPC =  8 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 3 totalTimeWaitFirstPC =  2 currentTimeExecutionFirstPC =3
  Second PC : 
  totalTimeExectuionTasksSecondPC = 0 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 0 totalTimeWaitThirdPC =  4 currentTimeExecutionThirdPC =4
+ totalTimeExectuionTasksThirdPC = 2 totalTimeWaitThirdPC =  6 currentTimeExecutionThirdPC =0
 ---------------------------------------
 totalTimeWork = 8
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 0 totalTimeWaitFirstPC =  9 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 6 totalTimeWaitFirstPC =  2 currentTimeExecutionFirstPC =1
  Second PC : 
  totalTimeExectuionTasksSecondPC = 0 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 0 totalTimeWaitThirdPC =  4 currentTimeExecutionThirdPC =5
+ totalTimeExectuionTasksThirdPC = 2 totalTimeWaitThirdPC =  6 currentTimeExecutionThirdPC =1
 ---------------------------------------
 totalTimeWork = 9
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 0 totalTimeWaitFirstPC =  10 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 6 totalTimeWaitFirstPC =  2 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 2 totalTimeWaitSecondPC =  8 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 0 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =3
  Third PC : 
- totalTimeExectuionTasksThirdPC = 5 totalTimeWaitThirdPC =  5 currentTimeExecutionThirdPC =0
+ totalTimeExectuionTasksThirdPC = 2 totalTimeWaitThirdPC =  6 currentTimeExecutionThirdPC =2
 ---------------------------------------
 totalTimeWork = 10
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 0 totalTimeWaitFirstPC =  11 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 8 totalTimeWaitFirstPC =  3 currentTimeExecutionFirstPC =0
  Second PC : 
- totalTimeExectuionTasksSecondPC = 2 totalTimeWaitSecondPC =  9 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 3 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 5 totalTimeWaitThirdPC =  6 currentTimeExecutionThirdPC =0
+ totalTimeExectuionTasksThirdPC = 2 totalTimeWaitThirdPC =  6 currentTimeExecutionThirdPC =3
 ---------------------------------------
 totalTimeWork = 11
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 0 totalTimeWaitFirstPC =  12 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 8 totalTimeWaitFirstPC =  4 currentTimeExecutionFirstPC =0
  Second PC : 
- totalTimeExectuionTasksSecondPC = 2 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 3 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 5 totalTimeWaitThirdPC =  6 currentTimeExecutionThirdPC =1
+ totalTimeExectuionTasksThirdPC = 2 totalTimeWaitThirdPC =  6 currentTimeExecutionThirdPC =4
 ---------------------------------------
 totalTimeWork = 12
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 0 totalTimeWaitFirstPC =  13 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 8 totalTimeWaitFirstPC =  4 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 2 totalTimeWaitSecondPC =  11 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 5 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 5 totalTimeWaitThirdPC =  6 currentTimeExecutionThirdPC =2
+ totalTimeExectuionTasksThirdPC = 6 totalTimeWaitThirdPC =  7 currentTimeExecutionThirdPC =0
 ---------------------------------------
 totalTimeWork = 13
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 0 totalTimeWaitFirstPC =  14 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 8 totalTimeWaitFirstPC =  4 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 2 totalTimeWaitSecondPC =  12 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 5 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 5 totalTimeWaitThirdPC =  6 currentTimeExecutionThirdPC =3
+ totalTimeExectuionTasksThirdPC = 6 totalTimeWaitThirdPC =  8 currentTimeExecutionThirdPC =0
 ---------------------------------------
 totalTimeWork = 14
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 0 totalTimeWaitFirstPC =  15 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 10 totalTimeWaitFirstPC =  5 currentTimeExecutionFirstPC =0
  Second PC : 
- totalTimeExectuionTasksSecondPC = 2 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 7 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 5 totalTimeWaitThirdPC =  6 currentTimeExecutionThirdPC =4
+ totalTimeExectuionTasksThirdPC = 6 totalTimeWaitThirdPC =  9 currentTimeExecutionThirdPC =0
 ---------------------------------------
 totalTimeWork = 15
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 0 totalTimeWaitFirstPC =  15 currentTimeExecutionFirstPC =1
+ totalTimeExectuionTasksFristPC = 10 totalTimeWaitFirstPC =  5 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 2 totalTimeWaitSecondPC =  14 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 7 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 9 totalTimeWaitThirdPC =  7 currentTimeExecutionThirdPC =0
+ totalTimeExectuionTasksThirdPC = 6 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =0
 ---------------------------------------
 totalTimeWork = 16
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 0 totalTimeWaitFirstPC =  15 currentTimeExecutionFirstPC =2
+ totalTimeExectuionTasksFristPC = 10 totalTimeWaitFirstPC =  5 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 2 totalTimeWaitSecondPC =  15 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 9 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 9 totalTimeWaitThirdPC =  8 currentTimeExecutionThirdPC =0
+ totalTimeExectuionTasksThirdPC = 6 totalTimeWaitThirdPC =  11 currentTimeExecutionThirdPC =0
 ---------------------------------------
 totalTimeWork = 17
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 0 totalTimeWaitFirstPC =  15 currentTimeExecutionFirstPC =3
+ totalTimeExectuionTasksFristPC = 10 totalTimeWaitFirstPC =  5 currentTimeExecutionFirstPC =3
  Second PC : 
- totalTimeExectuionTasksSecondPC = 2 totalTimeWaitSecondPC =  16 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 9 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 9 totalTimeWaitThirdPC =  9 currentTimeExecutionThirdPC =0
+ totalTimeExectuionTasksThirdPC = 6 totalTimeWaitThirdPC =  12 currentTimeExecutionThirdPC =0
 ---------------------------------------
 totalTimeWork = 18
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 0 totalTimeWaitFirstPC =  15 currentTimeExecutionFirstPC =4
+ totalTimeExectuionTasksFristPC = 13 totalTimeWaitFirstPC =  5 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 2 totalTimeWaitSecondPC =  17 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 11 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 9 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =0
+ totalTimeExectuionTasksThirdPC = 6 totalTimeWaitThirdPC =  12 currentTimeExecutionThirdPC =1
 ---------------------------------------
 totalTimeWork = 19
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 4 totalTimeWaitFirstPC =  15 currentTimeExecutionFirstPC =1
+ totalTimeExectuionTasksFristPC = 13 totalTimeWaitFirstPC =  5 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 2 totalTimeWaitSecondPC =  18 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 11 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 9 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =1
+ totalTimeExectuionTasksThirdPC = 6 totalTimeWaitThirdPC =  12 currentTimeExecutionThirdPC =2
 ---------------------------------------
 totalTimeWork = 20
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 4 totalTimeWaitFirstPC =  15 currentTimeExecutionFirstPC =2
+ totalTimeExectuionTasksFristPC = 13 totalTimeWaitFirstPC =  5 currentTimeExecutionFirstPC =3
  Second PC : 
- totalTimeExectuionTasksSecondPC = 2 totalTimeWaitSecondPC =  19 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 11 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =3
  Third PC : 
- totalTimeExectuionTasksThirdPC = 9 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =2
+ totalTimeExectuionTasksThirdPC = 6 totalTimeWaitThirdPC =  12 currentTimeExecutionThirdPC =3
 ---------------------------------------
 totalTimeWork = 21
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 4 totalTimeWaitFirstPC =  15 currentTimeExecutionFirstPC =3
+ totalTimeExectuionTasksFristPC = 16 totalTimeWaitFirstPC =  5 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 2 totalTimeWaitSecondPC =  20 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 14 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 9 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =3
+ totalTimeExectuionTasksThirdPC = 6 totalTimeWaitThirdPC =  12 currentTimeExecutionThirdPC =4
 ---------------------------------------
 totalTimeWork = 22
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 4 totalTimeWaitFirstPC =  15 currentTimeExecutionFirstPC =4
+ totalTimeExectuionTasksFristPC = 16 totalTimeWaitFirstPC =  5 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 2 totalTimeWaitSecondPC =  21 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 14 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 9 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =4
+ totalTimeExectuionTasksThirdPC = 10 totalTimeWaitThirdPC =  12 currentTimeExecutionThirdPC =1
 ---------------------------------------
 totalTimeWork = 23
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 8 totalTimeWaitFirstPC =  15 currentTimeExecutionFirstPC =1
+ totalTimeExectuionTasksFristPC = 16 totalTimeWaitFirstPC =  5 currentTimeExecutionFirstPC =3
  Second PC : 
- totalTimeExectuionTasksSecondPC = 2 totalTimeWaitSecondPC =  22 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 14 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =3
  Third PC : 
- totalTimeExectuionTasksThirdPC = 9 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =5
+ totalTimeExectuionTasksThirdPC = 10 totalTimeWaitThirdPC =  12 currentTimeExecutionThirdPC =2
 ---------------------------------------
 totalTimeWork = 24
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 8 totalTimeWaitFirstPC =  15 currentTimeExecutionFirstPC =2
+ totalTimeExectuionTasksFristPC = 19 totalTimeWaitFirstPC =  5 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 2 totalTimeWaitSecondPC =  23 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 17 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 9 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =6
+ totalTimeExectuionTasksThirdPC = 10 totalTimeWaitThirdPC =  12 currentTimeExecutionThirdPC =3
 ---------------------------------------
 totalTimeWork = 25
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 8 totalTimeWaitFirstPC =  15 currentTimeExecutionFirstPC =3
+ totalTimeExectuionTasksFristPC = 19 totalTimeWaitFirstPC =  5 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 2 totalTimeWaitSecondPC =  24 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 17 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 15 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =1
+ totalTimeExectuionTasksThirdPC = 13 totalTimeWaitThirdPC =  12 currentTimeExecutionThirdPC =1
 ---------------------------------------
 totalTimeWork = 26
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 8 totalTimeWaitFirstPC =  15 currentTimeExecutionFirstPC =4
+ totalTimeExectuionTasksFristPC = 19 totalTimeWaitFirstPC =  5 currentTimeExecutionFirstPC =3
  Second PC : 
- totalTimeExectuionTasksSecondPC = 2 totalTimeWaitSecondPC =  24 currentTimeExecutionSecondPC =1
+ totalTimeExectuionTasksSecondPC = 17 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =3
  Third PC : 
- totalTimeExectuionTasksThirdPC = 15 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =2
+ totalTimeExectuionTasksThirdPC = 13 totalTimeWaitThirdPC =  12 currentTimeExecutionThirdPC =2
 ---------------------------------------
 totalTimeWork = 27
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 8 totalTimeWaitFirstPC =  15 currentTimeExecutionFirstPC =5
+ totalTimeExectuionTasksFristPC = 22 totalTimeWaitFirstPC =  5 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 2 totalTimeWaitSecondPC =  24 currentTimeExecutionSecondPC =2
+ totalTimeExectuionTasksSecondPC = 20 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 15 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =3
+ totalTimeExectuionTasksThirdPC = 13 totalTimeWaitThirdPC =  12 currentTimeExecutionThirdPC =3
 ---------------------------------------
 totalTimeWork = 28
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 13 totalTimeWaitFirstPC =  16 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 22 totalTimeWaitFirstPC =  5 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 2 totalTimeWaitSecondPC =  24 currentTimeExecutionSecondPC =3
+ totalTimeExectuionTasksSecondPC = 20 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 15 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =4
+ totalTimeExectuionTasksThirdPC = 13 totalTimeWaitThirdPC =  12 currentTimeExecutionThirdPC =4
 ---------------------------------------
 totalTimeWork = 29
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 13 totalTimeWaitFirstPC =  17 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 24 totalTimeWaitFirstPC =  5 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 2 totalTimeWaitSecondPC =  24 currentTimeExecutionSecondPC =4
+ totalTimeExectuionTasksSecondPC = 20 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =3
  Third PC : 
- totalTimeExectuionTasksThirdPC = 15 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =5
+ totalTimeExectuionTasksThirdPC = 17 totalTimeWaitThirdPC =  12 currentTimeExecutionThirdPC =1
 ---------------------------------------
 totalTimeWork = 30
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 13 totalTimeWaitFirstPC =  17 currentTimeExecutionFirstPC =1
+ totalTimeExectuionTasksFristPC = 24 totalTimeWaitFirstPC =  5 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 6 totalTimeWaitSecondPC =  25 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 23 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 20 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =1
+ totalTimeExectuionTasksThirdPC = 17 totalTimeWaitThirdPC =  12 currentTimeExecutionThirdPC =2
 ---------------------------------------
 totalTimeWork = 31
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 13 totalTimeWaitFirstPC =  17 currentTimeExecutionFirstPC =2
+ totalTimeExectuionTasksFristPC = 26 totalTimeWaitFirstPC =  5 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 6 totalTimeWaitSecondPC =  26 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 23 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 20 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =2
+ totalTimeExectuionTasksThirdPC = 17 totalTimeWaitThirdPC =  12 currentTimeExecutionThirdPC =3
 ---------------------------------------
 totalTimeWork = 32
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 13 totalTimeWaitFirstPC =  17 currentTimeExecutionFirstPC =3
+ totalTimeExectuionTasksFristPC = 26 totalTimeWaitFirstPC =  5 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 6 totalTimeWaitSecondPC =  27 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 23 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =3
  Third PC : 
- totalTimeExectuionTasksThirdPC = 20 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =3
+ totalTimeExectuionTasksThirdPC = 20 totalTimeWaitThirdPC =  12 currentTimeExecutionThirdPC =1
 ---------------------------------------
 totalTimeWork = 33
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 13 totalTimeWaitFirstPC =  17 currentTimeExecutionFirstPC =4
+ totalTimeExectuionTasksFristPC = 26 totalTimeWaitFirstPC =  5 currentTimeExecutionFirstPC =3
  Second PC : 
- totalTimeExectuionTasksSecondPC = 6 totalTimeWaitSecondPC =  28 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 26 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 20 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =4
+ totalTimeExectuionTasksThirdPC = 20 totalTimeWaitThirdPC =  12 currentTimeExecutionThirdPC =2
 ---------------------------------------
 totalTimeWork = 34
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 17 totalTimeWaitFirstPC =  18 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 29 totalTimeWaitFirstPC =  5 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 6 totalTimeWaitSecondPC =  29 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 26 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 20 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =5
+ totalTimeExectuionTasksThirdPC = 20 totalTimeWaitThirdPC =  12 currentTimeExecutionThirdPC =3
 ---------------------------------------
 totalTimeWork = 35
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 17 totalTimeWaitFirstPC =  19 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 29 totalTimeWaitFirstPC =  5 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 6 totalTimeWaitSecondPC =  30 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 26 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =3
  Third PC : 
- totalTimeExectuionTasksThirdPC = 20 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =6
+ totalTimeExectuionTasksThirdPC = 23 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =0
 ---------------------------------------
 totalTimeWork = 36
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 17 totalTimeWaitFirstPC =  20 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 31 totalTimeWaitFirstPC =  5 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 6 totalTimeWaitSecondPC =  31 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 29 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 26 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =1
+ totalTimeExectuionTasksThirdPC = 23 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =1
 ---------------------------------------
 totalTimeWork = 37
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 17 totalTimeWaitFirstPC =  21 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 31 totalTimeWaitFirstPC =  5 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 6 totalTimeWaitSecondPC =  31 currentTimeExecutionSecondPC =1
+ totalTimeExectuionTasksSecondPC = 29 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 26 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =2
+ totalTimeExectuionTasksThirdPC = 23 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =2
 ---------------------------------------
 totalTimeWork = 38
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 17 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 31 totalTimeWaitFirstPC =  5 currentTimeExecutionFirstPC =3
  Second PC : 
- totalTimeExectuionTasksSecondPC = 6 totalTimeWaitSecondPC =  31 currentTimeExecutionSecondPC =2
+ totalTimeExectuionTasksSecondPC = 31 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 26 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =3
+ totalTimeExectuionTasksThirdPC = 23 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =3
 ---------------------------------------
 totalTimeWork = 39
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 17 totalTimeWaitFirstPC =  23 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 34 totalTimeWaitFirstPC =  5 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 6 totalTimeWaitSecondPC =  31 currentTimeExecutionSecondPC =3
+ totalTimeExectuionTasksSecondPC = 31 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 26 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =4
+ totalTimeExectuionTasksThirdPC = 26 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =1
 ---------------------------------------
 totalTimeWork = 40
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 17 totalTimeWaitFirstPC =  24 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 34 totalTimeWaitFirstPC =  5 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 6 totalTimeWaitSecondPC =  31 currentTimeExecutionSecondPC =4
+ totalTimeExectuionTasksSecondPC = 31 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =3
  Third PC : 
- totalTimeExectuionTasksThirdPC = 30 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =1
+ totalTimeExectuionTasksThirdPC = 26 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =2
 ---------------------------------------
 totalTimeWork = 41
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 17 totalTimeWaitFirstPC =  25 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 36 totalTimeWaitFirstPC =  5 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 10 totalTimeWaitSecondPC =  32 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 34 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 30 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =2
+ totalTimeExectuionTasksThirdPC = 26 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =3
 ---------------------------------------
 totalTimeWork = 42
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 17 totalTimeWaitFirstPC =  26 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 36 totalTimeWaitFirstPC =  5 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 10 totalTimeWaitSecondPC =  33 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 34 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 30 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =3
+ totalTimeExectuionTasksThirdPC = 26 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =4
 ---------------------------------------
 totalTimeWork = 43
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 17 totalTimeWaitFirstPC =  26 currentTimeExecutionFirstPC =1
+ totalTimeExectuionTasksFristPC = 38 totalTimeWaitFirstPC =  6 currentTimeExecutionFirstPC =0
  Second PC : 
- totalTimeExectuionTasksSecondPC = 10 totalTimeWaitSecondPC =  34 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 36 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 30 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =4
+ totalTimeExectuionTasksThirdPC = 30 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =1
 ---------------------------------------
 totalTimeWork = 44
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 17 totalTimeWaitFirstPC =  26 currentTimeExecutionFirstPC =2
+ totalTimeExectuionTasksFristPC = 38 totalTimeWaitFirstPC =  7 currentTimeExecutionFirstPC =0
  Second PC : 
- totalTimeExectuionTasksSecondPC = 10 totalTimeWaitSecondPC =  35 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 36 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 34 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =1
+ totalTimeExectuionTasksThirdPC = 30 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =2
 ---------------------------------------
 totalTimeWork = 45
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 17 totalTimeWaitFirstPC =  26 currentTimeExecutionFirstPC =3
+ totalTimeExectuionTasksFristPC = 38 totalTimeWaitFirstPC =  8 currentTimeExecutionFirstPC =0
  Second PC : 
- totalTimeExectuionTasksSecondPC = 10 totalTimeWaitSecondPC =  36 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 38 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 34 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =2
+ totalTimeExectuionTasksThirdPC = 30 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =3
 ---------------------------------------
 totalTimeWork = 46
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 20 totalTimeWaitFirstPC =  26 currentTimeExecutionFirstPC =1
+ totalTimeExectuionTasksFristPC = 38 totalTimeWaitFirstPC =  8 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 10 totalTimeWaitSecondPC =  37 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 38 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 34 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =3
+ totalTimeExectuionTasksThirdPC = 30 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =4
 ---------------------------------------
 totalTimeWork = 47
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 20 totalTimeWaitFirstPC =  26 currentTimeExecutionFirstPC =2
+ totalTimeExectuionTasksFristPC = 38 totalTimeWaitFirstPC =  8 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 10 totalTimeWaitSecondPC =  38 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 38 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =3
  Third PC : 
- totalTimeExectuionTasksThirdPC = 34 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =4
+ totalTimeExectuionTasksThirdPC = 30 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =5
 ---------------------------------------
 totalTimeWork = 48
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 20 totalTimeWaitFirstPC =  26 currentTimeExecutionFirstPC =3
+ totalTimeExectuionTasksFristPC = 40 totalTimeWaitFirstPC =  9 currentTimeExecutionFirstPC =0
  Second PC : 
- totalTimeExectuionTasksSecondPC = 10 totalTimeWaitSecondPC =  39 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 41 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 38 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =1
+ totalTimeExectuionTasksThirdPC = 35 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =1
 ---------------------------------------
 totalTimeWork = 49
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 20 totalTimeWaitFirstPC =  26 currentTimeExecutionFirstPC =4
+ totalTimeExectuionTasksFristPC = 40 totalTimeWaitFirstPC =  10 currentTimeExecutionFirstPC =0
  Second PC : 
- totalTimeExectuionTasksSecondPC = 10 totalTimeWaitSecondPC =  40 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 41 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 38 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =2
+ totalTimeExectuionTasksThirdPC = 35 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =2
 ---------------------------------------
 totalTimeWork = 50
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 24 totalTimeWaitFirstPC =  26 currentTimeExecutionFirstPC =1
+ totalTimeExectuionTasksFristPC = 40 totalTimeWaitFirstPC =  11 currentTimeExecutionFirstPC =0
  Second PC : 
- totalTimeExectuionTasksSecondPC = 10 totalTimeWaitSecondPC =  41 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 41 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =3
  Third PC : 
- totalTimeExectuionTasksThirdPC = 38 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =3
+ totalTimeExectuionTasksThirdPC = 37 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =1
 ---------------------------------------
 totalTimeWork = 51
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 24 totalTimeWaitFirstPC =  26 currentTimeExecutionFirstPC =2
+ totalTimeExectuionTasksFristPC = 40 totalTimeWaitFirstPC =  11 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 10 totalTimeWaitSecondPC =  42 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 44 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 41 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =1
+ totalTimeExectuionTasksThirdPC = 37 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =2
 ---------------------------------------
 totalTimeWork = 52
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 24 totalTimeWaitFirstPC =  26 currentTimeExecutionFirstPC =3
+ totalTimeExectuionTasksFristPC = 40 totalTimeWaitFirstPC =  11 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 10 totalTimeWaitSecondPC =  43 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 44 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 41 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =2
+ totalTimeExectuionTasksThirdPC = 37 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =3
 ---------------------------------------
 totalTimeWork = 53
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 24 totalTimeWaitFirstPC =  26 currentTimeExecutionFirstPC =4
+ totalTimeExectuionTasksFristPC = 40 totalTimeWaitFirstPC =  11 currentTimeExecutionFirstPC =3
  Second PC : 
- totalTimeExectuionTasksSecondPC = 10 totalTimeWaitSecondPC =  44 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 46 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 41 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =3
+ totalTimeExectuionTasksThirdPC = 37 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =4
 ---------------------------------------
 totalTimeWork = 54
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 28 totalTimeWaitFirstPC =  26 currentTimeExecutionFirstPC =1
+ totalTimeExectuionTasksFristPC = 43 totalTimeWaitFirstPC =  11 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 10 totalTimeWaitSecondPC =  45 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 46 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 41 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =4
+ totalTimeExectuionTasksThirdPC = 41 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =1
 ---------------------------------------
 totalTimeWork = 55
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 28 totalTimeWaitFirstPC =  26 currentTimeExecutionFirstPC =2
+ totalTimeExectuionTasksFristPC = 43 totalTimeWaitFirstPC =  11 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 10 totalTimeWaitSecondPC =  46 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 46 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =3
  Third PC : 
- totalTimeExectuionTasksThirdPC = 41 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =5
+ totalTimeExectuionTasksThirdPC = 41 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =2
 ---------------------------------------
 totalTimeWork = 56
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 28 totalTimeWaitFirstPC =  26 currentTimeExecutionFirstPC =3
+ totalTimeExectuionTasksFristPC = 45 totalTimeWaitFirstPC =  12 currentTimeExecutionFirstPC =0
  Second PC : 
- totalTimeExectuionTasksSecondPC = 10 totalTimeWaitSecondPC =  47 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 49 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 41 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =6
+ totalTimeExectuionTasksThirdPC = 41 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =3
 ---------------------------------------
 totalTimeWork = 57
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 31 totalTimeWaitFirstPC =  26 currentTimeExecutionFirstPC =1
+ totalTimeExectuionTasksFristPC = 45 totalTimeWaitFirstPC =  13 currentTimeExecutionFirstPC =0
  Second PC : 
- totalTimeExectuionTasksSecondPC = 10 totalTimeWaitSecondPC =  48 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 49 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 41 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =7
+ totalTimeExectuionTasksThirdPC = 41 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =4
 ---------------------------------------
 totalTimeWork = 58
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 31 totalTimeWaitFirstPC =  26 currentTimeExecutionFirstPC =2
+ totalTimeExectuionTasksFristPC = 45 totalTimeWaitFirstPC =  13 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 10 totalTimeWaitSecondPC =  49 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 51 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 48 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =1
+ totalTimeExectuionTasksThirdPC = 41 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =5
 ---------------------------------------
 totalTimeWork = 59
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 31 totalTimeWaitFirstPC =  26 currentTimeExecutionFirstPC =3
+ totalTimeExectuionTasksFristPC = 45 totalTimeWaitFirstPC =  13 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 10 totalTimeWaitSecondPC =  50 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 51 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 48 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =2
+ totalTimeExectuionTasksThirdPC = 46 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =1
 ---------------------------------------
 totalTimeWork = 60
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 31 totalTimeWaitFirstPC =  26 currentTimeExecutionFirstPC =4
+ totalTimeExectuionTasksFristPC = 45 totalTimeWaitFirstPC =  13 currentTimeExecutionFirstPC =3
  Second PC : 
- totalTimeExectuionTasksSecondPC = 10 totalTimeWaitSecondPC =  51 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 53 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 48 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =3
+ totalTimeExectuionTasksThirdPC = 46 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =2
 ---------------------------------------
 totalTimeWork = 61
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 35 totalTimeWaitFirstPC =  26 currentTimeExecutionFirstPC =1
+ totalTimeExectuionTasksFristPC = 48 totalTimeWaitFirstPC =  13 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 10 totalTimeWaitSecondPC =  51 currentTimeExecutionSecondPC =1
+ totalTimeExectuionTasksSecondPC = 53 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 48 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =4
+ totalTimeExectuionTasksThirdPC = 46 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =3
 ---------------------------------------
 totalTimeWork = 62
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 35 totalTimeWaitFirstPC =  26 currentTimeExecutionFirstPC =2
+ totalTimeExectuionTasksFristPC = 48 totalTimeWaitFirstPC =  13 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 10 totalTimeWaitSecondPC =  51 currentTimeExecutionSecondPC =2
+ totalTimeExectuionTasksSecondPC = 53 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =3
  Third PC : 
- totalTimeExectuionTasksThirdPC = 48 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =5
+ totalTimeExectuionTasksThirdPC = 49 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =1
 ---------------------------------------
 totalTimeWork = 63
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 35 totalTimeWaitFirstPC =  26 currentTimeExecutionFirstPC =3
+ totalTimeExectuionTasksFristPC = 50 totalTimeWaitFirstPC =  13 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 10 totalTimeWaitSecondPC =  51 currentTimeExecutionSecondPC =3
+ totalTimeExectuionTasksSecondPC = 56 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 53 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =1
+ totalTimeExectuionTasksThirdPC = 49 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =2
 ---------------------------------------
 totalTimeWork = 64
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 35 totalTimeWaitFirstPC =  26 currentTimeExecutionFirstPC =4
+ totalTimeExectuionTasksFristPC = 50 totalTimeWaitFirstPC =  13 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 13 totalTimeWaitSecondPC =  52 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 56 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 53 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =2
+ totalTimeExectuionTasksThirdPC = 49 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =3
 ---------------------------------------
 totalTimeWork = 65
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 35 totalTimeWaitFirstPC =  26 currentTimeExecutionFirstPC =5
+ totalTimeExectuionTasksFristPC = 50 totalTimeWaitFirstPC =  13 currentTimeExecutionFirstPC =3
  Second PC : 
- totalTimeExectuionTasksSecondPC = 13 totalTimeWaitSecondPC =  52 currentTimeExecutionSecondPC =1
+ totalTimeExectuionTasksSecondPC = 56 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =3
  Third PC : 
- totalTimeExectuionTasksThirdPC = 53 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =3
+ totalTimeExectuionTasksThirdPC = 52 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =1
 ---------------------------------------
 totalTimeWork = 66
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 40 totalTimeWaitFirstPC =  27 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 53 totalTimeWaitFirstPC =  14 currentTimeExecutionFirstPC =0
  Second PC : 
- totalTimeExectuionTasksSecondPC = 13 totalTimeWaitSecondPC =  52 currentTimeExecutionSecondPC =2
+ totalTimeExectuionTasksSecondPC = 59 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 53 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =4
+ totalTimeExectuionTasksThirdPC = 52 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =2
 ---------------------------------------
 totalTimeWork = 67
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 40 totalTimeWaitFirstPC =  28 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 53 totalTimeWaitFirstPC =  15 currentTimeExecutionFirstPC =0
  Second PC : 
- totalTimeExectuionTasksSecondPC = 13 totalTimeWaitSecondPC =  52 currentTimeExecutionSecondPC =3
+ totalTimeExectuionTasksSecondPC = 59 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 53 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =5
+ totalTimeExectuionTasksThirdPC = 52 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =3
 ---------------------------------------
 totalTimeWork = 68
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 40 totalTimeWaitFirstPC =  29 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 53 totalTimeWaitFirstPC =  15 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 16 totalTimeWaitSecondPC =  52 currentTimeExecutionSecondPC =1
+ totalTimeExectuionTasksSecondPC = 61 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 58 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =1
+ totalTimeExectuionTasksThirdPC = 52 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =4
 ---------------------------------------
 totalTimeWork = 69
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 40 totalTimeWaitFirstPC =  30 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 53 totalTimeWaitFirstPC =  15 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 16 totalTimeWaitSecondPC =  52 currentTimeExecutionSecondPC =2
+ totalTimeExectuionTasksSecondPC = 61 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 58 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =2
+ totalTimeExectuionTasksThirdPC = 52 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =5
 ---------------------------------------
 totalTimeWork = 70
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 40 totalTimeWaitFirstPC =  31 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 55 totalTimeWaitFirstPC =  16 currentTimeExecutionFirstPC =0
  Second PC : 
- totalTimeExectuionTasksSecondPC = 18 totalTimeWaitSecondPC =  52 currentTimeExecutionSecondPC =1
+ totalTimeExectuionTasksSecondPC = 61 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =3
  Third PC : 
- totalTimeExectuionTasksThirdPC = 58 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =3
+ totalTimeExectuionTasksThirdPC = 57 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =1
 ---------------------------------------
 totalTimeWork = 71
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 40 totalTimeWaitFirstPC =  32 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 55 totalTimeWaitFirstPC =  17 currentTimeExecutionFirstPC =0
  Second PC : 
- totalTimeExectuionTasksSecondPC = 18 totalTimeWaitSecondPC =  52 currentTimeExecutionSecondPC =2
+ totalTimeExectuionTasksSecondPC = 64 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 61 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =1
+ totalTimeExectuionTasksThirdPC = 57 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =2
 ---------------------------------------
 totalTimeWork = 72
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 40 totalTimeWaitFirstPC =  33 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 55 totalTimeWaitFirstPC =  18 currentTimeExecutionFirstPC =0
  Second PC : 
- totalTimeExectuionTasksSecondPC = 20 totalTimeWaitSecondPC =  52 currentTimeExecutionSecondPC =1
+ totalTimeExectuionTasksSecondPC = 64 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 61 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =2
+ totalTimeExectuionTasksThirdPC = 57 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =3
 ---------------------------------------
 totalTimeWork = 73
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 40 totalTimeWaitFirstPC =  34 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 55 totalTimeWaitFirstPC =  19 currentTimeExecutionFirstPC =0
  Second PC : 
- totalTimeExectuionTasksSecondPC = 20 totalTimeWaitSecondPC =  52 currentTimeExecutionSecondPC =2
+ totalTimeExectuionTasksSecondPC = 64 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =3
  Third PC : 
- totalTimeExectuionTasksThirdPC = 61 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =3
+ totalTimeExectuionTasksThirdPC = 57 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =4
 ---------------------------------------
 totalTimeWork = 74
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 40 totalTimeWaitFirstPC =  35 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 55 totalTimeWaitFirstPC =  19 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 20 totalTimeWaitSecondPC =  52 currentTimeExecutionSecondPC =3
+ totalTimeExectuionTasksSecondPC = 67 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 61 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =4
+ totalTimeExectuionTasksThirdPC = 57 totalTimeWaitThirdPC =  13 currentTimeExecutionThirdPC =5
 ---------------------------------------
 totalTimeWork = 75
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 40 totalTimeWaitFirstPC =  36 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 55 totalTimeWaitFirstPC =  19 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 23 totalTimeWaitSecondPC =  52 currentTimeExecutionSecondPC =1
+ totalTimeExectuionTasksSecondPC = 67 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 61 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =5
+ totalTimeExectuionTasksThirdPC = 62 totalTimeWaitThirdPC =  14 currentTimeExecutionThirdPC =0
 ---------------------------------------
 totalTimeWork = 76
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 40 totalTimeWaitFirstPC =  37 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 55 totalTimeWaitFirstPC =  19 currentTimeExecutionFirstPC =3
  Second PC : 
- totalTimeExectuionTasksSecondPC = 23 totalTimeWaitSecondPC =  52 currentTimeExecutionSecondPC =2
+ totalTimeExectuionTasksSecondPC = 69 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 66 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =1
+ totalTimeExectuionTasksThirdPC = 62 totalTimeWaitThirdPC =  15 currentTimeExecutionThirdPC =0
 ---------------------------------------
 totalTimeWork = 77
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 40 totalTimeWaitFirstPC =  38 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 58 totalTimeWaitFirstPC =  19 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 23 totalTimeWaitSecondPC =  52 currentTimeExecutionSecondPC =3
+ totalTimeExectuionTasksSecondPC = 69 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 66 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =2
+ totalTimeExectuionTasksThirdPC = 62 totalTimeWaitThirdPC =  15 currentTimeExecutionThirdPC =1
 ---------------------------------------
 totalTimeWork = 78
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 40 totalTimeWaitFirstPC =  39 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 58 totalTimeWaitFirstPC =  19 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 23 totalTimeWaitSecondPC =  52 currentTimeExecutionSecondPC =4
+ totalTimeExectuionTasksSecondPC = 69 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =3
  Third PC : 
- totalTimeExectuionTasksThirdPC = 66 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =3
+ totalTimeExectuionTasksThirdPC = 62 totalTimeWaitThirdPC =  15 currentTimeExecutionThirdPC =2
 ---------------------------------------
 totalTimeWork = 79
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 40 totalTimeWaitFirstPC =  39 currentTimeExecutionFirstPC =1
+ totalTimeExectuionTasksFristPC = 58 totalTimeWaitFirstPC =  19 currentTimeExecutionFirstPC =3
  Second PC : 
- totalTimeExectuionTasksSecondPC = 27 totalTimeWaitSecondPC =  53 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 72 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 66 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =4
+ totalTimeExectuionTasksThirdPC = 62 totalTimeWaitThirdPC =  15 currentTimeExecutionThirdPC =3
 ---------------------------------------
 totalTimeWork = 80
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 40 totalTimeWaitFirstPC =  39 currentTimeExecutionFirstPC =2
+ totalTimeExectuionTasksFristPC = 61 totalTimeWaitFirstPC =  19 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 27 totalTimeWaitSecondPC =  54 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 72 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 66 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =5
+ totalTimeExectuionTasksThirdPC = 62 totalTimeWaitThirdPC =  15 currentTimeExecutionThirdPC =4
 ---------------------------------------
 totalTimeWork = 81
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 40 totalTimeWaitFirstPC =  39 currentTimeExecutionFirstPC =3
+ totalTimeExectuionTasksFristPC = 61 totalTimeWaitFirstPC =  19 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 27 totalTimeWaitSecondPC =  55 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 72 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =3
  Third PC : 
- totalTimeExectuionTasksThirdPC = 71 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =1
+ totalTimeExectuionTasksThirdPC = 62 totalTimeWaitThirdPC =  15 currentTimeExecutionThirdPC =5
 ---------------------------------------
 totalTimeWork = 82
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 43 totalTimeWaitFirstPC =  39 currentTimeExecutionFirstPC =1
+ totalTimeExectuionTasksFristPC = 61 totalTimeWaitFirstPC =  19 currentTimeExecutionFirstPC =3
  Second PC : 
- totalTimeExectuionTasksSecondPC = 27 totalTimeWaitSecondPC =  56 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 75 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 71 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =2
+ totalTimeExectuionTasksThirdPC = 67 totalTimeWaitThirdPC =  15 currentTimeExecutionThirdPC =1
 ---------------------------------------
 totalTimeWork = 83
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 43 totalTimeWaitFirstPC =  39 currentTimeExecutionFirstPC =2
+ totalTimeExectuionTasksFristPC = 64 totalTimeWaitFirstPC =  19 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 27 totalTimeWaitSecondPC =  57 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 75 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 71 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =3
+ totalTimeExectuionTasksThirdPC = 67 totalTimeWaitThirdPC =  15 currentTimeExecutionThirdPC =2
 ---------------------------------------
 totalTimeWork = 84
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 43 totalTimeWaitFirstPC =  39 currentTimeExecutionFirstPC =3
+ totalTimeExectuionTasksFristPC = 64 totalTimeWaitFirstPC =  19 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 27 totalTimeWaitSecondPC =  58 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 77 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 71 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =4
+ totalTimeExectuionTasksThirdPC = 67 totalTimeWaitThirdPC =  15 currentTimeExecutionThirdPC =3
 ---------------------------------------
 totalTimeWork = 85
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 43 totalTimeWaitFirstPC =  39 currentTimeExecutionFirstPC =4
+ totalTimeExectuionTasksFristPC = 66 totalTimeWaitFirstPC =  20 currentTimeExecutionFirstPC =0
  Second PC : 
- totalTimeExectuionTasksSecondPC = 27 totalTimeWaitSecondPC =  59 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 77 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 71 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =5
+ totalTimeExectuionTasksThirdPC = 70 totalTimeWaitThirdPC =  15 currentTimeExecutionThirdPC =1
 ---------------------------------------
 totalTimeWork = 86
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 43 totalTimeWaitFirstPC =  39 currentTimeExecutionFirstPC =5
+ totalTimeExectuionTasksFristPC = 66 totalTimeWaitFirstPC =  21 currentTimeExecutionFirstPC =0
  Second PC : 
- totalTimeExectuionTasksSecondPC = 27 totalTimeWaitSecondPC =  60 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 79 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 71 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =6
+ totalTimeExectuionTasksThirdPC = 70 totalTimeWaitThirdPC =  15 currentTimeExecutionThirdPC =2
 ---------------------------------------
 totalTimeWork = 87
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 48 totalTimeWaitFirstPC =  40 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 66 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =0
  Second PC : 
- totalTimeExectuionTasksSecondPC = 27 totalTimeWaitSecondPC =  61 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 79 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 77 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =1
+ totalTimeExectuionTasksThirdPC = 70 totalTimeWaitThirdPC =  15 currentTimeExecutionThirdPC =3
 ---------------------------------------
 totalTimeWork = 88
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 48 totalTimeWaitFirstPC =  40 currentTimeExecutionFirstPC =1
+ totalTimeExectuionTasksFristPC = 66 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 27 totalTimeWaitSecondPC =  62 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 81 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 77 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =2
+ totalTimeExectuionTasksThirdPC = 70 totalTimeWaitThirdPC =  15 currentTimeExecutionThirdPC =4
 ---------------------------------------
 totalTimeWork = 89
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 48 totalTimeWaitFirstPC =  40 currentTimeExecutionFirstPC =2
+ totalTimeExectuionTasksFristPC = 66 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 27 totalTimeWaitSecondPC =  63 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 81 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 77 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =3
+ totalTimeExectuionTasksThirdPC = 74 totalTimeWaitThirdPC =  15 currentTimeExecutionThirdPC =1
 ---------------------------------------
 totalTimeWork = 90
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 48 totalTimeWaitFirstPC =  40 currentTimeExecutionFirstPC =3
+ totalTimeExectuionTasksFristPC = 66 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =3
  Second PC : 
- totalTimeExectuionTasksSecondPC = 27 totalTimeWaitSecondPC =  63 currentTimeExecutionSecondPC =1
+ totalTimeExectuionTasksSecondPC = 83 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 80 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =1
+ totalTimeExectuionTasksThirdPC = 74 totalTimeWaitThirdPC =  15 currentTimeExecutionThirdPC =2
 ---------------------------------------
 totalTimeWork = 91
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 48 totalTimeWaitFirstPC =  40 currentTimeExecutionFirstPC =4
+ totalTimeExectuionTasksFristPC = 69 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 27 totalTimeWaitSecondPC =  63 currentTimeExecutionSecondPC =2
+ totalTimeExectuionTasksSecondPC = 83 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 80 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =2
+ totalTimeExectuionTasksThirdPC = 74 totalTimeWaitThirdPC =  15 currentTimeExecutionThirdPC =3
 ---------------------------------------
 totalTimeWork = 92
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 48 totalTimeWaitFirstPC =  40 currentTimeExecutionFirstPC =5
+ totalTimeExectuionTasksFristPC = 69 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 27 totalTimeWaitSecondPC =  63 currentTimeExecutionSecondPC =3
+ totalTimeExectuionTasksSecondPC = 85 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 80 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =3
+ totalTimeExectuionTasksThirdPC = 74 totalTimeWaitThirdPC =  15 currentTimeExecutionThirdPC =4
 ---------------------------------------
 totalTimeWork = 93
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 53 totalTimeWaitFirstPC =  41 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 69 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =3
  Second PC : 
- totalTimeExectuionTasksSecondPC = 30 totalTimeWaitSecondPC =  63 currentTimeExecutionSecondPC =1
+ totalTimeExectuionTasksSecondPC = 85 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 80 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =4
+ totalTimeExectuionTasksThirdPC = 78 totalTimeWaitThirdPC =  16 currentTimeExecutionThirdPC =0
 ---------------------------------------
 totalTimeWork = 94
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 53 totalTimeWaitFirstPC =  42 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 72 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 30 totalTimeWaitSecondPC =  63 currentTimeExecutionSecondPC =2
+ totalTimeExectuionTasksSecondPC = 87 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 80 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =5
+ totalTimeExectuionTasksThirdPC = 78 totalTimeWaitThirdPC =  17 currentTimeExecutionThirdPC =0
 ---------------------------------------
 totalTimeWork = 95
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 53 totalTimeWaitFirstPC =  43 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 72 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 30 totalTimeWaitSecondPC =  63 currentTimeExecutionSecondPC =3
+ totalTimeExectuionTasksSecondPC = 87 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 80 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =6
+ totalTimeExectuionTasksThirdPC = 78 totalTimeWaitThirdPC =  18 currentTimeExecutionThirdPC =0
 ---------------------------------------
 totalTimeWork = 96
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 53 totalTimeWaitFirstPC =  44 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 72 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =3
  Second PC : 
- totalTimeExectuionTasksSecondPC = 30 totalTimeWaitSecondPC =  63 currentTimeExecutionSecondPC =4
+ totalTimeExectuionTasksSecondPC = 87 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =3
  Third PC : 
- totalTimeExectuionTasksThirdPC = 86 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =1
+ totalTimeExectuionTasksThirdPC = 78 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =0
 ---------------------------------------
 totalTimeWork = 97
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 53 totalTimeWaitFirstPC =  45 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 75 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 34 totalTimeWaitSecondPC =  64 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 90 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 86 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =2
+ totalTimeExectuionTasksThirdPC = 78 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =1
 ---------------------------------------
 totalTimeWork = 98
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 53 totalTimeWaitFirstPC =  45 currentTimeExecutionFirstPC =1
+ totalTimeExectuionTasksFristPC = 75 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 34 totalTimeWaitSecondPC =  65 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 90 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 86 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =3
+ totalTimeExectuionTasksThirdPC = 78 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =2
 ---------------------------------------
 totalTimeWork = 99
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 53 totalTimeWaitFirstPC =  45 currentTimeExecutionFirstPC =2
+ totalTimeExectuionTasksFristPC = 75 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =3
  Second PC : 
- totalTimeExectuionTasksSecondPC = 34 totalTimeWaitSecondPC =  66 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 92 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 86 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =4
+ totalTimeExectuionTasksThirdPC = 78 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =3
 ---------------------------------------
 totalTimeWork = 100
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 53 totalTimeWaitFirstPC =  45 currentTimeExecutionFirstPC =3
+ totalTimeExectuionTasksFristPC = 78 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 34 totalTimeWaitSecondPC =  67 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 92 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 86 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =5
+ totalTimeExectuionTasksThirdPC = 81 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =1
 ---------------------------------------
 totalTimeWork = 101
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 53 totalTimeWaitFirstPC =  45 currentTimeExecutionFirstPC =4
+ totalTimeExectuionTasksFristPC = 78 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 34 totalTimeWaitSecondPC =  68 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 92 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =3
  Third PC : 
- totalTimeExectuionTasksThirdPC = 86 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =6
+ totalTimeExectuionTasksThirdPC = 81 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =2
 ---------------------------------------
 totalTimeWork = 102
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 57 totalTimeWaitFirstPC =  45 currentTimeExecutionFirstPC =1
+ totalTimeExectuionTasksFristPC = 78 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =3
  Second PC : 
- totalTimeExectuionTasksSecondPC = 34 totalTimeWaitSecondPC =  69 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 95 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 86 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =7
+ totalTimeExectuionTasksThirdPC = 81 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =3
 ---------------------------------------
 totalTimeWork = 103
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 57 totalTimeWaitFirstPC =  45 currentTimeExecutionFirstPC =2
+ totalTimeExectuionTasksFristPC = 81 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 34 totalTimeWaitSecondPC =  70 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 95 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 93 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =1
+ totalTimeExectuionTasksThirdPC = 81 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =4
 ---------------------------------------
 totalTimeWork = 104
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 57 totalTimeWaitFirstPC =  45 currentTimeExecutionFirstPC =3
+ totalTimeExectuionTasksFristPC = 81 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 34 totalTimeWaitSecondPC =  71 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 95 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =3
  Third PC : 
- totalTimeExectuionTasksThirdPC = 93 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =2
+ totalTimeExectuionTasksThirdPC = 85 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =1
 ---------------------------------------
 totalTimeWork = 105
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 57 totalTimeWaitFirstPC =  45 currentTimeExecutionFirstPC =4
+ totalTimeExectuionTasksFristPC = 83 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 34 totalTimeWaitSecondPC =  71 currentTimeExecutionSecondPC =1
+ totalTimeExectuionTasksSecondPC = 98 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 93 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =3
+ totalTimeExectuionTasksThirdPC = 85 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =2
 ---------------------------------------
 totalTimeWork = 106
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 57 totalTimeWaitFirstPC =  45 currentTimeExecutionFirstPC =5
+ totalTimeExectuionTasksFristPC = 83 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 34 totalTimeWaitSecondPC =  71 currentTimeExecutionSecondPC =2
+ totalTimeExectuionTasksSecondPC = 98 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 96 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =1
+ totalTimeExectuionTasksThirdPC = 87 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =1
 ---------------------------------------
 totalTimeWork = 107
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 62 totalTimeWaitFirstPC =  46 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 83 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =3
  Second PC : 
- totalTimeExectuionTasksSecondPC = 34 totalTimeWaitSecondPC =  71 currentTimeExecutionSecondPC =3
+ totalTimeExectuionTasksSecondPC = 98 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =3
  Third PC : 
- totalTimeExectuionTasksThirdPC = 96 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =2
+ totalTimeExectuionTasksThirdPC = 87 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =2
 ---------------------------------------
 totalTimeWork = 108
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 62 totalTimeWaitFirstPC =  46 currentTimeExecutionFirstPC =1
+ totalTimeExectuionTasksFristPC = 86 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 37 totalTimeWaitSecondPC =  71 currentTimeExecutionSecondPC =1
+ totalTimeExectuionTasksSecondPC = 101 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 96 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =3
+ totalTimeExectuionTasksThirdPC = 89 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =1
 ---------------------------------------
 totalTimeWork = 109
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 62 totalTimeWaitFirstPC =  46 currentTimeExecutionFirstPC =2
+ totalTimeExectuionTasksFristPC = 86 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 37 totalTimeWaitSecondPC =  71 currentTimeExecutionSecondPC =2
+ totalTimeExectuionTasksSecondPC = 101 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 96 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =4
+ totalTimeExectuionTasksThirdPC = 89 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =2
 ---------------------------------------
 totalTimeWork = 110
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 62 totalTimeWaitFirstPC =  46 currentTimeExecutionFirstPC =3
+ totalTimeExectuionTasksFristPC = 86 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =3
  Second PC : 
- totalTimeExectuionTasksSecondPC = 37 totalTimeWaitSecondPC =  71 currentTimeExecutionSecondPC =3
+ totalTimeExectuionTasksSecondPC = 103 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 100 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =1
+ totalTimeExectuionTasksThirdPC = 89 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =3
 ---------------------------------------
 totalTimeWork = 111
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 62 totalTimeWaitFirstPC =  46 currentTimeExecutionFirstPC =4
+ totalTimeExectuionTasksFristPC = 89 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 40 totalTimeWaitSecondPC =  72 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 103 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 100 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =2
+ totalTimeExectuionTasksThirdPC = 89 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =4
 ---------------------------------------
 totalTimeWork = 112
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 66 totalTimeWaitFirstPC =  46 currentTimeExecutionFirstPC =1
+ totalTimeExectuionTasksFristPC = 89 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 40 totalTimeWaitSecondPC =  73 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 103 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =3
  Third PC : 
- totalTimeExectuionTasksThirdPC = 100 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =3
+ totalTimeExectuionTasksThirdPC = 93 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =1
 ---------------------------------------
 totalTimeWork = 113
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 66 totalTimeWaitFirstPC =  46 currentTimeExecutionFirstPC =2
+ totalTimeExectuionTasksFristPC = 91 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 40 totalTimeWaitSecondPC =  74 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 106 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 103 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =1
+ totalTimeExectuionTasksThirdPC = 93 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =2
 ---------------------------------------
 totalTimeWork = 114
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 66 totalTimeWaitFirstPC =  46 currentTimeExecutionFirstPC =3
+ totalTimeExectuionTasksFristPC = 91 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 40 totalTimeWaitSecondPC =  74 currentTimeExecutionSecondPC =1
+ totalTimeExectuionTasksSecondPC = 106 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 103 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =2
+ totalTimeExectuionTasksThirdPC = 93 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =3
 ---------------------------------------
 totalTimeWork = 115
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 66 totalTimeWaitFirstPC =  46 currentTimeExecutionFirstPC =4
+ totalTimeExectuionTasksFristPC = 91 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =3
  Second PC : 
- totalTimeExectuionTasksSecondPC = 40 totalTimeWaitSecondPC =  74 currentTimeExecutionSecondPC =2
+ totalTimeExectuionTasksSecondPC = 108 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 103 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =3
+ totalTimeExectuionTasksThirdPC = 96 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =1
 ---------------------------------------
 totalTimeWork = 116
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 70 totalTimeWaitFirstPC =  47 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 94 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 40 totalTimeWaitSecondPC =  74 currentTimeExecutionSecondPC =3
+ totalTimeExectuionTasksSecondPC = 108 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 103 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =4
+ totalTimeExectuionTasksThirdPC = 96 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =2
 ---------------------------------------
 totalTimeWork = 117
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 70 totalTimeWaitFirstPC =  48 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 94 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 43 totalTimeWaitSecondPC =  74 currentTimeExecutionSecondPC =1
+ totalTimeExectuionTasksSecondPC = 110 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 103 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =5
+ totalTimeExectuionTasksThirdPC = 96 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =3
 ---------------------------------------
 totalTimeWork = 118
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 70 totalTimeWaitFirstPC =  49 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 96 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 43 totalTimeWaitSecondPC =  74 currentTimeExecutionSecondPC =2
+ totalTimeExectuionTasksSecondPC = 110 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 103 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =6
+ totalTimeExectuionTasksThirdPC = 96 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =4
 ---------------------------------------
 totalTimeWork = 119
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 70 totalTimeWaitFirstPC =  50 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 96 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 43 totalTimeWaitSecondPC =  74 currentTimeExecutionSecondPC =3
+ totalTimeExectuionTasksSecondPC = 110 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =3
  Third PC : 
- totalTimeExectuionTasksThirdPC = 109 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =1
+ totalTimeExectuionTasksThirdPC = 100 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =1
 ---------------------------------------
 totalTimeWork = 120
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 70 totalTimeWaitFirstPC =  50 currentTimeExecutionFirstPC =1
+ totalTimeExectuionTasksFristPC = 96 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =3
  Second PC : 
- totalTimeExectuionTasksSecondPC = 46 totalTimeWaitSecondPC =  75 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 113 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 109 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =2
+ totalTimeExectuionTasksThirdPC = 100 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =2
 ---------------------------------------
 totalTimeWork = 121
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 70 totalTimeWaitFirstPC =  50 currentTimeExecutionFirstPC =2
+ totalTimeExectuionTasksFristPC = 99 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 46 totalTimeWaitSecondPC =  76 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 113 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 109 totalTimeWaitThirdPC =  10 currentTimeExecutionThirdPC =3
+ totalTimeExectuionTasksThirdPC = 100 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =3
 ---------------------------------------
 totalTimeWork = 122
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 70 totalTimeWaitFirstPC =  50 currentTimeExecutionFirstPC =3
+ totalTimeExectuionTasksFristPC = 99 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 46 totalTimeWaitSecondPC =  77 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 113 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =3
  Third PC : 
- totalTimeExectuionTasksThirdPC = 112 totalTimeWaitThirdPC =  11 currentTimeExecutionThirdPC =0
+ totalTimeExectuionTasksThirdPC = 103 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =1
 ---------------------------------------
 totalTimeWork = 123
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 73 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 99 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =3
  Second PC : 
- totalTimeExectuionTasksSecondPC = 46 totalTimeWaitSecondPC =  78 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 116 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 112 totalTimeWaitThirdPC =  11 currentTimeExecutionThirdPC =1
+ totalTimeExectuionTasksThirdPC = 103 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =2
 ---------------------------------------
 totalTimeWork = 124
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 73 totalTimeWaitFirstPC =  52 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 102 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 46 totalTimeWaitSecondPC =  79 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 116 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 112 totalTimeWaitThirdPC =  11 currentTimeExecutionThirdPC =2
+ totalTimeExectuionTasksThirdPC = 103 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =3
 ---------------------------------------
 totalTimeWork = 125
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 73 totalTimeWaitFirstPC =  53 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 102 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =2
  Second PC : 
- totalTimeExectuionTasksSecondPC = 46 totalTimeWaitSecondPC =  80 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 118 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 112 totalTimeWaitThirdPC =  11 currentTimeExecutionThirdPC =3
+ totalTimeExectuionTasksThirdPC = 103 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =4
 ---------------------------------------
 totalTimeWork = 126
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 73 totalTimeWaitFirstPC =  54 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 102 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =3
  Second PC : 
- totalTimeExectuionTasksSecondPC = 46 totalTimeWaitSecondPC =  81 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 118 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
  Third PC : 
- totalTimeExectuionTasksThirdPC = 112 totalTimeWaitThirdPC =  11 currentTimeExecutionThirdPC =4
+ totalTimeExectuionTasksThirdPC = 107 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =1
 ---------------------------------------
 totalTimeWork = 127
 ---------------------------------------
  First PC : 
- totalTimeExectuionTasksFristPC = 73 totalTimeWaitFirstPC =  55 currentTimeExecutionFirstPC =0
+ totalTimeExectuionTasksFristPC = 105 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =1
  Second PC : 
- totalTimeExectuionTasksSecondPC = 46 totalTimeWaitSecondPC =  82 currentTimeExecutionSecondPC =0
+ totalTimeExectuionTasksSecondPC = 120 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =1
  Third PC : 
- totalTimeExectuionTasksThirdPC = 116 totalTimeWaitThirdPC =  12 currentTimeExecutionThirdPC =0
+ totalTimeExectuionTasksThirdPC = 107 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =2
 ---------------------------------------
 totalTimeWork = 128
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 105 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 120 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 109 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 129
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 107 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 120 totalTimeWaitSecondPC =  7 currentTimeExecutionSecondPC =3
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 109 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 130
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 107 totalTimeWaitFirstPC =  22 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 123 totalTimeWaitSecondPC =  8 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 109 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 131
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 109 totalTimeWaitFirstPC =  23 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 123 totalTimeWaitSecondPC =  8 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 109 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =4
+---------------------------------------
+totalTimeWork = 132
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 109 totalTimeWaitFirstPC =  24 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 123 totalTimeWaitSecondPC =  8 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 113 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 133
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 109 totalTimeWaitFirstPC =  24 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 123 totalTimeWaitSecondPC =  8 currentTimeExecutionSecondPC =3
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 113 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 134
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 109 totalTimeWaitFirstPC =  24 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 126 totalTimeWaitSecondPC =  9 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 113 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 135
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 109 totalTimeWaitFirstPC =  24 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 126 totalTimeWaitSecondPC =  9 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 116 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 136
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 112 totalTimeWaitFirstPC =  25 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 126 totalTimeWaitSecondPC =  9 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 116 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 137
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 112 totalTimeWaitFirstPC =  26 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 128 totalTimeWaitSecondPC =  9 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 118 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 138
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 112 totalTimeWaitFirstPC =  26 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 128 totalTimeWaitSecondPC =  9 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 118 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 139
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 112 totalTimeWaitFirstPC =  26 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 130 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 120 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 140
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 112 totalTimeWaitFirstPC =  26 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 130 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 120 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 141
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 115 totalTimeWaitFirstPC =  27 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 130 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 120 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 142
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 115 totalTimeWaitFirstPC =  27 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 130 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =3
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 120 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =4
+---------------------------------------
+totalTimeWork = 143
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 115 totalTimeWaitFirstPC =  27 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 133 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 124 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 144
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 115 totalTimeWaitFirstPC =  27 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 133 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 124 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 145
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 118 totalTimeWaitFirstPC =  28 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 135 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 124 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 146
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 118 totalTimeWaitFirstPC =  29 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 135 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 124 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =4
+---------------------------------------
+totalTimeWork = 147
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 118 totalTimeWaitFirstPC =  30 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 135 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =3
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 128 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 148
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 118 totalTimeWaitFirstPC =  31 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 138 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 128 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 149
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 118 totalTimeWaitFirstPC =  31 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 138 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 128 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 150
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 118 totalTimeWaitFirstPC =  31 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 138 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =3
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 128 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =4
+---------------------------------------
+totalTimeWork = 151
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 120 totalTimeWaitFirstPC =  32 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 141 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 128 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =5
+---------------------------------------
+totalTimeWork = 152
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 120 totalTimeWaitFirstPC =  33 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 141 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 133 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 153
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 120 totalTimeWaitFirstPC =  33 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 141 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =3
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 133 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 154
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 120 totalTimeWaitFirstPC =  33 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 144 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 133 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 155
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 120 totalTimeWaitFirstPC =  33 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 144 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 136 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 156
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 123 totalTimeWaitFirstPC =  33 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 144 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =3
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 136 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 157
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 123 totalTimeWaitFirstPC =  33 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 147 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 136 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 158
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 125 totalTimeWaitFirstPC =  33 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 147 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 139 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 159
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 125 totalTimeWaitFirstPC =  33 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 149 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 139 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 160
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 127 totalTimeWaitFirstPC =  33 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 149 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 139 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 161
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 127 totalTimeWaitFirstPC =  33 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 149 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =3
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 139 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =4
+---------------------------------------
+totalTimeWork = 162
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 127 totalTimeWaitFirstPC =  33 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 152 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 143 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 163
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 130 totalTimeWaitFirstPC =  33 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 152 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 143 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 164
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 130 totalTimeWaitFirstPC =  33 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 152 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =3
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 143 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 165
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 130 totalTimeWaitFirstPC =  33 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 155 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 146 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 166
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 133 totalTimeWaitFirstPC =  33 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 155 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 146 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 167
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 133 totalTimeWaitFirstPC =  33 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 157 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 148 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 168
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 133 totalTimeWaitFirstPC =  33 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 157 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 148 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 169
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 136 totalTimeWaitFirstPC =  33 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 157 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =3
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 148 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 170
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 136 totalTimeWaitFirstPC =  33 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 160 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 148 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =4
+---------------------------------------
+totalTimeWork = 171
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 138 totalTimeWaitFirstPC =  33 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 160 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 152 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 172
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 138 totalTimeWaitFirstPC =  33 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 162 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 152 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 173
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 138 totalTimeWaitFirstPC =  33 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 162 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 152 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 174
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 141 totalTimeWaitFirstPC =  34 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 164 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 155 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 175
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 141 totalTimeWaitFirstPC =  35 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 164 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 155 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 176
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 141 totalTimeWaitFirstPC =  35 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 166 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 155 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 177
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 141 totalTimeWaitFirstPC =  35 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 166 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 155 totalTimeWaitThirdPC =  19 currentTimeExecutionThirdPC =4
+---------------------------------------
+totalTimeWork = 178
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 141 totalTimeWaitFirstPC =  35 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 168 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 159 totalTimeWaitThirdPC =  20 currentTimeExecutionThirdPC =0
+---------------------------------------
+totalTimeWork = 179
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 144 totalTimeWaitFirstPC =  36 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 168 totalTimeWaitSecondPC =  10 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 159 totalTimeWaitThirdPC =  20 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 180
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 144 totalTimeWaitFirstPC =  36 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 170 totalTimeWaitSecondPC =  11 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 159 totalTimeWaitThirdPC =  20 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 181
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 144 totalTimeWaitFirstPC =  36 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 170 totalTimeWaitSecondPC =  11 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 159 totalTimeWaitThirdPC =  20 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 182
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 144 totalTimeWaitFirstPC =  36 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 170 totalTimeWaitSecondPC =  11 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 159 totalTimeWaitThirdPC =  20 currentTimeExecutionThirdPC =4
+---------------------------------------
+totalTimeWork = 183
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 147 totalTimeWaitFirstPC =  37 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 170 totalTimeWaitSecondPC =  11 currentTimeExecutionSecondPC =3
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 163 totalTimeWaitThirdPC =  20 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 184
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 147 totalTimeWaitFirstPC =  37 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 173 totalTimeWaitSecondPC =  11 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 163 totalTimeWaitThirdPC =  20 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 185
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 147 totalTimeWaitFirstPC =  37 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 173 totalTimeWaitSecondPC =  11 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 163 totalTimeWaitThirdPC =  20 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 186
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 147 totalTimeWaitFirstPC =  37 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 175 totalTimeWaitSecondPC =  12 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 166 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =0
+---------------------------------------
+totalTimeWork = 187
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 150 totalTimeWaitFirstPC =  37 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 175 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 166 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 188
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 150 totalTimeWaitFirstPC =  37 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 175 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 166 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 189
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 150 totalTimeWaitFirstPC =  37 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 175 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 166 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 190
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 153 totalTimeWaitFirstPC =  37 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 175 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =3
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 169 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 191
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 153 totalTimeWaitFirstPC =  37 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 178 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 169 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 192
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 155 totalTimeWaitFirstPC =  37 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 178 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 169 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 193
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 155 totalTimeWaitFirstPC =  37 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 178 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =3
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 169 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =4
+---------------------------------------
+totalTimeWork = 194
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 157 totalTimeWaitFirstPC =  38 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 181 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 169 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =5
+---------------------------------------
+totalTimeWork = 195
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 157 totalTimeWaitFirstPC =  38 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 181 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 174 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 196
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 157 totalTimeWaitFirstPC =  38 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 183 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 174 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 197
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 159 totalTimeWaitFirstPC =  38 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 183 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 174 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 198
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 159 totalTimeWaitFirstPC =  38 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 183 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =3
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 174 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =4
+---------------------------------------
+totalTimeWork = 199
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 159 totalTimeWaitFirstPC =  38 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 186 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 178 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 200
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 162 totalTimeWaitFirstPC =  38 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 186 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 178 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 201
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 162 totalTimeWaitFirstPC =  38 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 188 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 180 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 202
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 164 totalTimeWaitFirstPC =  39 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 188 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 180 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 203
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 164 totalTimeWaitFirstPC =  40 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 190 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 180 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 204
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 164 totalTimeWaitFirstPC =  40 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 190 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 180 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =4
+---------------------------------------
+totalTimeWork = 205
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 164 totalTimeWaitFirstPC =  40 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 192 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 184 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 206
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 166 totalTimeWaitFirstPC =  40 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 192 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 184 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 207
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 166 totalTimeWaitFirstPC =  40 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 192 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =3
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 184 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 208
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 166 totalTimeWaitFirstPC =  40 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 195 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 184 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =4
+---------------------------------------
+totalTimeWork = 209
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 169 totalTimeWaitFirstPC =  41 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 195 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 188 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 210
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 169 totalTimeWaitFirstPC =  41 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 195 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =3
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 188 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 211
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 169 totalTimeWaitFirstPC =  41 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 198 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 188 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 212
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 169 totalTimeWaitFirstPC =  41 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 198 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 191 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 213
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 172 totalTimeWaitFirstPC =  41 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 198 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =3
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 191 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 214
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 172 totalTimeWaitFirstPC =  41 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 201 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 191 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 215
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 172 totalTimeWaitFirstPC =  41 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 201 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 191 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =4
+---------------------------------------
+totalTimeWork = 216
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 175 totalTimeWaitFirstPC =  42 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 203 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 191 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =5
+---------------------------------------
+totalTimeWork = 217
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 175 totalTimeWaitFirstPC =  43 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 203 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 196 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 218
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 175 totalTimeWaitFirstPC =  44 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 203 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =3
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 196 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 219
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 175 totalTimeWaitFirstPC =  45 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 206 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 198 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 220
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 175 totalTimeWaitFirstPC =  46 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 206 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 198 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 221
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 175 totalTimeWaitFirstPC =  47 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 206 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =3
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 198 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 222
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 175 totalTimeWaitFirstPC =  48 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 209 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 198 totalTimeWaitThirdPC =  21 currentTimeExecutionThirdPC =4
+---------------------------------------
+totalTimeWork = 223
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 175 totalTimeWaitFirstPC =  48 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 209 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 202 totalTimeWaitThirdPC =  22 currentTimeExecutionThirdPC =0
+---------------------------------------
+totalTimeWork = 224
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 175 totalTimeWaitFirstPC =  48 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 211 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 202 totalTimeWaitThirdPC =  23 currentTimeExecutionThirdPC =0
+---------------------------------------
+totalTimeWork = 225
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 177 totalTimeWaitFirstPC =  49 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 211 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 202 totalTimeWaitThirdPC =  23 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 226
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 177 totalTimeWaitFirstPC =  50 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 211 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =3
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 202 totalTimeWaitThirdPC =  23 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 227
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 177 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 214 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 202 totalTimeWaitThirdPC =  23 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 228
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 177 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 214 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 205 totalTimeWaitThirdPC =  24 currentTimeExecutionThirdPC =0
+---------------------------------------
+totalTimeWork = 229
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 177 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 214 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =3
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 205 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =0
+---------------------------------------
+totalTimeWork = 230
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 179 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 217 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 205 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 231
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 179 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 217 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 205 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 232
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 181 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 217 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =3
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 205 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 233
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 181 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 220 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 205 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =4
+---------------------------------------
+totalTimeWork = 234
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 181 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 220 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 209 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 235
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 184 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 222 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 209 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 236
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 184 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 222 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 209 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 237
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 184 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 224 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 209 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =4
+---------------------------------------
+totalTimeWork = 238
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 187 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 224 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 209 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =5
+---------------------------------------
+totalTimeWork = 239
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 187 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 226 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 214 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 240
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 187 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 226 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 214 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 241
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 190 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 228 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 214 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 242
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 190 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 228 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 217 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 243
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 190 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 228 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =3
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 217 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 244
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 193 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 231 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 217 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 245
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 193 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 231 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 220 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 246
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 195 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 233 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 220 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 247
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 195 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 233 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 220 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 248
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 197 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 235 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 220 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =4
+---------------------------------------
+totalTimeWork = 249
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 197 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 235 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 224 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 250
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 199 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 235 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =3
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 224 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 251
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 199 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 238 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 224 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 252
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 199 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 238 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 224 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =4
+---------------------------------------
+totalTimeWork = 253
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 202 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 238 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =3
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 228 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 254
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 202 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 241 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 228 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 255
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 202 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 241 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 228 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 256
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 205 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 241 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =3
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 231 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 257
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 205 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 244 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 231 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 258
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 205 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 244 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 231 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 259
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 208 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 246 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 231 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =4
+---------------------------------------
+totalTimeWork = 260
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 208 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 246 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 231 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =5
+---------------------------------------
+totalTimeWork = 261
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 208 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 246 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =3
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 236 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 262
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 211 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 249 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 236 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 263
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 211 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 249 totalTimeWaitSecondPC =  13 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 236 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 264
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 211 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 251 totalTimeWaitSecondPC =  14 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 239 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 265
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 214 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 251 totalTimeWaitSecondPC =  15 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 239 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 266
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 214 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 251 totalTimeWaitSecondPC =  15 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 241 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 267
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 214 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 251 totalTimeWaitSecondPC =  15 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 241 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 268
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 217 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 253 totalTimeWaitSecondPC =  15 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 241 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 269
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 217 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 253 totalTimeWaitSecondPC =  15 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 241 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =4
+---------------------------------------
+totalTimeWork = 270
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 217 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 255 totalTimeWaitSecondPC =  16 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 245 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 271
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 220 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 255 totalTimeWaitSecondPC =  16 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 245 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 272
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 220 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 255 totalTimeWaitSecondPC =  16 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 247 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 273
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 222 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 257 totalTimeWaitSecondPC =  17 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 247 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 274
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 222 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 257 totalTimeWaitSecondPC =  18 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 247 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 275
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 222 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 257 totalTimeWaitSecondPC =  19 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 250 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 276
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 225 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 257 totalTimeWaitSecondPC =  19 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 250 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 277
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 225 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 257 totalTimeWaitSecondPC =  19 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 250 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 278
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 227 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 257 totalTimeWaitSecondPC =  19 currentTimeExecutionSecondPC =3
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 250 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =4
+---------------------------------------
+totalTimeWork = 279
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 227 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 260 totalTimeWaitSecondPC =  19 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 254 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 280
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 229 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 260 totalTimeWaitSecondPC =  19 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 254 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 281
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 229 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 262 totalTimeWaitSecondPC =  20 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 256 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 282
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 231 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 262 totalTimeWaitSecondPC =  21 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 256 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 283
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 231 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 262 totalTimeWaitSecondPC =  21 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 256 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 284
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 231 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 262 totalTimeWaitSecondPC =  21 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 256 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =4
+---------------------------------------
+totalTimeWork = 285
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 234 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 262 totalTimeWaitSecondPC =  21 currentTimeExecutionSecondPC =3
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 256 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =5
+---------------------------------------
+totalTimeWork = 286
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 234 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 265 totalTimeWaitSecondPC =  22 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 261 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 287
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 234 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 265 totalTimeWaitSecondPC =  23 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 261 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 288
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 237 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 265 totalTimeWaitSecondPC =  24 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 261 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 289
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 237 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 265 totalTimeWaitSecondPC =  25 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 261 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =4
+---------------------------------------
+totalTimeWork = 290
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 239 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 265 totalTimeWaitSecondPC =  26 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 265 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 291
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 239 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 265 totalTimeWaitSecondPC =  26 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 265 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 292
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 239 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 265 totalTimeWaitSecondPC =  26 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 265 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 293
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 242 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 267 totalTimeWaitSecondPC =  26 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 268 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 294
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 242 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 267 totalTimeWaitSecondPC =  26 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 268 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 295
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 244 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 269 totalTimeWaitSecondPC =  27 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 268 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 296
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 244 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 269 totalTimeWaitSecondPC =  27 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 268 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =4
+---------------------------------------
+totalTimeWork = 297
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 244 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 269 totalTimeWaitSecondPC =  27 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 268 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =5
+---------------------------------------
+totalTimeWork = 298
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 247 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 271 totalTimeWaitSecondPC =  27 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 273 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 299
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 247 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 271 totalTimeWaitSecondPC =  27 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 273 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 300
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 249 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 271 totalTimeWaitSecondPC =  27 currentTimeExecutionSecondPC =3
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 273 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 301
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 249 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 274 totalTimeWaitSecondPC =  28 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 273 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =4
+---------------------------------------
+totalTimeWork = 302
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 249 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 274 totalTimeWaitSecondPC =  29 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 273 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =5
+---------------------------------------
+totalTimeWork = 303
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 252 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 274 totalTimeWaitSecondPC =  30 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 278 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 304
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 252 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 274 totalTimeWaitSecondPC =  30 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 278 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 305
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 252 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 274 totalTimeWaitSecondPC =  30 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 280 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 306
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 255 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 274 totalTimeWaitSecondPC =  30 currentTimeExecutionSecondPC =3
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 280 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 307
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 255 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 277 totalTimeWaitSecondPC =  31 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 280 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 308
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 255 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 277 totalTimeWaitSecondPC =  32 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 283 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 309
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 258 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 277 totalTimeWaitSecondPC =  32 currentTimeExecutionSecondPC =1
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 283 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 310
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 258 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 277 totalTimeWaitSecondPC =  32 currentTimeExecutionSecondPC =2
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 283 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 311
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 258 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =3
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 279 totalTimeWaitSecondPC =  33 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 286 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 312
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 261 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =1
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 279 totalTimeWaitSecondPC =  34 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 286 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 313
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 261 totalTimeWaitFirstPC =  51 currentTimeExecutionFirstPC =2
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 279 totalTimeWaitSecondPC =  35 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 288 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 314
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 263 totalTimeWaitFirstPC =  52 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 279 totalTimeWaitSecondPC =  36 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 288 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 315
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 263 totalTimeWaitFirstPC =  53 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 279 totalTimeWaitSecondPC =  37 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 290 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 316
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 263 totalTimeWaitFirstPC =  54 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 279 totalTimeWaitSecondPC =  38 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 290 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 317
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 263 totalTimeWaitFirstPC =  55 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 279 totalTimeWaitSecondPC =  39 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 290 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 318
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 263 totalTimeWaitFirstPC =  56 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 279 totalTimeWaitSecondPC =  40 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 290 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =4
+---------------------------------------
+totalTimeWork = 319
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 263 totalTimeWaitFirstPC =  57 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 279 totalTimeWaitSecondPC =  41 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 294 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 320
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 263 totalTimeWaitFirstPC =  58 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 279 totalTimeWaitSecondPC =  42 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 294 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 321
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 263 totalTimeWaitFirstPC =  59 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 279 totalTimeWaitSecondPC =  43 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 296 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 322
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 263 totalTimeWaitFirstPC =  60 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 279 totalTimeWaitSecondPC =  44 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 296 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 323
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 263 totalTimeWaitFirstPC =  61 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 279 totalTimeWaitSecondPC =  45 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 296 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =3
+---------------------------------------
+totalTimeWork = 324
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 263 totalTimeWaitFirstPC =  62 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 279 totalTimeWaitSecondPC =  46 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 299 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =1
+---------------------------------------
+totalTimeWork = 325
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 263 totalTimeWaitFirstPC =  63 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 279 totalTimeWaitSecondPC =  47 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 299 totalTimeWaitThirdPC =  25 currentTimeExecutionThirdPC =2
+---------------------------------------
+totalTimeWork = 326
+---------------------------------------
+ First PC : 
+ totalTimeExectuionTasksFristPC = 263 totalTimeWaitFirstPC =  64 currentTimeExecutionFirstPC =0
+ Second PC : 
+ totalTimeExectuionTasksSecondPC = 279 totalTimeWaitSecondPC =  48 currentTimeExecutionSecondPC =0
+ Third PC : 
+ totalTimeExectuionTasksThirdPC = 301 totalTimeWaitThirdPC =  26 currentTimeExecutionThirdPC =0
+---------------------------------------
+totalTimeWork = 327
 ---------------------------------------

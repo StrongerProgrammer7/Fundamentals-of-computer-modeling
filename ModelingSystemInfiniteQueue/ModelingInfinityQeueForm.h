@@ -53,14 +53,23 @@ namespace ModelingSystemInfiniteQueue {
 	private: System::Windows::Forms::TextBox^ tb_startTimeExecutionThird;
 	private: System::Windows::Forms::TextBox^ tb_endTimeExecutionThird;
 	private: System::Windows::Forms::Button^ btn_exectuion;
-	private: System::Windows::Forms::Label^ lbl_answer;
-	private: System::Windows::Forms::Label^ lbl_answer1;
-	private: System::Windows::Forms::Label^ lbl_answer2;
-	private: System::Windows::Forms::Label^ lbl_answer3;
-	private: System::Windows::Forms::Label^ lbl_answer4;
-	private: System::Windows::Forms::Label^ lbl_answer5;
-	private: System::Windows::Forms::Label^ lbl_answer6;
+	private: System::Windows::Forms::Label^ lbl_total;
+
+	private: System::Windows::Forms::Label^ lbl_FirstPC;
+	private: System::Windows::Forms::Label^ lbl_SecondPC;
+	private: System::Windows::Forms::Label^ lbl_ThirdPC;
+
+
+
+
+
+
+
 	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::Label^ label6;
+	private: System::Windows::Forms::Label^ label7;
+
 
 	private:
 		/// <summary>
@@ -93,14 +102,14 @@ namespace ModelingSystemInfiniteQueue {
 			this->tb_startTimeExecutionThird = (gcnew System::Windows::Forms::TextBox());
 			this->tb_endTimeExecutionThird = (gcnew System::Windows::Forms::TextBox());
 			this->btn_exectuion = (gcnew System::Windows::Forms::Button());
-			this->lbl_answer = (gcnew System::Windows::Forms::Label());
-			this->lbl_answer1 = (gcnew System::Windows::Forms::Label());
-			this->lbl_answer2 = (gcnew System::Windows::Forms::Label());
-			this->lbl_answer3 = (gcnew System::Windows::Forms::Label());
-			this->lbl_answer4 = (gcnew System::Windows::Forms::Label());
-			this->lbl_answer5 = (gcnew System::Windows::Forms::Label());
-			this->lbl_answer6 = (gcnew System::Windows::Forms::Label());
+			this->lbl_total = (gcnew System::Windows::Forms::Label());
+			this->lbl_FirstPC = (gcnew System::Windows::Forms::Label());
+			this->lbl_SecondPC = (gcnew System::Windows::Forms::Label());
+			this->lbl_ThirdPC = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->label7 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -109,7 +118,7 @@ namespace ModelingSystemInfiniteQueue {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label1->Location = System::Drawing::Point(12, 9);
+			this->label1->Location = System::Drawing::Point(154, 9);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(820, 147);
 			this->label1->TabIndex = 0;
@@ -120,7 +129,7 @@ namespace ModelingSystemInfiniteQueue {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label2->Location = System::Drawing::Point(12, 165);
+			this->label2->Location = System::Drawing::Point(154, 165);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(729, 42);
 			this->label2->TabIndex = 1;
@@ -133,7 +142,7 @@ namespace ModelingSystemInfiniteQueue {
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label3->Location = System::Drawing::Point(12, 228);
+			this->label3->Location = System::Drawing::Point(154, 228);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(198, 21);
 			this->label3->TabIndex = 2;
@@ -142,7 +151,7 @@ namespace ModelingSystemInfiniteQueue {
 			// numericUpDown1
 			// 
 			this->numericUpDown1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->numericUpDown1->Location = System::Drawing::Point(209, 230);
+			this->numericUpDown1->Location = System::Drawing::Point(351, 230);
 			this->numericUpDown1->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 10000, 0, 0, 0 });
 			this->numericUpDown1->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->numericUpDown1->Name = L"numericUpDown1";
@@ -155,7 +164,7 @@ namespace ModelingSystemInfiniteQueue {
 			// 
 			this->tb_startInteervalGetTask->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->tb_startInteervalGetTask->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->tb_startInteervalGetTask->Location = System::Drawing::Point(555, 14);
+			this->tb_startInteervalGetTask->Location = System::Drawing::Point(697, 14);
 			this->tb_startInteervalGetTask->Name = L"tb_startInteervalGetTask";
 			this->tb_startInteervalGetTask->Size = System::Drawing::Size(41, 14);
 			this->tb_startInteervalGetTask->TabIndex = 4;
@@ -167,7 +176,7 @@ namespace ModelingSystemInfiniteQueue {
 			// 
 			this->tb_endInteervalGetTask->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->tb_endInteervalGetTask->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->tb_endInteervalGetTask->Location = System::Drawing::Point(611, 14);
+			this->tb_endInteervalGetTask->Location = System::Drawing::Point(753, 14);
 			this->tb_endInteervalGetTask->Name = L"tb_endInteervalGetTask";
 			this->tb_endInteervalGetTask->Size = System::Drawing::Size(41, 14);
 			this->tb_endInteervalGetTask->TabIndex = 5;
@@ -179,7 +188,7 @@ namespace ModelingSystemInfiniteQueue {
 			// 
 			this->tb_probabilityGetTaskFirst->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->tb_probabilityGetTaskFirst->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->tb_probabilityGetTaskFirst->Location = System::Drawing::Point(428, 33);
+			this->tb_probabilityGetTaskFirst->Location = System::Drawing::Point(570, 33);
 			this->tb_probabilityGetTaskFirst->Name = L"tb_probabilityGetTaskFirst";
 			this->tb_probabilityGetTaskFirst->Size = System::Drawing::Size(52, 14);
 			this->tb_probabilityGetTaskFirst->TabIndex = 6;
@@ -191,7 +200,7 @@ namespace ModelingSystemInfiniteQueue {
 			// 
 			this->tb_probabilityGetTaskSecond->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->tb_probabilityGetTaskSecond->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->tb_probabilityGetTaskSecond->Location = System::Drawing::Point(713, 33);
+			this->tb_probabilityGetTaskSecond->Location = System::Drawing::Point(855, 33);
 			this->tb_probabilityGetTaskSecond->Name = L"tb_probabilityGetTaskSecond";
 			this->tb_probabilityGetTaskSecond->Size = System::Drawing::Size(52, 14);
 			this->tb_probabilityGetTaskSecond->TabIndex = 7;
@@ -203,7 +212,7 @@ namespace ModelingSystemInfiniteQueue {
 			// 
 			this->tb_probabilityGetTaskSecondAfterFirst->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->tb_probabilityGetTaskSecondAfterFirst->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->tb_probabilityGetTaskSecondAfterFirst->Location = System::Drawing::Point(321, 97);
+			this->tb_probabilityGetTaskSecondAfterFirst->Location = System::Drawing::Point(463, 97);
 			this->tb_probabilityGetTaskSecondAfterFirst->Name = L"tb_probabilityGetTaskSecondAfterFirst";
 			this->tb_probabilityGetTaskSecondAfterFirst->Size = System::Drawing::Size(39, 14);
 			this->tb_probabilityGetTaskSecondAfterFirst->TabIndex = 9;
@@ -215,7 +224,7 @@ namespace ModelingSystemInfiniteQueue {
 			// 
 			this->tb_probabilityGetTaskThirdAfterFirst->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->tb_probabilityGetTaskThirdAfterFirst->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->tb_probabilityGetTaskThirdAfterFirst->Location = System::Drawing::Point(49, 118);
+			this->tb_probabilityGetTaskThirdAfterFirst->Location = System::Drawing::Point(191, 118);
 			this->tb_probabilityGetTaskThirdAfterFirst->Name = L"tb_probabilityGetTaskThirdAfterFirst";
 			this->tb_probabilityGetTaskThirdAfterFirst->Size = System::Drawing::Size(39, 14);
 			this->tb_probabilityGetTaskThirdAfterFirst->TabIndex = 10;
@@ -227,7 +236,7 @@ namespace ModelingSystemInfiniteQueue {
 			// 
 			this->tb_startTimeExecutionFirst->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->tb_startTimeExecutionFirst->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->tb_startTimeExecutionFirst->Location = System::Drawing::Point(143, 190);
+			this->tb_startTimeExecutionFirst->Location = System::Drawing::Point(285, 190);
 			this->tb_startTimeExecutionFirst->Name = L"tb_startTimeExecutionFirst";
 			this->tb_startTimeExecutionFirst->Size = System::Drawing::Size(41, 14);
 			this->tb_startTimeExecutionFirst->TabIndex = 11;
@@ -239,7 +248,7 @@ namespace ModelingSystemInfiniteQueue {
 			// 
 			this->tb_endTimeExecutionFirst->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->tb_endTimeExecutionFirst->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->tb_endTimeExecutionFirst->Location = System::Drawing::Point(208, 190);
+			this->tb_endTimeExecutionFirst->Location = System::Drawing::Point(350, 190);
 			this->tb_endTimeExecutionFirst->Name = L"tb_endTimeExecutionFirst";
 			this->tb_endTimeExecutionFirst->Size = System::Drawing::Size(41, 14);
 			this->tb_endTimeExecutionFirst->TabIndex = 12;
@@ -251,7 +260,7 @@ namespace ModelingSystemInfiniteQueue {
 			// 
 			this->tb_startTimeExecutionSecond->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->tb_startTimeExecutionSecond->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->tb_startTimeExecutionSecond->Location = System::Drawing::Point(358, 190);
+			this->tb_startTimeExecutionSecond->Location = System::Drawing::Point(500, 190);
 			this->tb_startTimeExecutionSecond->Name = L"tb_startTimeExecutionSecond";
 			this->tb_startTimeExecutionSecond->Size = System::Drawing::Size(41, 14);
 			this->tb_startTimeExecutionSecond->TabIndex = 13;
@@ -263,7 +272,7 @@ namespace ModelingSystemInfiniteQueue {
 			// 
 			this->tb_endTimeExecutionSecond->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->tb_endTimeExecutionSecond->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->tb_endTimeExecutionSecond->Location = System::Drawing::Point(428, 190);
+			this->tb_endTimeExecutionSecond->Location = System::Drawing::Point(570, 190);
 			this->tb_endTimeExecutionSecond->Name = L"tb_endTimeExecutionSecond";
 			this->tb_endTimeExecutionSecond->Size = System::Drawing::Size(41, 14);
 			this->tb_endTimeExecutionSecond->TabIndex = 14;
@@ -275,7 +284,7 @@ namespace ModelingSystemInfiniteQueue {
 			// 
 			this->tb_startTimeExecutionThird->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->tb_startTimeExecutionThird->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->tb_startTimeExecutionThird->Location = System::Drawing::Point(579, 190);
+			this->tb_startTimeExecutionThird->Location = System::Drawing::Point(721, 190);
 			this->tb_startTimeExecutionThird->Name = L"tb_startTimeExecutionThird";
 			this->tb_startTimeExecutionThird->Size = System::Drawing::Size(41, 14);
 			this->tb_startTimeExecutionThird->TabIndex = 15;
@@ -287,7 +296,7 @@ namespace ModelingSystemInfiniteQueue {
 			// 
 			this->tb_endTimeExecutionThird->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->tb_endTimeExecutionThird->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->tb_endTimeExecutionThird->Location = System::Drawing::Point(640, 190);
+			this->tb_endTimeExecutionThird->Location = System::Drawing::Point(782, 190);
 			this->tb_endTimeExecutionThird->Name = L"tb_endTimeExecutionThird";
 			this->tb_endTimeExecutionThird->Size = System::Drawing::Size(41, 14);
 			this->tb_endTimeExecutionThird->TabIndex = 16;
@@ -299,7 +308,7 @@ namespace ModelingSystemInfiniteQueue {
 			// 
 			this->btn_exectuion->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->btn_exectuion->Location = System::Drawing::Point(416, 228);
+			this->btn_exectuion->Location = System::Drawing::Point(558, 228);
 			this->btn_exectuion->Name = L"btn_exectuion";
 			this->btn_exectuion->Size = System::Drawing::Size(204, 47);
 			this->btn_exectuion->TabIndex = 17;
@@ -307,92 +316,92 @@ namespace ModelingSystemInfiniteQueue {
 			this->btn_exectuion->UseVisualStyleBackColor = true;
 			this->btn_exectuion->Click += gcnew System::EventHandler(this, &ModelingInfinityQeueForm::Btn_exectuion_Click);
 			// 
-			// lbl_answer
+			// lbl_total
 			// 
-			this->lbl_answer->AutoSize = true;
-			this->lbl_answer->Location = System::Drawing::Point(13, 293);
-			this->lbl_answer->Name = L"lbl_answer";
-			this->lbl_answer->Size = System::Drawing::Size(57, 13);
-			this->lbl_answer->TabIndex = 18;
-			this->lbl_answer->Text = L"lbl_answer";
+			this->lbl_total->AutoSize = true;
+			this->lbl_total->Location = System::Drawing::Point(9, 284);
+			this->lbl_total->Name = L"lbl_total";
+			this->lbl_total->Size = System::Drawing::Size(61, 13);
+			this->lbl_total->TabIndex = 18;
+			this->lbl_total->Text = L"Total report";
 			// 
-			// lbl_answer1
+			// lbl_FirstPC
 			// 
-			this->lbl_answer1->AutoSize = true;
-			this->lbl_answer1->Location = System::Drawing::Point(13, 311);
-			this->lbl_answer1->Name = L"lbl_answer1";
-			this->lbl_answer1->Size = System::Drawing::Size(35, 13);
-			this->lbl_answer1->TabIndex = 19;
-			this->lbl_answer1->Text = L"label4";
+			this->lbl_FirstPC->AutoSize = true;
+			this->lbl_FirstPC->Location = System::Drawing::Point(294, 318);
+			this->lbl_FirstPC->Name = L"lbl_FirstPC";
+			this->lbl_FirstPC->Size = System::Drawing::Size(48, 13);
+			this->lbl_FirstPC->TabIndex = 19;
+			this->lbl_FirstPC->Text = L"Report 1";
 			// 
-			// lbl_answer2
+			// lbl_SecondPC
 			// 
-			this->lbl_answer2->AutoSize = true;
-			this->lbl_answer2->Location = System::Drawing::Point(12, 333);
-			this->lbl_answer2->Name = L"lbl_answer2";
-			this->lbl_answer2->Size = System::Drawing::Size(35, 13);
-			this->lbl_answer2->TabIndex = 20;
-			this->lbl_answer2->Text = L"label5";
+			this->lbl_SecondPC->AutoSize = true;
+			this->lbl_SecondPC->Location = System::Drawing::Point(571, 318);
+			this->lbl_SecondPC->Name = L"lbl_SecondPC";
+			this->lbl_SecondPC->Size = System::Drawing::Size(48, 13);
+			this->lbl_SecondPC->TabIndex = 20;
+			this->lbl_SecondPC->Text = L"Report 2";
 			// 
-			// lbl_answer3
+			// lbl_ThirdPC
 			// 
-			this->lbl_answer3->AutoSize = true;
-			this->lbl_answer3->Location = System::Drawing::Point(13, 353);
-			this->lbl_answer3->Name = L"lbl_answer3";
-			this->lbl_answer3->Size = System::Drawing::Size(35, 13);
-			this->lbl_answer3->TabIndex = 21;
-			this->lbl_answer3->Text = L"label6";
-			// 
-			// lbl_answer4
-			// 
-			this->lbl_answer4->AutoSize = true;
-			this->lbl_answer4->Location = System::Drawing::Point(12, 375);
-			this->lbl_answer4->Name = L"lbl_answer4";
-			this->lbl_answer4->Size = System::Drawing::Size(35, 13);
-			this->lbl_answer4->TabIndex = 22;
-			this->lbl_answer4->Text = L"label7";
-			// 
-			// lbl_answer5
-			// 
-			this->lbl_answer5->AutoSize = true;
-			this->lbl_answer5->Location = System::Drawing::Point(12, 399);
-			this->lbl_answer5->Name = L"lbl_answer5";
-			this->lbl_answer5->Size = System::Drawing::Size(35, 13);
-			this->lbl_answer5->TabIndex = 23;
-			this->lbl_answer5->Text = L"label7";
-			// 
-			// lbl_answer6
-			// 
-			this->lbl_answer6->AutoSize = true;
-			this->lbl_answer6->Location = System::Drawing::Point(12, 421);
-			this->lbl_answer6->Name = L"lbl_answer6";
-			this->lbl_answer6->Size = System::Drawing::Size(35, 13);
-			this->lbl_answer6->TabIndex = 24;
-			this->lbl_answer6->Text = L"label7";
+			this->lbl_ThirdPC->AutoSize = true;
+			this->lbl_ThirdPC->Location = System::Drawing::Point(873, 318);
+			this->lbl_ThirdPC->Name = L"lbl_ThirdPC";
+			this->lbl_ThirdPC->Size = System::Drawing::Size(48, 13);
+			this->lbl_ThirdPC->TabIndex = 21;
+			this->lbl_ThirdPC->Text = L"Report 3";
 			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(645, 420);
+			this->label4->Location = System::Drawing::Point(313, 296);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(35, 13);
+			this->label4->Size = System::Drawing::Size(39, 13);
 			this->label4->TabIndex = 25;
-			this->label4->Text = L"label4";
+			this->label4->Text = L"1 ÝÂÌ";
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Location = System::Drawing::Point(607, 296);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(39, 13);
+			this->label5->TabIndex = 26;
+			this->label5->Text = L"2 ÝÂÌ";
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Location = System::Drawing::Point(889, 296);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(39, 13);
+			this->label6->TabIndex = 27;
+			this->label6->Text = L"3 ÝÂÌ";
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Location = System::Drawing::Point(43, 262);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(83, 13);
+			this->label7->TabIndex = 28;
+			this->label7->Text = L"Îáùèå äàííûå";
 			// 
 			// ModelingInfinityQeueForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::LightSteelBlue;
-			this->ClientSize = System::Drawing::Size(849, 445);
+			this->ClientSize = System::Drawing::Size(1140, 511);
+			this->Controls->Add(this->label7);
+			this->Controls->Add(this->label6);
+			this->Controls->Add(this->label5);
 			this->Controls->Add(this->label4);
-			this->Controls->Add(this->lbl_answer6);
-			this->Controls->Add(this->lbl_answer5);
-			this->Controls->Add(this->lbl_answer4);
-			this->Controls->Add(this->lbl_answer3);
-			this->Controls->Add(this->lbl_answer2);
-			this->Controls->Add(this->lbl_answer1);
-			this->Controls->Add(this->lbl_answer);
+			this->Controls->Add(this->lbl_ThirdPC);
+			this->Controls->Add(this->lbl_SecondPC);
+			this->Controls->Add(this->lbl_FirstPC);
+			this->Controls->Add(this->lbl_total);
 			this->Controls->Add(this->btn_exectuion);
 			this->Controls->Add(this->tb_endTimeExecutionThird);
 			this->Controls->Add(this->tb_startTimeExecutionThird);
@@ -419,20 +428,22 @@ namespace ModelingSystemInfiniteQueue {
 		}
 #pragma endregion
 		private:
+			System::Void setTextForLabelEveryMachine(System::Windows::Forms::Label^ curLabel, int const& totalTimeExectuionTasksCurPC, int const& totalTimeWaitCurPC,
+				int const& totalTimeQueueCurPC, int const& maxCountTaskInQueueCurPC,int const& maxTimeCurrentQueueCurPC);
 			System::Void Tb_startInteervalGetTask_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
 			System::Void Tb_endInteervalGetTask_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
 			System::Void Tb_probabilityGetTaskSecond_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
-		 //System::Void Tb_probabilityGetTaskThird_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
-		 System::Void Tb_probabilityGetTaskSecondAfterFirst_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
-		 System::Void Tb_probabilityGetTaskThirdAfterFirst_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
-		 System::Void Tb_startTimeExecutionFirst_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
-		 System::Void Tb_endTimeExecutionFirst_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
-		 System::Void Tb_startTimeExecutionSecond_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
-		 System::Void Tb_endTimeExecutionSecond_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
-		 System::Void Tb_startTimeExecutionThird_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
-		 System::Void Tb_endTimeExecutionThird_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
-		 System::Boolean checkInput(System::Windows::Forms::KeyPressEventArgs^ e);
-		 System::Void Btn_exectuion_Click(System::Object^ sender, System::EventArgs^ e);
-		 System::Void Tb_probabilityGetTaskFirst_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
+			System::Void Tb_probabilityGetTaskSecondAfterFirst_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
+			System::Void Tb_probabilityGetTaskThirdAfterFirst_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
+			System::Void Tb_startTimeExecutionFirst_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
+			System::Void Tb_endTimeExecutionFirst_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
+			System::Void Tb_startTimeExecutionSecond_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
+			System::Void Tb_endTimeExecutionSecond_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
+			System::Void Tb_startTimeExecutionThird_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
+			System::Void Tb_endTimeExecutionThird_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
+			System::Boolean checkInput(System::Windows::Forms::KeyPressEventArgs^ e);
+			System::Void Btn_exectuion_Click(System::Object^ sender, System::EventArgs^ e);
+			System::Void Tb_probabilityGetTaskFirst_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
+		 
 };
 }

@@ -308,7 +308,7 @@ namespace ModelingSystemInfiniteQueue {
 			// 
 			this->btn_exectuion->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->btn_exectuion->Location = System::Drawing::Point(558, 228);
+			this->btn_exectuion->Location = System::Drawing::Point(558, 223);
 			this->btn_exectuion->Name = L"btn_exectuion";
 			this->btn_exectuion->Size = System::Drawing::Size(204, 47);
 			this->btn_exectuion->TabIndex = 17;
@@ -328,34 +328,40 @@ namespace ModelingSystemInfiniteQueue {
 			// lbl_FirstPC
 			// 
 			this->lbl_FirstPC->AutoSize = true;
-			this->lbl_FirstPC->Location = System::Drawing::Point(294, 318);
+			this->lbl_FirstPC->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->lbl_FirstPC->Location = System::Drawing::Point(282, 300);
 			this->lbl_FirstPC->Name = L"lbl_FirstPC";
-			this->lbl_FirstPC->Size = System::Drawing::Size(48, 13);
+			this->lbl_FirstPC->Size = System::Drawing::Size(54, 15);
 			this->lbl_FirstPC->TabIndex = 19;
 			this->lbl_FirstPC->Text = L"Report 1";
 			// 
 			// lbl_SecondPC
 			// 
 			this->lbl_SecondPC->AutoSize = true;
-			this->lbl_SecondPC->Location = System::Drawing::Point(571, 318);
+			this->lbl_SecondPC->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->lbl_SecondPC->Location = System::Drawing::Point(559, 300);
 			this->lbl_SecondPC->Name = L"lbl_SecondPC";
-			this->lbl_SecondPC->Size = System::Drawing::Size(48, 13);
+			this->lbl_SecondPC->Size = System::Drawing::Size(54, 15);
 			this->lbl_SecondPC->TabIndex = 20;
 			this->lbl_SecondPC->Text = L"Report 2";
 			// 
 			// lbl_ThirdPC
 			// 
 			this->lbl_ThirdPC->AutoSize = true;
-			this->lbl_ThirdPC->Location = System::Drawing::Point(873, 318);
+			this->lbl_ThirdPC->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->lbl_ThirdPC->Location = System::Drawing::Point(861, 300);
 			this->lbl_ThirdPC->Name = L"lbl_ThirdPC";
-			this->lbl_ThirdPC->Size = System::Drawing::Size(48, 13);
+			this->lbl_ThirdPC->Size = System::Drawing::Size(54, 15);
 			this->lbl_ThirdPC->TabIndex = 21;
 			this->lbl_ThirdPC->Text = L"Report 3";
 			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(313, 296);
+			this->label4->Location = System::Drawing::Point(301, 278);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(39, 13);
 			this->label4->TabIndex = 25;
@@ -364,7 +370,7 @@ namespace ModelingSystemInfiniteQueue {
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(607, 296);
+			this->label5->Location = System::Drawing::Point(595, 278);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(39, 13);
 			this->label5->TabIndex = 26;
@@ -373,7 +379,7 @@ namespace ModelingSystemInfiniteQueue {
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(889, 296);
+			this->label6->Location = System::Drawing::Point(877, 278);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(39, 13);
 			this->label6->TabIndex = 27;
@@ -393,7 +399,7 @@ namespace ModelingSystemInfiniteQueue {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::LightSteelBlue;
-			this->ClientSize = System::Drawing::Size(1140, 511);
+			this->ClientSize = System::Drawing::Size(1184, 545);
 			this->Controls->Add(this->label7);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->label5);
@@ -428,8 +434,7 @@ namespace ModelingSystemInfiniteQueue {
 		}
 #pragma endregion
 		private:
-			System::Void setTextForLabelEveryMachine(System::Windows::Forms::Label^ curLabel, int const& totalTimeExectuionTasksCurPC, int const& totalTimeWaitCurPC,
-				int const& totalTimeQueueCurPC, int const& maxCountTaskInQueueCurPC,int const& maxTimeCurrentQueueCurPC);
+			System::Void setTextForLabelEveryMachine(System::Windows::Forms::Label^ curLabel, int const& totalTimeExectuionTasksCurPC, int const& totalTimeWaitCurPC,int const& totalTimeQueueCurPC, int const& maxCountTaskInQueueCurPC,int const& maxTimeCurrentQueueCurPC, int const& completeTask, int const& countTaskInQueueAfterTask, int const& countQueue);
 			System::Void Tb_startInteervalGetTask_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
 			System::Void Tb_endInteervalGetTask_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
 			System::Void Tb_probabilityGetTaskSecond_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);

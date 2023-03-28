@@ -24,28 +24,44 @@ void main(array<String^>^ args)
 }
 
 
-System::Void ModelingSystemInfiniteQueue::ModelingInfinityQeueForm::setTextForLabelEveryMachine(System::Windows::Forms::Label^ curLabel, int const& totalTimeExectuionTasksCurPC, int const& totalTimeWaitCurPC, int const& totalTimeQueueCurPC, int const& maxCountTaskInQueueCurPC,int const& maxTimeCurrentQueueCurPC)
+System::Void ModelingSystemInfiniteQueue::ModelingInfinityQeueForm::setTextForLabelEveryMachine(System::Windows::Forms::Label^ curLabel, int const& totalTimeExectuionTasksCurPC, int const& totalTimeWaitCurPC, int const& totalTimeQueueCurPC, int const& maxCountTaskInQueueCurPC,int const& maxTimeCurrentQueueCurPC,int const& completeTask,int const& countTaskInQueueAfterTask,int const& countQueue)
+
 {
+	int middleTimeWorkForOneTask = 1;
+	int middleTimeQueueForOneTask = 1;
+
+	if (completeTask != 0)
+	{
+		middleTimeWorkForOneTask = std::round(totalTimeExectuionTasksCurPC / completeTask);
+	}
+	if(countQueue!=0)
+		middleTimeQueueForOneTask = std::round(totalTimeQueueCurPC / countQueue);
+
 	curLabel->Text = "Время на выполнение всех задач: " + (totalTimeExectuionTasksCurPC / 60).ToString() + " ч. " + (totalTimeExectuionTasksCurPC % 60).ToString() + " мин.\n"
-		+ "Время простоя: " + (totalTimeWaitCurPC / 60).ToString() + " ч. " + (totalTimeWaitCurPC % 60).ToString() + " мин. \n"
-		+ "Все время ожидания в очереди: " + (totalTimeQueueCurPC / 60).ToString() + " ч. " + (totalTimeQueueCurPC % 60).ToString() + " мин. \n" 
-		+ "Максимальное время очереди: " + (maxTimeCurrentQueueCurPC / 60).ToString() + " ч. " + (maxTimeCurrentQueueCurPC % 60).ToString() + " мин. \n"
-		" Макс очередь: " + maxCountTaskInQueueCurPC.ToString();
+		+ "Количество выполненных задач: " + completeTask + "\n"
+		+ "Количество задач оставшихся в очереди: " + countTaskInQueueAfterTask + "\n "
+		+ " Среднее время выполнения \n   на одну задачу : " + (middleTimeWorkForOneTask / 60).ToString() + " ч. " + (middleTimeWorkForOneTask % 60).ToString() + " мин. \n"
+		//+ "Все время ожидания в очереди: " + (totalTimeQueueCurPC / 60).ToString() + " ч. " + (totalTimeQueueCurPC % 60).ToString() + " мин. \n" 
+		+ "Среднее время в очереди: " + (middleTimeQueueForOneTask / 60).ToString() + " ч. " + (middleTimeQueueForOneTask % 60).ToString() + " мин. \n"
+		+ "Время простоя: " + (totalTimeWaitCurPC / 60).ToString() + " ч. " + (totalTimeWaitCurPC % 60).ToString() + " мин. \n ---- \n";
+		//" Среднее количество задач скопившихся\n в очереди : " + maxCountTaskInQueueCurPC.ToString() + " задач \n ---- \n";
+
 	if (totalTimeExectuionTasksCurPC == 0)
-		curLabel->Text += "\n Эффективность ЭВМ 0%. \nНе используется, рекомендуется повысить\n вероятность попадания.";
+		curLabel->Text += " Эффективность ЭВМ 0. \nНе используется, рекомендуется повысить\n вероятность попадания.";
 	else
 	{
 		if(totalTimeExectuionTasksCurPC == totalTimeWaitCurPC)
-			curLabel->Text += "\n Эффективность ЭВМ 50%. \nИспользуется лишь на половину, \nследует повысить вероятность попадания.";
+			curLabel->Text += " Эффективность ЭВМ средняя. \nИспользуется лишь на половину, \nследует повысить вероятность попадания.";
 		else
 			if(maxTimeCurrentQueueCurPC > totalTimeExectuionTasksCurPC * 0.3)
-				curLabel->Text += "\n Эффективность ЭВМ выше среднего. \nДолгое выполнение, \nрекомендуется понизить вероятность попадания\n или уменьшить время выполнения.";
+				curLabel->Text += " Эффективность ЭВМ выше среднего. \nДолгое выполнение, рекомендуется \nпонизить вероятность попадания\n или уменьшить время выполнения.";
 			else
-				if(totalTimeWaitCurPC > totalTimeExectuionTasksCurPC * 0.5)
-					curLabel->Text += "\n Эффективность ЭВМ низкая. \nСлишком долгий простой, \nследует повысить вероятность попадания.";
+				if(totalTimeWaitCurPC > totalTimeExectuionTasksCurPC * 0.3)
+					curLabel->Text += " Эффективность ЭВМ низкая. \nСлишком долгий простой, \nследует повысить вероятность попадания.";
 				else
-					curLabel->Text += "\n Эффективность ЭВМ нормальная. \nИспользуется в пределах нормы.";
+					curLabel->Text += " Эффективность ЭВМ нормальная. \nИспользуется в пределах нормы.";
 	}
+	curLabel->Text += "\n ---- \n";
 }
 
 System::Void ModelingSystemInfiniteQueue::ModelingInfinityQeueForm::Tb_startInteervalGetTask_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e)
@@ -134,8 +150,6 @@ double getRandom_uniformRealDistribution(double const& start, double const& end)
 }
 
 
-
-
 int giveNumberPC(double const& prob1, double const& prob2)
 {
 	double random = getRandom_uniformRealDistribution(0.0, 1.0);
@@ -173,7 +187,7 @@ void saveSizeQueueIfExists(int const& countTask, int& maxQueue)
 		maxQueue = countTask - 1;
 }
 
-void calculateTimeInQueue(int const& countTask, int& timeInQueue,int& timeCurrentQueue ,int& maxTimeCurrentQueueCurPC)
+void calculateTimeInQueue(int const& countTask, int& timeInQueue,int& timeCurrentQueue ,int& maxTimeCurrentQueueCurPC,int& countQueueCurPC)
 {
 	if (countTask > 1)
 	{
@@ -184,11 +198,15 @@ void calculateTimeInQueue(int const& countTask, int& timeInQueue,int& timeCurren
 	{
 		if (timeCurrentQueue > maxTimeCurrentQueueCurPC)
 			maxTimeCurrentQueueCurPC = timeCurrentQueue;
-		timeCurrentQueue = 0;
+		if (timeCurrentQueue != 0)
+		{
+			timeCurrentQueue = 0;
+			countQueueCurPC++;
+		}
 	}
 }
 
-void checkWorkPC(std::vector<double> & listTaskCurPC, int& timeExectuionTaskCurPC, int& totalTimeExecutionPC, int& countCompleteTask, int& maxQueue, int& timeInQueue, int& timeWait, int& timeCurrentQueue, int& maxTimeCurrentQueueCurPC)
+void checkWorkPC(std::vector<double> & listTaskCurPC, int& timeExectuionTaskCurPC, int& totalTimeExecutionPC, int& countCompleteTask, int& maxQueue, int& timeInQueue, int& timeWait, int& timeCurrentQueue, int& maxTimeCurrentQueueCurPC,int& countQueueCurPC)
 {
 	if (listTaskCurPC.size() != 0)
 	{
@@ -198,7 +216,7 @@ void checkWorkPC(std::vector<double> & listTaskCurPC, int& timeExectuionTaskCurP
 		{
 			timeExectuionTaskCurPC++;
 			saveSizeQueueIfExists(listTaskCurPC.size(), maxQueue);
-			calculateTimeInQueue(listTaskCurPC.size(), timeInQueue,timeCurrentQueue,maxTimeCurrentQueueCurPC);
+			calculateTimeInQueue(listTaskCurPC.size(), timeInQueue,timeCurrentQueue,maxTimeCurrentQueueCurPC, countQueueCurPC);
 
 		}
 	}
@@ -224,9 +242,10 @@ void correctTime(int const& totalTimeWork, int& totalTimeWorkCurMachine)
 
 System::Void ModelingSystemInfiniteQueue::ModelingInfinityQeueForm::Btn_exectuion_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	std::ofstream logFile("log.txt");
+	/*std::ofstream logFile("log.txt");*/
 
 	int countTask = Convert::ToInt32(numericUpDown1->Text);
+	int countTaskTemp = Convert::ToInt32(numericUpDown1->Text);
 	double const startInterrvalGetTask = Convert::ToDouble(tb_startInteervalGetTask->Text->Replace(".", ","));
 	double const endInteervalGetTask = Convert::ToDouble(tb_endInteervalGetTask->Text->Replace(".", ","));
 
@@ -253,7 +272,7 @@ System::Void ModelingSystemInfiniteQueue::ModelingInfinityQeueForm::Btn_exectuio
 	
 	//Общее время выполнения задач и количество 1 ЭВМ
 	int totalTimeExectuionTasksFristPC = 0;
-	int countCompleteTaskFirstPC = 0;
+	int countCompleteFirstPC = 0;
 	//Общее время выполнения задач и количество 2 ЭВМ
 	int totalTimeExectuionTasksSecondPC = 0;
 	int countCompleteSecondPC = 0;
@@ -290,10 +309,20 @@ System::Void ModelingSystemInfiniteQueue::ModelingInfinityQeueForm::Btn_exectuio
 	int maxCountTaskInQueueFirstPC = 0;
 	int maxCountTaskInQueueSecondPC = 0;
 	int maxCountTaskInQueueThirdPC = 0;
+
+	//Количество очередй
+	int countQueueFirstPC = 0;
+	int countQueueSecondPC = 0;
+	int countQueueThirdPC = 0;
 	
 	//общее время поступления задач
 	double totalTimeReceiptsTasks = 0;
 	
+	//Количество задач оставшихся в очереди
+	int countTaskInQueueAfterGetAllTaskFirstPC = 0;
+	int countTaskInQueueAfterGetAllTaskSecondPC = 0;
+	int countTaskInQueueAfterGetAllTaskThirdPC = 0;
+
 	double timeBeforeNextTask = getRandom_uniformRealDistribution(startInterrvalGetTask, endInteervalGetTask);
 	double currentTime = 0;
 	int totalTimeWork = 0;
@@ -315,6 +344,7 @@ System::Void ModelingSystemInfiniteQueue::ModelingInfinityQeueForm::Btn_exectuio
 				listTimeExecutionTasksThirdPC.push_back(getRandom_uniformRealDistribution(startIntervalTimeExecutionTaskThirdPC, endIntervalTimeExecutionTaskThirdPC));
 				break;
 			default:
+				listTimeExecutionTasksFirstPC.push_back(getRandom_uniformRealDistribution(startIntervalTimeExecutionTaskFirstPC, endIntervalTimeExecutionTaskFirstPC));
 				break;
 			}
 
@@ -328,8 +358,8 @@ System::Void ModelingSystemInfiniteQueue::ModelingInfinityQeueForm::Btn_exectuio
 
 			if (currentTimeExecutionFirstPC >= std::round(listTimeExecutionTasksFirstPC[0]))
 			{
-				completeTask(listTimeExecutionTasksFirstPC, currentTimeExecutionFirstPC, totalTimeExectuionTasksFristPC, countCompleteTaskFirstPC);
-
+				completeTask(listTimeExecutionTasksFirstPC, currentTimeExecutionFirstPC, totalTimeExectuionTasksFristPC, countCompleteFirstPC);
+				
 				switch (giveNumberPC(probabilityGetTaskSecondPCAfterFirstPC, probabilityGetTaskThirdPCAfterFirstPC))
 				{
 				case 1:
@@ -339,6 +369,7 @@ System::Void ModelingSystemInfiniteQueue::ModelingInfinityQeueForm::Btn_exectuio
 					listTimeExecutionTasksThirdPC.push_back(getRandom_uniformRealDistribution(startIntervalTimeExecutionTaskThirdPC, endIntervalTimeExecutionTaskThirdPC));
 					break;
 				default:
+					listTimeExecutionTasksSecondPC.push_back(getRandom_uniformRealDistribution(startIntervalTimeExecutionTaskSecondPC, endIntervalTimeExecutionTaskSecondPC));
 					break;
 				}
 			}
@@ -346,63 +377,85 @@ System::Void ModelingSystemInfiniteQueue::ModelingInfinityQeueForm::Btn_exectuio
 			{
 				currentTimeExecutionFirstPC++;
 				saveSizeQueueIfExists(listTimeExecutionTasksFirstPC.size(), maxCountTaskInQueueFirstPC);
-				calculateTimeInQueue(listTimeExecutionTasksFirstPC.size(), totalTimeQueueFirstPC,timeCurrentQueueFirstPC,maxTimeQueueFirstPC);
+				calculateTimeInQueue(listTimeExecutionTasksFirstPC.size(), totalTimeQueueFirstPC,timeCurrentQueueFirstPC,maxTimeQueueFirstPC, countQueueFirstPC);
 			}
 			
 		}
 		if(listTimeExecutionTasksFirstPC.size() == 0)
 			totalTimeWaitFirstPC++;
 
-		checkWorkPC(listTimeExecutionTasksSecondPC, currentTimeExecutionSecondPC, totalTimeExectuionTasksSecondPC, countCompleteSecondPC, maxCountTaskInQueueSecondPC, totalTimeQueueSecondPC, totalTimeWaitSecondPC,timeCurrentQueueSecondPC,maxTimeQueueSecondPC);
-		checkWorkPC(listTimeExecutionTasksThirdPC, currentTimeExecutionThirdPC, totalTimeExectuionTasksThirdPC, countCompleteThirdPC, maxCountTaskInQueueThirdPC, totalTimeQueueThirdPC, totalTimeWaitThirdPC,timeCurrentQueueThridPC,maxTimeQueueThirdPC);
+		checkWorkPC(listTimeExecutionTasksSecondPC, currentTimeExecutionSecondPC, totalTimeExectuionTasksSecondPC, countCompleteSecondPC, maxCountTaskInQueueSecondPC, totalTimeQueueSecondPC, totalTimeWaitSecondPC,timeCurrentQueueSecondPC,maxTimeQueueSecondPC,countCompleteSecondPC);
+		checkWorkPC(listTimeExecutionTasksThirdPC, currentTimeExecutionThirdPC, totalTimeExectuionTasksThirdPC, countCompleteThirdPC, maxCountTaskInQueueThirdPC, totalTimeQueueThirdPC, totalTimeWaitThirdPC,timeCurrentQueueThridPC,maxTimeQueueThirdPC,countCompleteThirdPC);
 
-		logFile << " First PC : \n";
-		logFile << " totalTimeExectuionTasksFristPC = " << totalTimeExectuionTasksFristPC << " totalTimeWaitFirstPC =  " << totalTimeWaitFirstPC << " currentTimeExecutionFirstPC =" << currentTimeExecutionFirstPC << "\n";
-		logFile << " Second PC : \n";
-		logFile << " totalTimeExectuionTasksSecondPC = " << totalTimeExectuionTasksSecondPC << " totalTimeWaitSecondPC =  " << totalTimeWaitSecondPC << " currentTimeExecutionSecondPC =" << currentTimeExecutionSecondPC << "\n";
-		logFile << " Third PC : \n";
-		logFile << " totalTimeExectuionTasksThirdPC = " << totalTimeExectuionTasksThirdPC << " totalTimeWaitThirdPC =  " << totalTimeWaitThirdPC << " currentTimeExecutionThirdPC =" << currentTimeExecutionThirdPC << "\n";
-		logFile << "---------------------------------------\n";
+		//logFile << " First PC : \n";
+		//logFile << " totalTimeExectuionTasksFristPC = " << totalTimeExectuionTasksFristPC << " totalTimeWaitFirstPC =  " << totalTimeWaitFirstPC << " currentTimeExecutionFirstPC =" << currentTimeExecutionFirstPC << "\n";
+		//logFile << " Second PC : \n";
+		//logFile << " totalTimeExectuionTasksSecondPC = " << totalTimeExectuionTasksSecondPC << " totalTimeWaitSecondPC =  " << totalTimeWaitSecondPC << " currentTimeExecutionSecondPC =" << currentTimeExecutionSecondPC << "\n";
+		//logFile << " Third PC : \n";
+		//logFile << " totalTimeExectuionTasksThirdPC = " << totalTimeExectuionTasksThirdPC << " totalTimeWaitThirdPC =  " << totalTimeWaitThirdPC << " currentTimeExecutionThirdPC =" << currentTimeExecutionThirdPC << "\n";
+		//logFile << "---------------------------------------\n";
 		
 		if(countTask > 0)
 			currentTime+=1;
+		if (countTask == 0 && countTaskInQueueAfterGetAllTaskFirstPC == 0 && countTaskInQueueAfterGetAllTaskSecondPC == 0 && countTaskInQueueAfterGetAllTaskThirdPC == 0)
+		{
+			countTaskInQueueAfterGetAllTaskFirstPC = listTimeExecutionTasksFirstPC.size();
+			countTaskInQueueAfterGetAllTaskSecondPC = listTimeExecutionTasksSecondPC.size();
+			countTaskInQueueAfterGetAllTaskThirdPC = listTimeExecutionTasksThirdPC.size();
+		}
+
 		totalTimeWork++;
 	
-		logFile << "totalTimeWork = " << totalTimeWork << "\n---------------------------------------\n";
+		/*logFile << "totalTimeWork = " << totalTimeWork << "\n---------------------------------------\n";*/
 		if (countTask == 0 && listTimeExecutionTasksFirstPC.size() == 0 && listTimeExecutionTasksSecondPC.size() == 0 && listTimeExecutionTasksThirdPC.size() == 0)
 			break;
 
 	}
 
 	
-	setTextForLabelEveryMachine(lbl_FirstPC, totalTimeExectuionTasksFristPC, totalTimeWaitFirstPC, totalTimeQueueFirstPC, maxCountTaskInQueueFirstPC,maxTimeQueueFirstPC);
-	setTextForLabelEveryMachine(lbl_SecondPC, totalTimeExectuionTasksSecondPC, totalTimeWaitSecondPC, totalTimeQueueSecondPC, maxCountTaskInQueueSecondPC,maxTimeQueueSecondPC);
-	setTextForLabelEveryMachine(lbl_ThirdPC, totalTimeExectuionTasksThirdPC, totalTimeWaitThirdPC, totalTimeQueueThirdPC, maxCountTaskInQueueThirdPC,maxTimeQueueThirdPC);
+	setTextForLabelEveryMachine(lbl_FirstPC, totalTimeExectuionTasksFristPC, totalTimeWaitFirstPC, totalTimeQueueFirstPC, maxCountTaskInQueueFirstPC,maxTimeQueueFirstPC,countCompleteFirstPC,countTaskInQueueAfterGetAllTaskFirstPC,countQueueFirstPC);
+	setTextForLabelEveryMachine(lbl_SecondPC, totalTimeExectuionTasksSecondPC, totalTimeWaitSecondPC, totalTimeQueueSecondPC, maxCountTaskInQueueSecondPC,maxTimeQueueSecondPC,countCompleteSecondPC,countTaskInQueueAfterGetAllTaskSecondPC,countQueueSecondPC);
+	setTextForLabelEveryMachine(lbl_ThirdPC, totalTimeExectuionTasksThirdPC, totalTimeWaitThirdPC, totalTimeQueueThirdPC, maxCountTaskInQueueThirdPC,maxTimeQueueThirdPC,countCompleteThirdPC,countTaskInQueueAfterGetAllTaskThirdPC,countCompleteThirdPC);
 
 	int maxTimeQueuePC = std::max(maxTimeQueueThirdPC, std::max(maxTimeQueueFirstPC, maxTimeQueueSecondPC));
 	int maxTimeWaitPC = std::max(totalTimeWaitFirstPC, std::max(totalTimeWaitSecondPC, totalTimeWaitThirdPC));
 
-	lbl_total->Text = "Общее время работы : " + (totalTimeWork / 60).ToString() + " ч. " + (totalTimeWork % 60).ToString() + " мин.";
+	/*lbl_total->Text = "Общее время работы : " + (totalTimeWork / 60).ToString() + " ч. " + (totalTimeWork % 60).ToString() + " мин.";
 	lbl_total->Text += "\nОбщее время ожидания в очереди: " + ((totalTimeQueueFirstPC+totalTimeQueueSecondPC+totalTimeQueueThirdPC)/60).ToString() + " ч. " + ((totalTimeQueueFirstPC + totalTimeQueueSecondPC + totalTimeQueueThirdPC)  % 60).ToString() + " мин.";
 	lbl_total->Text += "\nОбщее время в простое: " + ((totalTimeWaitFirstPC+totalTimeWaitSecondPC+totalTimeWaitThirdPC)/ 60).ToString() + " ч. " + ((totalTimeWaitFirstPC + totalTimeWaitSecondPC + totalTimeWaitThirdPC) % 60).ToString() + " мин.";
 	lbl_total->Text += "\nВремя поступления задач: " + (((int)std::round(totalTimeReceiptsTasks)) / 60).ToString() + " ч. " + (static_cast<int>(std::round(totalTimeReceiptsTasks)) % 60).ToString() + " мин."; 
-	lbl_total->Text += "\nСамое макс время очереди: " + ((maxTimeQueuePC) / 60).ToString() + " ч. " + ((maxTimeQueuePC) % 60).ToString() + " мин.";
-	lbl_total->Text += "\nСамое макс время простоя: " + ((maxTimeWaitPC) / 60).ToString() + " ч. " + ((maxTimeWaitPC) % 60).ToString() + " мин.";
-	
+	*/
 
+	int middleQueue =(totalTimeQueueFirstPC + totalTimeQueueSecondPC + totalTimeQueueThirdPC) / (countQueueFirstPC+ countQueueSecondPC+ countQueueThirdPC);
+	int middleWait = (totalTimeWaitFirstPC + totalTimeWaitSecondPC + totalTimeWaitThirdPC)/ 3;
 	
+	lbl_total->Text = "Общее время работы : " + (totalTimeWork / 60).ToString() + " ч. " + (totalTimeWork % 60).ToString() + " мин.";
+	lbl_total->Text += "\nСреднее время очереди: " + ((middleQueue) / 60).ToString() + " ч. " + ((middleQueue) % 60).ToString() + " мин.";
+	lbl_total->Text += "\nСреднее время в простое: " + ((middleWait) / 60).ToString() + " ч. " + ((middleWait) % 60).ToString() + " мин.";
+	lbl_total->Text += "\n Макс время очереди одной из ЭВМ: " + ((maxTimeQueuePC) / 60).ToString() + " ч. " + ((maxTimeQueuePC) % 60).ToString() + " мин.";
+	lbl_total->Text += "\n Макс время простоя одной из ЭВМ: " + ((maxTimeWaitPC) / 60).ToString() + " ч. " + ((maxTimeWaitPC) % 60).ToString() + " мин.";
+
+	int timeExecutionOneTaskFirstPC = (totalTimeExectuionTasksFristPC / countCompleteFirstPC);
+	int timeExecutionOneTaskSecondPC = (totalTimeExectuionTasksSecondPC / countCompleteSecondPC);
+	int timeExecutionOneTaskThirdPC = (totalTimeExectuionTasksThirdPC / countCompleteThirdPC);
+	
+	lbl_total->Text += "\n Абсолютная пропускная способность: " + (timeExecutionOneTaskFirstPC + timeExecutionOneTaskSecondPC + timeExecutionOneTaskThirdPC / 3) + "\n";
 
 	lbl_total->Text += "\n\n Краткая сводка об эффективности:\n---\n";
-	if (maxTimeQueuePC > totalTimeWork * 0.8)
-		lbl_total->Text += "Макс время очереди более 80% от всей работы,\n рекомендуется снизить нагрузку\n с нагруженной ЭВМ и повысить на менее\n нагруженную \n(см. сводка для текущей ЭВМ)\n---\n";
+	if (middleQueue > totalTimeWork * 0.4)
+		lbl_total->Text += "Среднее время очереди высокое,\n рекомендуется снизить нагрузку\n с нагруженной ЭВМ и повысить на менее\n нагруженную \n(см. сводка для текущей ЭВМ)\n---\n";
 	else
-		lbl_total->Text += "Макс время очереди занимает менее 80% времени \nот всей работы, в пределах нормы\n---\n";
-	if ((totalTimeWaitFirstPC + totalTimeWaitSecondPC + totalTimeWaitThirdPC) > totalTimeWork * 0.3)
-		lbl_total->Text += "Общее время простоя более 30% от всей работы, \nЭВМ практически не работают\n---\n";
+		lbl_total->Text += "Среднее время очереди низкое \n, ЭВМ работают хорошо \n---\n";
+	
+	if (middleWait > totalTimeWork * 0.5)
+		lbl_total->Text += "Среднее время простоя высокое, \nЭВМ практически не работают\n---\n";
 	else
-		lbl_total->Text += "Общее время простоя менее 30% от всей работы \n ЭВМ работают в стабильном режиме\n---\n";
+		if(middleWait > totalTimeWork * 0.3)
+			lbl_total->Text += "Среднее время простоя среднее, \nЭВМ частично работает\n---\n";
+		else
+			lbl_total->Text += "Среднее время простоя небольшое \n ЭВМ работают в стабильном режиме\n---\n";
 
-	logFile.close();
+	//logFile.close();
 }
 
 System::Void ModelingSystemInfiniteQueue::ModelingInfinityQeueForm::Tb_probabilityGetTaskFirst_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e)

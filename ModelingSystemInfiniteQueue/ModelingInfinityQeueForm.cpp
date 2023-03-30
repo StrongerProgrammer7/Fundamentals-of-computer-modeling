@@ -31,11 +31,12 @@ System::Void ModelingSystemInfiniteQueue::ModelingInfinityQeueForm::setTextForLa
 	int middleTimeQueueForOneTask = 1;
 
 	if (completeTask != 0)
-	{
 		middleTimeWorkForOneTask = std::round(totalTimeExectuionTasksCurPC / completeTask);
-	}
+
 	if(countQueue!=0)
 		middleTimeQueueForOneTask = std::round(totalTimeQueueCurPC / countQueue);
+
+	double percentQueue = (int)(double)(((double)totalTimeWaitCurPC / (double)totalTimeExectuionTasksCurPC) * 100.0);
 
 	curLabel->Text = "Время на выполнение всех задач: " + (totalTimeExectuionTasksCurPC / 60).ToString() + " ч. " + (totalTimeExectuionTasksCurPC % 60).ToString() + " мин.\n"
 		+ "Количество выполненных задач: " + completeTask + "\n"
@@ -43,7 +44,7 @@ System::Void ModelingSystemInfiniteQueue::ModelingInfinityQeueForm::setTextForLa
 		+ " Среднее время выполнения \n   на одну задачу : " + (middleTimeWorkForOneTask / 60).ToString() + " ч. " + (middleTimeWorkForOneTask % 60).ToString() + " мин. \n"
 		//+ "Все время ожидания в очереди: " + (totalTimeQueueCurPC / 60).ToString() + " ч. " + (totalTimeQueueCurPC % 60).ToString() + " мин. \n" 
 		+ "Среднее время в очереди: " + (middleTimeQueueForOneTask / 60).ToString() + " ч. " + (middleTimeQueueForOneTask % 60).ToString() + " мин. \n"
-		+ "Время простоя: " + (totalTimeWaitCurPC / 60).ToString() + " ч. " + (totalTimeWaitCurPC % 60).ToString() + " мин. \n ---- \n";
+		+ "Время простоя: " + (totalTimeWaitCurPC / 60).ToString() + " ч. " + (totalTimeWaitCurPC % 60).ToString() + " мин. " + percentQueue.ToString() + "%\n ---- \n";
 		//" Среднее количество задач скопившихся\n в очереди : " + maxCountTaskInQueueCurPC.ToString() + " задач \n ---- \n";
 
 	if (totalTimeExectuionTasksCurPC == 0)
@@ -53,13 +54,37 @@ System::Void ModelingSystemInfiniteQueue::ModelingInfinityQeueForm::setTextForLa
 		if(totalTimeExectuionTasksCurPC == totalTimeWaitCurPC)
 			curLabel->Text += " Эффективность ЭВМ средняя. \nИспользуется лишь на половину, \nследует повысить вероятность попадания.";
 		else
-			if(maxTimeCurrentQueueCurPC > totalTimeExectuionTasksCurPC * 0.3)
-				curLabel->Text += " Эффективность ЭВМ выше среднего. \nДолгое выполнение, рекомендуется \nпонизить вероятность попадания\n или уменьшить время выполнения.";
+		{
+			if (totalTimeWaitCurPC > totalTimeExectuionTasksCurPC * 0.3)
+				curLabel->Text += " Эффективность ЭВМ низкая. \nСлишком долгий простой, \nследует повысить вероятность попадания.";
 			else
-				if(totalTimeWaitCurPC > totalTimeExectuionTasksCurPC * 0.3)
-					curLabel->Text += " Эффективность ЭВМ низкая. \nСлишком долгий простой, \nследует повысить вероятность попадания.";
-				else
+			{
+				if (middleTimeQueueForOneTask > totalTimeExectuionTasksCurPC * 0.05)
+				{
+
+					if (middleTimeQueueForOneTask > totalTimeExectuionTasksCurPC * 0.2)
+					{
+						curLabel->Text += " Эффективность ЭВМ низкая. \nЭВМ перегруженна, рекомендуется \nпонизить вероятность попадания\n или уменьшить время выполнения.";
+					}
+					else
+						curLabel->Text += " Эффективность ЭВМ выше среднего. \nДолгое выполнение, рекомендуется \nпонизить вероятность попадания\n или уменьшить время выполнения.";
+				}else
 					curLabel->Text += " Эффективность ЭВМ нормальная. \nИспользуется в пределах нормы.";
+			}
+
+			if (countTaskInQueueAfterTask > completeTask *0.25)
+			{	
+				if (countTaskInQueueAfterTask > completeTask * 0.5)
+					if (countTaskInQueueAfterTask >= completeTask)
+						curLabel->Text += " \nОчень большое количество \nзадач в очереди, следует выполнить \nувеличение скорости выполнения";
+					else
+						curLabel->Text += " \nКоличество \nзадач в очереди около 50%, следует \nпонизить время выполнения";
+				else
+					curLabel->Text += " \n Количество \nзадач в очереди (25-50)% рекомендуется \nпонизить время выполнения";
+			}
+			else
+				curLabel->Text += " \nКоличетсво задач в очереди менее 25%";
+		}
 	}
 	curLabel->Text += "\n ---- \n";
 }
@@ -384,8 +409,8 @@ System::Void ModelingSystemInfiniteQueue::ModelingInfinityQeueForm::Btn_exectuio
 		if(listTimeExecutionTasksFirstPC.size() == 0)
 			totalTimeWaitFirstPC++;
 
-		checkWorkPC(listTimeExecutionTasksSecondPC, currentTimeExecutionSecondPC, totalTimeExectuionTasksSecondPC, countCompleteSecondPC, maxCountTaskInQueueSecondPC, totalTimeQueueSecondPC, totalTimeWaitSecondPC,timeCurrentQueueSecondPC,maxTimeQueueSecondPC,countCompleteSecondPC);
-		checkWorkPC(listTimeExecutionTasksThirdPC, currentTimeExecutionThirdPC, totalTimeExectuionTasksThirdPC, countCompleteThirdPC, maxCountTaskInQueueThirdPC, totalTimeQueueThirdPC, totalTimeWaitThirdPC,timeCurrentQueueThridPC,maxTimeQueueThirdPC,countCompleteThirdPC);
+		checkWorkPC(listTimeExecutionTasksSecondPC, currentTimeExecutionSecondPC, totalTimeExectuionTasksSecondPC, countCompleteSecondPC, maxCountTaskInQueueSecondPC, totalTimeQueueSecondPC, totalTimeWaitSecondPC,timeCurrentQueueSecondPC,maxTimeQueueSecondPC,countQueueSecondPC);
+		checkWorkPC(listTimeExecutionTasksThirdPC, currentTimeExecutionThirdPC, totalTimeExectuionTasksThirdPC, countCompleteThirdPC, maxCountTaskInQueueThirdPC, totalTimeQueueThirdPC, totalTimeWaitThirdPC,timeCurrentQueueThridPC,maxTimeQueueThirdPC,countQueueThirdPC);
 
 		//logFile << " First PC : \n";
 		//logFile << " totalTimeExectuionTasksFristPC = " << totalTimeExectuionTasksFristPC << " totalTimeWaitFirstPC =  " << totalTimeWaitFirstPC << " currentTimeExecutionFirstPC =" << currentTimeExecutionFirstPC << "\n";
@@ -402,6 +427,7 @@ System::Void ModelingSystemInfiniteQueue::ModelingInfinityQeueForm::Btn_exectuio
 			countTaskInQueueAfterGetAllTaskFirstPC = listTimeExecutionTasksFirstPC.size();
 			countTaskInQueueAfterGetAllTaskSecondPC = listTimeExecutionTasksSecondPC.size();
 			countTaskInQueueAfterGetAllTaskThirdPC = listTimeExecutionTasksThirdPC.size();
+			break;
 		}
 
 		totalTimeWork++;
@@ -442,18 +468,18 @@ System::Void ModelingSystemInfiniteQueue::ModelingInfinityQeueForm::Btn_exectuio
 	lbl_total->Text += "\n Абсолютная пропускная способность: " + (timeExecutionOneTaskFirstPC + timeExecutionOneTaskSecondPC + timeExecutionOneTaskThirdPC / 3) + "\n";
 
 	lbl_total->Text += "\n\n Краткая сводка об эффективности:\n---\n";
-	if (middleQueue > totalTimeWork * 0.4)
+	if (middleQueue > totalTimeWork * 0.3)
 		lbl_total->Text += "Среднее время очереди высокое,\n рекомендуется снизить нагрузку\n с нагруженной ЭВМ и повысить на менее\n нагруженную \n(см. сводка для текущей ЭВМ)\n---\n";
 	else
-		lbl_total->Text += "Среднее время очереди низкое \n, ЭВМ работают хорошо \n---\n";
+		lbl_total->Text += "Среднее время очереди не большое \n, ЭВМ работают хорошо \n---\n";
 	
-	if (middleWait > totalTimeWork * 0.5)
+	if (middleWait > totalTimeWork * 0.3)
 		lbl_total->Text += "Среднее время простоя высокое, \nЭВМ практически не работают\n---\n";
 	else
-		if(middleWait > totalTimeWork * 0.3)
+		if(middleWait > totalTimeWork * 0.1)
 			lbl_total->Text += "Среднее время простоя среднее, \nЭВМ частично работает\n---\n";
 		else
-			lbl_total->Text += "Среднее время простоя небольшое \n ЭВМ работают в стабильном режиме\n---\n";
+			lbl_total->Text += "Среднее время простоя низкое \n ЭВМ работают в стабильном режиме\n---\n";
 
 	//logFile.close();
 }

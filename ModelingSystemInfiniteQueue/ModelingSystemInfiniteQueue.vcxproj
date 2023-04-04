@@ -133,12 +133,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="function.cpp" />
     <ClCompile Include="ModelingInfinityQeueForm.cpp" />
+    <ClCompile Include="ModelingSystemInfinityQueuePC.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="function.h" />
+    <ClInclude Include="include.h" />
     <ClInclude Include="ModelingInfinityQeueForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="ModelingSystemInfinityQueuePC.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ModelingInfinityQeueForm.resx">

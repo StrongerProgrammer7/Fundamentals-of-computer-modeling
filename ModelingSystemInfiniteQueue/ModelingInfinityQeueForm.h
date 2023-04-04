@@ -1,4 +1,5 @@
 #pragma once
+#include "ModelingSystemInfinityQueuePC.h"
 
 namespace ModelingSystemInfiniteQueue {
 
@@ -434,7 +435,9 @@ namespace ModelingSystemInfiniteQueue {
 		}
 #pragma endregion
 		private:
-			System::Void setTextForLabelEveryMachine(System::Windows::Forms::Label^ curLabel, int const& totalTimeExectuionTasksCurPC, int const& totalTimeWaitCurPC,int const& totalTimeQueueCurPC, int const& maxCountTaskInQueueCurPC,int const& maxTimeCurrentQueueCurPC, int const& completeTask, int const& countTaskInQueueAfterTask, int const& countQueue);
+
+			System::Void setTextForLabelEveryMachine(System::Windows::Forms::Label^ curLabel, ModelingSystemInfinityQueuePC& PC,int countTaskInQueueAfterTask);
+
 			System::Void Tb_startInteervalGetTask_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
 			System::Void Tb_endInteervalGetTask_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
 			System::Void Tb_probabilityGetTaskSecond_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);

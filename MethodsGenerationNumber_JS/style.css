@@ -1,0 +1,225 @@
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	outline:none;
+}
+table {						/* устраняем отступы между ячейками таблицы */
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+td, td img {
+	vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+} 
+input, select, button, textarea {
+	margin: 0; 				/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+	font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+	outline: none;
+}
+input[type="text"], input[type="password"], textarea {
+	padding: 0; 				/* убираем внутренние отступы для текстовых полей */
+}
+input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+	vertical-align: bottom;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu/*, nav*/, section {
+	display:block;
+}
+nav ul {
+	 list-style:none;
+}
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+html {
+	min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+body {
+	color: #000;
+    background-color: #fffdfd;
+	text-align: left;
+	font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+	min-height:100%;
+}
+a, a:visited { /* порядок правил для ссылок имеет значение */
+	color: #1a54e7;
+	text-decoration: underline;
+}
+a:hover {
+	color: #1a54e7;
+	text-decoration:none;
+}
+a:focus, a:active {
+	color: #1a54e7;
+	text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:normal;
+}
+img{
+
+	max-width:100%;
+}
+.clr{
+	clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+/* --------------- /базовые настройки ---------*/
+
+body
+{
+    background-color: #f7f7f7;
+}
+#myChart
+{
+    background-color: rgb(255, 255, 255);
+}
+.container
+{
+    margin: 10px 50px;
+}
+
+.graphic
+{
+    display: flex;
+
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	
+}
+
+.myChart
+{
+	
+
+}
+.myChart canvas
+{
+	
+}
+
+.menu
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+	margin-top: -30px;
+}
+
+.menu__button
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 25px auto;
+    margin-bottom: 25px;
+	justify-content: center;
+}
+
+.menu__button button
+{
+	margin-left: 15px;
+}
+
+.menu>div button
+{
+    margin-right: 25px;
+}
+.menu__input input
+{
+    margin:5px auto;
+    width: 10rem;
+}
+
+table, th, td 
+{
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}
+
+table
+{
+	background-color: white;
+}
+
+button
+{
+	border-radius: 0;
+	border: 2px solid rgba(112, 231, 255, 1);;
+	padding: 5px;
+	cursor: pointer;
+	transition-duration: 0.3s;
+    transition-delay: 0.1s;
+
+	max-width: 20%;
+}
+button:hover
+{
+	background-color: rgba(112, 231, 255, 0.5);;
+	transition-duration: 0.3s;
+    transition-delay: 0.1s;
+}
+.datagrid
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* margin-top: 30px; */
+}
+
+.dataGrid_data
+{
+    margin-right: 15px;
+	margin-bottom: 15px;
+}
+.dataGrid_data th:nth-child(2)
+{
+    width: 33.3%;
+}
+.dataGrid_equability
+{
+	margin-left: 10px;
+}
+.dataGrid_equability th
+{
+    width: 25%;
+}
+
+.intervalTest
+{
+    margin-top:25px;
+}
+.intervalTest p
+{
+    padding: 4px;
+}

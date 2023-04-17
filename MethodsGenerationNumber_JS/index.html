@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./chartjs-plugin-datalabels.min .js"></script>
+    <script defer type="text/javascript" src="./index.js"></script>
+    <title>Generation</title>
+</head>
+<body>
+    <div class="graphic chartBox" id="graphic">
+        <div class="myChart">
+            <canvas  id="myChart" width="750" height="450"></canvas>
+            <div class="menu__button">
+                <button id="btn_squareSegments">Метод серединных отрезков</button>
+                <button id="btn_mult">Метод произведений</button>
+                <button id="btn_linearCongruent">Линейный конгруэтный метод</button>
+                <button id="btn_linearMixedCongruent">Линейный конгруэтный метод(смешанный)</button>
+            </div>
+        </div> 
+        <menu class="datagrid">
+            <div class="dataGrid_data">
+                <table id="dataTable">
+                    <tr>
+                        <th>Текущее</th>
+                        <th>Результат множителя</th>
+                        <th>Полученное</th>
+                    </tr>
+                </table>
+            </div>
+            <div class="dataGrid_equability">
+                <table id="equabilityTable">
+                    <tr>
+                        <th>Методы</th>
+                    <th>Мат ожидание</th>
+                    <th>Дисперсия</th>
+                    <th>Среднеквадратичное отклонение</th>
+                    </tr>
+                    <tr id="method0">
+                        <td>Method 1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr id="method1">
+                        <td>Method 2</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr id="method2">
+                        <td>Method 3</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <div id="intervalTest" class='intervalTest'>
+                    <p>Частотный тест метода 1: </p>
+                    <p>Частотный тест метода 2: </p>
+                    <p>Частотный тест метода 3: </p>
+                </div>
+            </div>
+        </menu>
+    </div>
+    <div class="menu container" id="menu">
+        
+        <div class="menu__input">
+            <div><input type="number" id="countPoint" value="10"/> Количество точек </div>
+            <div><input type="number" id="defaultR0" value="7153"/> Начальное значение R0</div>
+            <div><input type="number" id="defaultR1_divisor" value="3729"/> Начальное значение R1/Делитель </div>
+        </div>
+    </div>
+   
+    
+</body>
+</html>

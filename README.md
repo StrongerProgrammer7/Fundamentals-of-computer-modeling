@@ -19,9 +19,16 @@
 <p>File Generation numbers (russian language: V.G. Galkina, Monte-Carlo METHOD PDF):</p>
 [Generatsia_sluchaynykh_chisel.pdf](https://github.com/StrongerProgrammer7/Fundamentals-of-computer-modeling/files/10807894/Generatsia_sluchaynykh_chisel.pdf)
 <p align="center"><img src="https://user-images.githubusercontent.com/71569051/232435002-406112f9-2876-4c97-a5f4-c82aa8729915.png" alt="WinForms"></p>
+<p><strong>Javascript</strong></p>
+<img src="https://user-images.githubusercontent.com/71569051/232436651-f9fcdf97-6de8-4b70-9c0b-13a3a2900301.png" alt="Google">
 </div>
 <div>
+<h3>Modeling system with breakdowns</h3>
+<p><strong>Thanks for program users: <a href="https://github.com/Povilika310121/Computer_modeling/blob/4131d04257bdc40451790f5add691f1b4abeaab8/Lab_5%20machine_work/main.py"><i>Povilika310121</i> (Relalise Python)</a></strong></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/71569051/232436899-e4ec5fab-5937-4faa-9512-0d3a0323060a.png" alt="WinForms"></p>
+</div>
 
+<div>
 <h3>Development tools and Programming Language</h3>
 <p align="justify"> Microsoft Visual Studio Profession 2019</p>
 <p align="justify"> Language C++, C++/CLI (Windows forms) </p>

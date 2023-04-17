@@ -27,6 +27,10 @@
 <p><strong>Thanks for program users: <a href="https://github.com/Povilika310121/Computer_modeling/blob/4131d04257bdc40451790f5add691f1b4abeaab8/Lab_5%20machine_work/main.py"><i>Povilika310121</i> (Relalise Python)</a></strong></p>
 <p align="center"><img src="https://user-images.githubusercontent.com/71569051/232436899-e4ec5fab-5937-4faa-9512-0d3a0323060a.png" alt="WinForms"></p>
 </div>
+<div>
+<h3>Modeling system without breakdowns and infinity Queue</h3>
+<p align="center"><img src="https://user-images.githubusercontent.com/71569051/232459550-4df3659f-1421-4cb1-8f14-6c93b30993d3.png" alt="WinForms"></p>
+</div>
 
 <div>
 <h3>Development tools and Programming Language</h3>

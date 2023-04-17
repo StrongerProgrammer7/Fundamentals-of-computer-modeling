@@ -1,11 +1,12 @@
 <sub>** This work is being done as part of the Course Fundamentals of computer modeling **</sub> 
 <h1 align="center">Fundamentals-of-computer-modeling</h1>
 <ul>
-<li><a href=""> Least Square </a></li>
-<li><a href=""> Monte Carlo </a></li>
-<li><a href=""> Generation random numbers </a></li>
-<li><a href=""> Modeling system with breakdowns </a></li>
-<li><a href=""> Modeling system without breakdowns and infinity Queue </a></li>
+<li><a href="https://github.com/StrongerProgrammer7/Fundamentals-of-computer-modeling#least-square"> Least Square </a></li>
+<li><a href="https://github.com/StrongerProgrammer7/Fundamentals-of-computer-modeling#monte-carlo"> Monte Carlo </a></li>
+<li><a href="https://github.com/StrongerProgrammer7/Fundamentals-of-computer-modeling#generation-random-numbers"> Generation random numbers </a></li>
+<li><a href="https://github.com/StrongerProgrammer7/Fundamentals-of-computer-modeling#modeling-system-with-breakdowns"> Modeling system with breakdowns </a></li>
+<li><a href="https://github.com/StrongerProgrammer7/Fundamentals-of-computer-modeling#modeling-system-without-breakdowns-and-infinity-queue
+"> Modeling system without breakdowns and infinity Queue </a></li>
 </ul>
 <div>
 <h3>Least Square</h3>

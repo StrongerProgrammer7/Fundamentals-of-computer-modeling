@@ -222,8 +222,10 @@ System::Void ModelingSystemInfiniteQueue::ModelingInfinityQeueForm::Btn_exectuio
 	double timeBeforeNextTask = getRandom_uniformRealDistribution(startInterrvalGetTask, endInteervalGetTask);
 	double currentTime = 0;
 	totalTimeWork = 0;
+
 	int middleCountPCWorking = 0;
 	ModelingSystemInfinityQueuePC* PCs[3] = { &PC_2, &PC_3, &PC_1 };
+	//double lambda = 0;
 	while (true)
 	{
 		if (currentTime >= timeBeforeNextTask && countTask > 0)
@@ -232,6 +234,7 @@ System::Void ModelingSystemInfiniteQueue::ModelingInfinityQeueForm::Btn_exectuio
 			//totalTimeReceiptsTasks += timeBeforeNextTask;
 			timeBeforeNextTask = std::round(getRandom_uniformRealDistribution(startInterrvalGetTask, endInteervalGetTask));
 			currentTime = 0;
+			//lambda += timeBeforeNextTask;
 		}
 		PC_1.computitionPC(PCs);
 		PC_2.computitionPC(NULL);
@@ -253,7 +256,7 @@ System::Void ModelingSystemInfiniteQueue::ModelingInfinityQeueForm::Btn_exectuio
 			countTaskInQueueAfterGetAllTaskFirstPC = PC_1.listTimeExecutionTasksPC.size();
 			countTaskInQueueAfterGetAllTaskSecondPC = PC_2.listTimeExecutionTasksPC.size();
 			countTaskInQueueAfterGetAllTaskThirdPC = PC_3.listTimeExecutionTasksPC.size();
-			break;
+			break;//Удалить, если надо продолжить работу после получение всех задач
 		}
 
 		totalTimeWork++;
@@ -272,8 +275,10 @@ System::Void ModelingSystemInfiniteQueue::ModelingInfinityQeueForm::Btn_exectuio
 	int maxTimeQueuePC = std::max(PC_1.getMaxTimeQueuePC(), std::max(PC_2.getMaxTimeQueuePC(), PC_3.getMaxTimeQueuePC()));
 	int maxTimeWaitPC = std::max(PC_1.getTotalTimeWaitPC(), std::max(PC_2.getTotalTimeWaitPC(), PC_3.getTotalTimeWaitPC()));
 
+	int middleQueue = 0;
+	if((PC_1.getCountQueuePC() + PC_2.getCountQueuePC() + PC_3.getCountQueuePC()) != 0)
+		middleQueue =(PC_1.getTotalTimeWaitPC() + PC_3.getTotalTimeWaitPC() + PC_3.getTotalTimeWaitPC()) / (PC_1.getCountQueuePC()+ PC_2.getCountQueuePC() + PC_3.getCountQueuePC());
 
-	int middleQueue =(PC_1.getTotalTimeWaitPC() + PC_3.getTotalTimeWaitPC() + PC_3.getTotalTimeWaitPC()) / (PC_1.getCountQueuePC()+ PC_2.getCountQueuePC() + PC_3.getCountQueuePC());
 	int middleWait = (PC_1.getTotalTimeWaitPC() + PC_3.getTotalTimeWaitPC() + PC_3.getTotalTimeWaitPC())/ 3;
 	
 	double middleBusyTime = (PC_1.getTotalTimeExectuionTasksPC() + PC_2.getTotalTimeExectuionTasksPC() + PC_3.getTotalTimeExectuionTasksPC()) / 3.0;
@@ -287,7 +292,10 @@ System::Void ModelingSystemInfiniteQueue::ModelingInfinityQeueForm::Btn_exectuio
 	lbl_total->Text += "\nМакс время очереди одной из ЭВМ: " + ((maxTimeQueuePC) / 60).ToString() + " ч. " + ((maxTimeQueuePC) % 60).ToString() + " мин.";
 	lbl_total->Text += "\nМакс время простоя одной из ЭВМ: " + ((maxTimeWaitPC) / 60).ToString() + " ч. " + ((maxTimeWaitPC) % 60).ToString() + " мин.";
 
-	lbl_total->Text += "\n Абсолютная пропускная способность: " + (PC_1.getTimeExectuinOneTask() + PC_2.getTimeExectuinOneTask() + PC_3.getTimeExectuinOneTask() / 3) + "\n";
+	// (lambda / Convert::ToInt32(numericUpDown1->Text))
+	//
+	//((PC_1.getTimeExectuinOneTask() + PC_2.getTimeExectuinOneTask() + PC_3.getTimeExectuinOneTask()) / 3)
+	lbl_total->Text += "\n Абсолютная пропускная способность: " + ((PC_1.getTimeExectuinOneTask() + PC_2.getTimeExectuinOneTask() + PC_3.getTimeExectuinOneTask()) / 3) + "\n";
 
 	lbl_total->Text += "\n Краткая сводка об эффективности:\n---\n";
 	if (middleQueue > totalTimeWork * 0.3)

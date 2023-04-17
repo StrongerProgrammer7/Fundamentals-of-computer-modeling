@@ -1,5 +1,12 @@
 <sub>** This work is being done as part of the Course Fundamentals of computer modeling **</sub> 
 <h1 align="center">Fundamentals-of-computer-modeling</h1>
+<ul>
+<li><a href=""> Least Square </a></li>
+<li><a href=""> Monte Carlo </a></li>
+<li><a href=""> Generation random numbers </a></li>
+<li><a href=""> Modeling system with breakdowns </a></li>
+<li><a href=""> Modeling system without breakdowns and infinity Queue </a></li>
+</ul>
 <div>
 <h3>Least Square</h3>
 <p>File Least Square  (russian language: L.V. Kolomiets, LEAST SQUARE METHOD PDF):</p>
@@ -24,7 +31,7 @@
 </div>
 <div>
 <h3>Modeling system with breakdowns</h3>
-<p><strong>Thanks for program users: <a href="https://github.com/Povilika310121/Computer_modeling/blob/4131d04257bdc40451790f5add691f1b4abeaab8/Lab_5%20machine_work/main.py"><i>Povilika310121</i> (Relalise Python)</a></strong></p>
+<p><strong>Thanks for program user: <a href="https://github.com/Povilika310121/Computer_modeling/blob/4131d04257bdc40451790f5add691f1b4abeaab8/Lab_5%20machine_work/main.py"><i>Povilika310121</i> (Realise Python)</a></strong></p>
 <p align="center"><img src="https://user-images.githubusercontent.com/71569051/232436899-e4ec5fab-5937-4faa-9512-0d3a0323060a.png" alt="WinForms"></p>
 </div>
 <div>

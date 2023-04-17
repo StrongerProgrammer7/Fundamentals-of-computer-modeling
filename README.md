@@ -14,12 +14,15 @@
 <p align="center"><img src="https://user-images.githubusercontent.com/71569051/220746151-9e35158b-c888-4da3-ae72-31f307a96ff1.png" alt="WinForms"></p>
 </div>
 <div>
+<div>
+<h3>Generation random numbers</h3>
+<p>File Generation numbers (russian language: V.G. Galkina, Monte-Carlo METHOD PDF):</p>
+[Generatsia_sluchaynykh_chisel.pdf](https://github.com/StrongerProgrammer7/Fundamentals-of-computer-modeling/files/10807894/Generatsia_sluchaynykh_chisel.pdf)
+<p align="center"><img src="https://user-images.githubusercontent.com/71569051/232435002-406112f9-2876-4c97-a5f4-c82aa8729915.png" alt="WinForms"></p>
+</div>
+<div>
+
 <h3>Development tools and Programming Language</h3>
 <p align="justify"> Microsoft Visual Studio Profession 2019</p>
 <p align="justify"> Language C++, C++/CLI (Windows forms) </p>
-</div>
-<div>
-<h4>Extra material</h4>
-Generation random numbers - evenly
-[Generatsia_sluchaynykh_chisel.pdf](https://github.com/StrongerProgrammer7/Fundamentals-of-computer-modeling/files/10807894/Generatsia_sluchaynykh_chisel.pdf)
 </div>
